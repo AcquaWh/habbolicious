@@ -1,0 +1,289 @@
+body {
+     font-family: 'Ubuntu Condensed', sans-serif;
+}
+/* Navbar */
+.navbar {
+     background: #fff;
+     box-shadow: 0px 3px 12px rgba(107, 107, 107, 0.39);
+     padding: 0px;
+     .habbolicious{
+          height: 70px;
+          transition: 0.3s;
+          &:hover {
+               transform: scale(1.2);
+          }
+     }
+     .navbar-toggler{
+          transition: 0.3s;
+          margin-right: 10px;
+          &:hover {
+               background: #e6e6e6;
+          }
+          i {
+               color: #b1b1b1;
+          }
+     }
+     .navbar-nav {
+          text-align: center;
+          .nav-link{
+               transition: 0.3s;
+               &:hover {
+                    background: #eaeaea;
+               }
+          }
+          .ico-inicio{
+               background-image: url('/img/icons/v22_1(1).gif');
+               width: 40px;
+               height: 40px;
+               background-position: center;
+               background-repeat: no-repeat;
+               margin: auto;
+          }
+          .ico-noticias{
+               background-image: url('/img/icons/text.gif');
+               width: 40px;
+               height: 40px;
+               background-position: center;
+               background-repeat: no-repeat;
+               margin: auto;
+          }
+          .ico-blogs{
+               background-image: url('/img/icons/v22_5.gif');
+               width: 40px;
+               height: 40px;
+               background-position: center;
+               background-repeat: no-repeat;
+               margin: auto;
+          }
+          .ico-loteria{
+               background-image: url('/img/icons/toolbar_03.gif');
+               width: 40px;
+               height: 40px;
+               background-position: center;
+               background-repeat: no-repeat;
+               margin: auto;
+          }
+          .ico-catalogo{
+               background-image: url('/img/icons/toolbar_04.gif');
+               width: 40px;
+               height: 40px;
+               background-position: center;
+               background-repeat: no-repeat;
+               margin: auto;
+          }
+          .ico-eventos{
+               background-image: url('/img/icons/v20_b3.gif');
+               width: 40px;
+               height: 40px;
+               background-position: center;
+               background-repeat: no-repeat;
+               margin: auto;
+          }
+          .ico-equipo{
+               background-image: url('/img/icons/star_3.gif');
+               width: 40px;
+               height: 40px;
+               background-position: center;
+               background-repeat: no-repeat;
+               margin: auto;
+          }
+          .ico-vacantes{
+               background-image: url('/img/icons/v22_4(1).gif');
+               width: 40px;
+               height: 40px;
+               background-position: center;
+               background-repeat: no-repeat;
+               margin: auto;
+          }
+          .ico-utilidades{
+               background-image: url('/img/icons/pwrup_pins.gif');
+               width: 40px;
+               height: 40px;
+               background-position: center;
+               background-repeat: no-repeat;
+               margin: auto;
+          }
+          .ico-iniciar{
+               background-image: url('/img/icons/room_icon_password.gif');
+               width: 40px;
+               height: 40px;
+               background-position: center;
+               background-repeat: no-repeat;
+               background-size: contain;
+               margin: auto;
+          }
+          a {
+               color: #616161;
+               font-weight: bold;
+               transition: 0.3s;
+               &:hover {
+                    color: #c90497;
+               }
+          }
+     }
+}
+/* celular y tablet */
+@media (max-width: 991.98px) {
+     .navbar {
+          .habbolicious{
+               height: 50px;
+               margin-left: 10px;
+          }
+          .navbar-nav {
+               .nav-link{
+                    font-size: 12px;
+               }
+               .ico-inicio{
+                    background-image: url('/img/icons/v22_1(1).gif');
+                    width: 30px;
+                    height: 30px;
+                    display: inline-block!important;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    margin-right: 10px;
+               }
+               .ico-noticias{
+                    background-image: url('/img/icons/text.gif');
+                    width: 30px;
+                    height: 30px;
+                    display: inline-block!important;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    margin-right: 10px;
+               }
+               .ico-blogs{
+                    background-image: url('/img/icons/v22_5.gif');
+                    width: 30px;
+                    height: 30px;
+                    display: inline-block!important;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    margin-right: 10px;
+               }
+               .ico-loteria{
+                    background-image: url('/img/icons/toolbar_03.gif');
+                    width: 30px;
+                    height: 30px;
+                    display: inline-block!important;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    margin-right: 10px;
+               }
+               .ico-catalogo{
+                    background-image: url('/img/icons/toolbar_04.gif');
+                    width: 30px;
+                    height: 30px;
+                    display: inline-block!important;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    margin-right: 10px;
+               }
+               .ico-eventos{
+                    background-image: url('/img/icons/v20_b3.gif');
+                    width: 30px;
+                    height: 30px;
+                    display: inline-block!important;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    margin-right: 10px;
+               }
+               .ico-equipo{
+                    background-image: url('/img/icons/star_3.gif');
+                    width: 30px;
+                    height: 30px;
+                    display: inline-block!important;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    margin-right: 10px;
+               }
+               .ico-vacantes{
+                    background-image: url('/img/icons/v22_4(1).gif');
+                    width: 30px;
+                    height: 30px;
+                    display: inline-block!important;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    margin-right: 10px;
+               }
+               .ico-utilidades{
+                    background-image: url('/img/icons/pwrup_pins.gif');
+                    width: 30px;
+                    height: 30px;
+                    display: inline-block!important;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    margin-right: 10px;
+               }
+               .ico-iniciar{
+                    background-image: url('/img/icons/room_icon_password.gif');
+                    width: 30px;
+                    height: 30px;
+                    display: inline-block!important;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    margin-right: 10px;
+               }
+          }
+     }
+}
+@media (max-width: 766px) {
+     .navbar {
+          .navbar-collapse {
+               overflow-y: auto;
+               max-height: 260px;
+          }
+     }
+}
+/* Página principal */
+.principal {
+     margin-top: 60px;
+     .fondo {
+          background-image: url(/img/extra/t39MERG.png);
+          height: 400px;
+          background-size: 700px;
+          background-color: #fda2bb;
+     }
+}
+footer {
+     background: #f980a0;
+     text-align: right;
+     padding-top: 30px !important;
+     padding-bottom: 20px;
+     .habbolicious{
+          height: 70px;
+          transition: 0.6s;
+          &:hover {
+               opacity: 0.3;
+          }
+     }
+     .habboli{
+          font-weight: bold;
+          font-size: 16px;
+     }
+     .mapa {
+          font-size: 16px;
+          color: #ffd2e8;
+          a {
+               transition: 0.5s;
+               color: #ffd2e8;
+               &:hover {
+                    text-decoration: none;
+                    color: #ffffff;
+               }
+          }
+     }
+     span {
+          font-size: 13px;
+          color: #ffd2e8;
+     }
+}

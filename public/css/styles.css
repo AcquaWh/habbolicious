@@ -1,0 +1,242 @@
+@charset "UTF-8";
+body {
+  font-family: 'Ubuntu Condensed', sans-serif; }
+
+/* Navbar */
+.navbar {
+  background: #fff;
+  box-shadow: 0px 3px 12px rgba(107, 107, 107, 0.39);
+  padding: 0px; }
+  .navbar .habbolicious {
+    height: 70px;
+    transition: 0.3s; }
+    .navbar .habbolicious:hover {
+      transform: scale(1.2); }
+  .navbar .navbar-toggler {
+    transition: 0.3s;
+    margin-right: 10px; }
+    .navbar .navbar-toggler:hover {
+      background: #e6e6e6; }
+    .navbar .navbar-toggler i {
+      color: #b1b1b1; }
+  .navbar .navbar-nav {
+    text-align: center; }
+    .navbar .navbar-nav .nav-link {
+      transition: 0.3s; }
+      .navbar .navbar-nav .nav-link:hover {
+        background: #eaeaea; }
+    .navbar .navbar-nav .ico-inicio {
+      background-image: url("/img/icons/v22_1(1).gif");
+      width: 40px;
+      height: 40px;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: auto; }
+    .navbar .navbar-nav .ico-noticias {
+      background-image: url("/img/icons/text.gif");
+      width: 40px;
+      height: 40px;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: auto; }
+    .navbar .navbar-nav .ico-blogs {
+      background-image: url("/img/icons/v22_5.gif");
+      width: 40px;
+      height: 40px;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: auto; }
+    .navbar .navbar-nav .ico-loteria {
+      background-image: url("/img/icons/toolbar_03.gif");
+      width: 40px;
+      height: 40px;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: auto; }
+    .navbar .navbar-nav .ico-catalogo {
+      background-image: url("/img/icons/toolbar_04.gif");
+      width: 40px;
+      height: 40px;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: auto; }
+    .navbar .navbar-nav .ico-eventos {
+      background-image: url("/img/icons/v20_b3.gif");
+      width: 40px;
+      height: 40px;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: auto; }
+    .navbar .navbar-nav .ico-equipo {
+      background-image: url("/img/icons/star_3.gif");
+      width: 40px;
+      height: 40px;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: auto; }
+    .navbar .navbar-nav .ico-vacantes {
+      background-image: url("/img/icons/v22_4(1).gif");
+      width: 40px;
+      height: 40px;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: auto; }
+    .navbar .navbar-nav .ico-utilidades {
+      background-image: url("/img/icons/pwrup_pins.gif");
+      width: 40px;
+      height: 40px;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: auto; }
+    .navbar .navbar-nav .ico-iniciar {
+      background-image: url("/img/icons/room_icon_password.gif");
+      width: 40px;
+      height: 40px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin: auto; }
+    .navbar .navbar-nav a {
+      color: #616161;
+      font-weight: bold;
+      transition: 0.3s; }
+      .navbar .navbar-nav a:hover {
+        color: #c90497; }
+
+/* celular y tablet */
+@media (max-width: 991.98px) {
+  .navbar .habbolicious {
+    height: 50px;
+    margin-left: 10px; }
+  .navbar .navbar-nav .nav-link {
+    font-size: 12px; }
+  .navbar .navbar-nav .ico-inicio {
+    background-image: url("/img/icons/v22_1(1).gif");
+    width: 30px;
+    height: 30px;
+    display: inline-block !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 10px; }
+  .navbar .navbar-nav .ico-noticias {
+    background-image: url("/img/icons/text.gif");
+    width: 30px;
+    height: 30px;
+    display: inline-block !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 10px; }
+  .navbar .navbar-nav .ico-blogs {
+    background-image: url("/img/icons/v22_5.gif");
+    width: 30px;
+    height: 30px;
+    display: inline-block !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 10px; }
+  .navbar .navbar-nav .ico-loteria {
+    background-image: url("/img/icons/toolbar_03.gif");
+    width: 30px;
+    height: 30px;
+    display: inline-block !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 10px; }
+  .navbar .navbar-nav .ico-catalogo {
+    background-image: url("/img/icons/toolbar_04.gif");
+    width: 30px;
+    height: 30px;
+    display: inline-block !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 10px; }
+  .navbar .navbar-nav .ico-eventos {
+    background-image: url("/img/icons/v20_b3.gif");
+    width: 30px;
+    height: 30px;
+    display: inline-block !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 10px; }
+  .navbar .navbar-nav .ico-equipo {
+    background-image: url("/img/icons/star_3.gif");
+    width: 30px;
+    height: 30px;
+    display: inline-block !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 10px; }
+  .navbar .navbar-nav .ico-vacantes {
+    background-image: url("/img/icons/v22_4(1).gif");
+    width: 30px;
+    height: 30px;
+    display: inline-block !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 10px; }
+  .navbar .navbar-nav .ico-utilidades {
+    background-image: url("/img/icons/pwrup_pins.gif");
+    width: 30px;
+    height: 30px;
+    display: inline-block !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 10px; }
+  .navbar .navbar-nav .ico-iniciar {
+    background-image: url("/img/icons/room_icon_password.gif");
+    width: 30px;
+    height: 30px;
+    display: inline-block !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 10px; } }
+@media (max-width: 766px) {
+  .navbar .navbar-collapse {
+    overflow-y: auto;
+    max-height: 260px; } }
+/* P├ígina principal */
+.principal {
+  margin-top: 60px; }
+  .principal .fondo {
+    background-image: url(/img/extra/t39MERG.png);
+    height: 400px;
+    background-size: 700px;
+    background-color: #fda2bb; }
+
+footer {
+  background: #f980a0;
+  text-align: right;
+  padding-top: 30px !important;
+  padding-bottom: 20px; }
+  footer .habbolicious {
+    height: 70px;
+    transition: 0.6s; }
+    footer .habbolicious:hover {
+      opacity: 0.3; }
+  footer .habboli {
+    font-weight: bold;
+    font-size: 16px; }
+  footer .mapa {
+    font-size: 16px;
+    color: #ffd2e8; }
+    footer .mapa a {
+      transition: 0.5s;
+      color: #ffd2e8; }
+      footer .mapa a:hover {
+        text-decoration: none;
+        color: #ffffff; }
+  footer span {
+    font-size: 13px;
+    color: #ffd2e8; }
+
+/*# sourceMappingURL=styles.css.map */
