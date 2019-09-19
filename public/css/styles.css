@@ -209,9 +209,203 @@ body {
   margin-top: 60px; }
   .principal .fondo {
     background-image: url(/img/extra/t39MERG.png);
-    height: 400px;
+    height: 380px;
     background-size: 700px;
-    background-color: #fda2bb; }
+    background-color: #ffccfc;
+    border-bottom: 10px solid white;
+    box-shadow: 0px 0px 10px #0000004f; }
+    .principal .fondo .globos {
+      position: absolute;
+      width: 100%;
+      height: 380px;
+      background-image: url(/img/extra/globos.png);
+      background-size: 200px;
+      transition: 0.3s;
+      animation: animatedBackground 10s linear infinite;
+      -moz-animation: animatedBackground 10s linear infinite;
+      -webkit-animation: animatedBackground 10s linear infinite;
+      -ms-animation: animatedBackground 10s linear infinite;
+      -o-animation: animatedBackground 10s linear infinite; }
+@keyframes animatedBackground {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: -300px 0; } }
+@-moz-keyframes animatedBackground {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: -300px 0; } }
+@-webkit-keyframes animatedBackground {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: -300px 0; } }
+@-ms-keyframes animatedBackground {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: -300px 0; } }
+@-o-keyframes animatedBackground {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: -300px 0; } }
+    .principal .fondo .owl-carousel {
+      margin-top: 70px;
+      box-shadow: 0px 6px 9px rgba(0, 0, 0, 0.473);
+      color: white; }
+      .principal .fondo .owl-carousel .owl-dots {
+        position: absolute;
+        top: 110px;
+        left: 20px; }
+      .principal .fondo .owl-carousel .item {
+        height: 10rem;
+        background: black;
+        padding: 1rem;
+        background-size: cover;
+        background-repeat: none;
+        background-position: center; }
+    .principal .fondo .radio {
+      margin-top: 70px;
+      background: white;
+      box-shadow: 0px 6px 9px rgba(0, 0, 0, 0.473); }
+      .principal .fondo .radio span {
+        margin-right: 10px; }
+      .principal .fondo .radio .titulo-radio {
+        padding: 10px;
+        background: #cccccc;
+        color: #4e4e4e;
+        margin-top: 12px;
+        margin-left: 20px;
+        font-size: 13px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        overflow: hidden; }
+      .principal .fondo .radio .cancion-radio {
+        padding: 10px;
+        background: #cccccc;
+        color: #4e4e4e;
+        margin-top: 10px;
+        margin-left: 20px;
+        font-size: 13px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        overflow: hidden; }
+      .principal .fondo .radio .menu-radio .dj {
+        display: inline-block;
+        background: #cccccc;
+        color: #4e4e4e;
+        font-size: 13px;
+        margin-left: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        transition: 0.3s; }
+        .principal .fondo .radio .menu-radio .dj:hover {
+          color: white;
+          background: #f980a0; }
+      .principal .fondo .radio .menu-radio .play {
+        display: inline-block;
+        background: #cccccc;
+        color: #4e4e4e;
+        font-size: 13px;
+        margin-left: 4px;
+        padding: 10px;
+        border-radius: 5px;
+        transition: 0.3s; }
+        .principal .fondo .radio .menu-radio .play:hover {
+          color: white;
+          background: #f980a0; }
+      .principal .fondo .radio .menu-radio .stop {
+        display: inline-block;
+        background: #cccccc;
+        color: #4e4e4e;
+        font-size: 13px;
+        margin-left: 4px;
+        padding: 10px;
+        border-radius: 5px;
+        transition: 0.3s; }
+        .principal .fondo .radio .menu-radio .stop:hover {
+          color: white;
+          background: #f980a0; }
+      .principal .fondo .radio .menu-radio .enviar-peticion {
+        display: inline-block;
+        background: #cccccc;
+        color: #4e4e4e;
+        font-size: 13px;
+        margin-left: 4px;
+        padding: 10px;
+        border-radius: 5px;
+        transition: 0.3s; }
+        .principal .fondo .radio .menu-radio .enviar-peticion:hover {
+          color: white;
+          background: #f980a0; }
+      .principal .fondo .radio .menu-radio .volumen {
+        display: inline-block;
+        background: #cccccc;
+        color: #4e4e4e;
+        font-size: 13px;
+        margin-left: 4px;
+        padding: 10px;
+        border-radius: 5px;
+        width: 70px; }
+        .principal .fondo .radio .menu-radio .volumen #slider {
+          display: inline-block;
+          width: 100%; }
+      .principal .fondo .radio .avatar-radio {
+        background: linear-gradient(180deg, #3586c1, #0c3a65);
+        color: white;
+        height: 160px;
+        padding: 10px;
+        margin: auto; }
+        .principal .fondo .radio .avatar-radio .oyentes {
+          font-size: 13px;
+          position: absolute; }
+        .principal .fondo .radio .avatar-radio .avatar {
+          height: 150px;
+          background-repeat: no-repeat;
+          background-position: center -9px;
+          transition: 0.6s;
+          z-index: -1; }
+          .principal .fondo .radio .avatar-radio .avatar:hover {
+            transform: translateX(-84px); }
+  @media (max-width: 991.98px) {
+    .principal .fondo {
+      height: 650px; }
+      .principal .fondo .radio .titulo-radio {
+        padding: 10px;
+        margin-right: 20px;
+        background: #cccccc;
+        color: #4e4e4e;
+        margin-top: 14px;
+        margin-left: 20px;
+        font-size: 13px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        overflow: hidden; }
+      .principal .fondo .radio .cancion-radio {
+        padding: 10px;
+        background: #cccccc;
+        color: #4e4e4e;
+        margin-top: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 13px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        overflow: hidden; }
+      .principal .fondo .radio .avatar-radio .avatar {
+        height: 150px;
+        background-repeat: no-repeat;
+        background-position: center -9px;
+        transition: 0.6s;
+        z-index: -1; }
+        .principal .fondo .radio .avatar-radio .avatar:hover {
+          transform: translateX(0px); }
+      .principal .fondo .radio .menu-radio {
+        margin-bottom: 13px; } }
 
 footer {
   background: #f980a0;
@@ -221,8 +415,6 @@ footer {
   footer .habbolicious {
     height: 70px;
     transition: 0.6s; }
-    footer .habbolicious:hover {
-      opacity: 0.3; }
   footer .habboli {
     font-weight: bold;
     font-size: 16px; }
