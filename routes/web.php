@@ -15,3 +15,4 @@ Route::get('/', function () {
     return redirect()->route('index');
 });
 Route::get('/','HabboliciousController@index')->name('index');
+Auth::routes(['register' => false]);
