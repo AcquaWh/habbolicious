@@ -34,31 +34,31 @@
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                          <ul class="navbar-nav ml-md-auto">
                               <li class="nav-item active">
-                                   <a class="nav-link" href="#"><div class="ico-inicio"></div>Inicio</a>
+                                   <a class="nav-link" href="{{route('index')}}"><div class="ico-inicio"></div>Inicio</a>
                               </li>
                               <li class="nav-item">
-                                   <a class="nav-link" href="#"><div class="ico-noticias"></div>Noticias</a>
+                                   <a class="nav-link" href="{{route('noticias')}}"><div class="ico-noticias"></div>Noticias</a>
                               </li>
                               <li class="nav-item">
-                                   <a class="nav-link" href="#"><div class="ico-blogs"></div>Blogs</a>
+                                   <a class="nav-link" href="{{route('blogs')}}"><div class="ico-blogs"></div>Blogs</a>
                               </li>
                               <li class="nav-item">
-                                   <a class="nav-link" href="#"><div class="ico-loteria"></div>Lotería</a>
+                                   <a class="nav-link" href="{{route('loteria')}}"><div class="ico-loteria"></div>Lotería</a>
                               </li>
                               <li class="nav-item">
-                                   <a class="nav-link" href="#"><div class="ico-catalogo"></div>Catálogo</a>
+                                   <a class="nav-link" href="{{route('catalogo')}}"><div class="ico-catalogo"></div>Catálogo</a>
                               </li>
                               <li class="nav-item">
-                                   <a class="nav-link" href="#"><div class="ico-eventos"></div>Eventos</a>
+                                   <a class="nav-link" href="{{route('eventos')}}"><div class="ico-eventos"></div>Eventos</a>
                               </li>
                               <li class="nav-item">
-                                   <a class="nav-link" href="#"><div class="ico-equipo"></div>Equipo</a>
+                                   <a class="nav-link" href="{{route('equipo')}}"><div class="ico-equipo"></div>Equipo</a>
                               </li>
                               <li class="nav-item">
-                                   <a class="nav-link" href="#"><div class="ico-vacantes"></div>Vacantes</a>
+                                   <a class="nav-link" href="{{route('vacantes')}}"><div class="ico-vacantes"></div>Vacantes</a>
                               </li>
                               <li class="nav-item">
-                                   <a class="nav-link" href="#"><div class="ico-utilidades"></div>Utilidades</a>
+                                   <a class="nav-link" href="{{route('utilidades')}}"><div class="ico-utilidades"></div>Utilidades</a>
                               </li>
                               <li class="nav-item">
                                    <a class="nav-link" href="#"><div class="ico-iniciar"></div>Iniciar</a>
