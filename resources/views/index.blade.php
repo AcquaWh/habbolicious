@@ -60,6 +60,45 @@
                                    </div>
                               </div>
                          </div>
+                         <div class="col-lg-12">
+                              <div class="noticias-usuarios">
+                                   <div class="row">
+                                        <div class="col-lg-4">
+                                             <div class="post-noticias">
+                                                  <div class="imagen-post" style="background:url(https://images.habbo.com/habbo-web/america/es/assets/images/app_summary_image-1200x628.85a9f5dc.png);"></div>
+                                                  <div class="cuadro-noticias">
+                                                       <div class="avatar-noticias"></div>
+                                                       <span class="titulo-post">Título post</span>
+                                                       <p>Comentario de usuario</p>
+                                                       <span class="tiempo-post">Hace 2 horas</span>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                             <div class="post-noticias">
+                                                  <div class="imagen-post" style="background:url(https://i.imgur.com/fVlGql6.png);"></div>
+                                                  <div class="cuadro-noticias">
+                                                       <div class="avatar-noticias"></div>
+                                                       <span class="titulo-post">Título post</span>
+                                                       <p>Comentario de usuario</p>
+                                                       <span class="tiempo-post">Hace 2 horas</span>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                             <div class="post-noticias">
+                                                  <div class="imagen-post" style="background:url(https://help.habbo.com/hc/article_attachments/360003391388/Infobus_1.gif);"></div>
+                                                  <div class="cuadro-noticias">
+                                                       <div class="avatar-noticias"></div>
+                                                       <span class="titulo-post">Título post</span>
+                                                       <p>Comentario de usuario</p>
+                                                       <span class="tiempo-post">Hace 2 horas</span>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
                     </div>
                </div>
           </div>
