@@ -545,7 +545,6 @@ body {
      .contenido-inicio {
           margin-top: 160px;
           .contenedor-titulo{
-               background-image: url(https://static.habbo-happy.net/img/articles/9f76a6_nuevacampa%C3%B1a2.png);
                background-position: center;
                padding-left: 15px;
                padding-right: 15px;
@@ -576,7 +575,7 @@ body {
                height: auto;
                box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219);
                .noticia {
-                    box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219);
+                    box-shadow: 0px 2px 5px rgba(54, 54, 54, 0.219);
                     width: 100%;
                     margin-bottom: 10px;
                     transition: 0.3s;
@@ -697,6 +696,18 @@ body {
                                    opacity: 1;
                               }
                          }
+                    }
+               }
+          }
+          .contenedor-twitter {
+               background:white;
+               padding: 10px;
+               height: auto;
+               box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219);
+               .twitter-timeline{
+                    color: black;
+                    &:hover {
+                         color: black;
                     }
                }
           }

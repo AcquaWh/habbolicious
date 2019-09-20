@@ -131,7 +131,7 @@
                <div class="container">
                     <div class="row">
                          <div class="col-lg-8">
-                              <div class="contenedor-titulo">
+                              <div class="contenedor-titulo" style="background-image: url(https://static.habbo-happy.net/img/articles/9f76a6_nuevacampa%C3%B1a2.png);">
                                    <div class="ico-seccion-noticias"></div>
                                    <h4>Últimas noticias</h4>
                                    <p>Noticias y actualizaciones en Habbo y en todo el mundo.</p>
@@ -183,7 +183,7 @@
                                         <div class="row">
                                              <div class="col-lg-9">
                                                   <div class="noticia-texto">
-                                                       <h4>Gana candys</h4>
+                                                       <h4>Gana sweets</h4>
                                                        <p>Siempre puedes ganar grandes premios</p>
                                                        <div class="usuario-noticia"><i class="fas fa-user"></i> Dj-timbalarde</div>
                                                        <div class="tiempo-noticia"><i class="far fa-calendar-alt"></i> Hace 1 hora</div>
@@ -200,6 +200,14 @@
                                              </div>
                                         </div>
                                    </div>
+                              </div>
+                         </div>
+                         <div class="col-lg-4">
+                              <div class="contenedor-titulo" style="background-image: url(https://habbotemplarios.com/wp-content/uploads/2015/03/lpromo_cland_bundle.png);">
+                                   <h4>Twitter</h4>
+                              </div>
+                              <div class="contenedor-twitter">
+                                   <a class="twitter-timeline" data-height="530" href="https://twitter.com/HabboLiciousES?ref_src=twsrc%5Etfw">Twitter por Habbolicious</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                               </div>
                          </div>
                     </div>
