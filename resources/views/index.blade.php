@@ -145,13 +145,15 @@
                                                        <p>Hoy celebramos que Habbolicious abre sus puestas de nuevo</p>
                                                        <div class="usuario-noticia"><i class="fas fa-user"></i> Dj-timbalarde</div>
                                                        <div class="tiempo-noticia"><i class="far fa-calendar-alt"></i> Hace 1 hora</div>
-                                                       <div class="comentarios-noticia"> 2 comentarios</div>
                                                   </div>
                                              </div>
                                              <div class="col-lg-3">
-                                                  <div class="noticia-img" style="background-image: url(https://www.habbobites.com/uploads/15acce89408f92_nlgfpmeiojkhq.png);">
-                                                       <a href=""><i class="fas fa-book"></i> Leer más</a>
-                                                       <div class="usuario-noticia-img"></div>
+                                                  <div class="noticia-img" style="background-image: url(https://help.habbo.com/hc/article_attachments/360003391388/Infobus_1.gif);">
+                                                       <div class="capa1">
+                                                            <span><i class="far fa-comment-dots"></i> 2 Comentarios</span>
+                                                            <span><i class="fas fa-heart"></i> 2 Me gusta</span>
+                                                            <div class="usuario-noticia-img"></div>
+                                                       </div>
                                                   </div>
                                              </div>
                                         </div>
@@ -164,13 +166,15 @@
                                                        <p>Pronto abrirá sus puertas</p>
                                                        <div class="usuario-noticia"><i class="fas fa-user"></i> Dj-timbalarde</div>
                                                        <div class="tiempo-noticia"><i class="far fa-calendar-alt"></i> Hace 1 hora</div>
-                                                       <div class="comentarios-noticia"> 2 comentarios</div>
                                                   </div>
                                              </div>
                                              <div class="col-lg-3">
-                                                  <div class="noticia-img" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaFd4riH_FzNgfHMH_-oduthuTmG6o8uQpijE3tJHdfwwJKcJW);">
-                                                       <a href=""><i class="fas fa-book"></i> Leer más</a>
-                                                       <div class="usuario-noticia-img"></div>
+                                                  <div class="noticia-img" style="background-image: url(https://help.habbo.com/hc/article_attachments/360003391388/Infobus_1.gif);">
+                                                       <div class="capa1">
+                                                            <span><i class="far fa-comment-dots"></i> 2 Comentarios</span>
+                                                            <span><i class="fas fa-heart"></i> 2 Me gusta</span>
+                                                            <div class="usuario-noticia-img"></div>
+                                                       </div>
                                                   </div>
                                              </div>
                                         </div>
@@ -183,13 +187,15 @@
                                                        <p>Siempre puedes ganar grandes premios</p>
                                                        <div class="usuario-noticia"><i class="fas fa-user"></i> Dj-timbalarde</div>
                                                        <div class="tiempo-noticia"><i class="far fa-calendar-alt"></i> Hace 1 hora</div>
-                                                       <div class="comentarios-noticia"> 2 comentarios</div>
                                                   </div>
                                              </div>
                                              <div class="col-lg-3">
                                                   <div class="noticia-img" style="background-image: url(https://help.habbo.com/hc/article_attachments/360003391388/Infobus_1.gif);">
-                                                       <a href=""><i class="fas fa-book"></i> Leer más</a>
-                                                       <div class="usuario-noticia-img"></div>
+                                                       <div class="capa1">
+                                                            <span><i class="far fa-comment-dots"></i> 2 Comentarios</span>
+                                                            <span><i class="fas fa-heart"></i> 2 Me gusta</span>
+                                                            <div class="usuario-noticia-img"></div>
+                                                       </div>
                                                   </div>
                                              </div>
                                         </div>
