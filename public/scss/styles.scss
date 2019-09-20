@@ -30,6 +30,36 @@ body {
                transition: 0.3s;
                &:hover {
                     background: #eaeaea;
+                    .ico-noticias {
+                         transform: translate(0px, -5px);
+                    }
+                    .ico-inicio {
+                         transform: translate(0px, -5px);
+                    }
+                    .ico-iniciar {
+                         transform: translate(0px, -5px);
+                    }
+                    .ico-blogs {
+                         transform: translate(0px, -5px);
+                    }
+                    .ico-loteria {
+                         transform: translate(0px, -5px);
+                    }
+                    .ico-catalogo {
+                         transform: translate(0px, -5px);
+                    }
+                    .ico-eventos {
+                         transform: translate(0px, -5px);
+                    }
+                    .ico-equipo {
+                         transform: translate(0px, -5px);
+                    }
+                    .ico-vacantes {
+                         transform: translate(0px, -5px);
+                    }
+                    .ico-utilidades {
+                         transform: translate(0px, -5px);
+                    }
                }
           }
           .ico-inicio{
@@ -39,6 +69,7 @@ body {
                background-position: center;
                background-repeat: no-repeat;
                margin: auto;
+               transition: 0.3s;
           }
           .ico-noticias{
                background-image: url('/img/icons/text.gif');
@@ -47,6 +78,7 @@ body {
                background-position: center;
                background-repeat: no-repeat;
                margin: auto;
+               transition: 0.3s;
           }
           .ico-blogs{
                background-image: url('/img/icons/v22_5.gif');
@@ -55,6 +87,7 @@ body {
                background-position: center;
                background-repeat: no-repeat;
                margin: auto;
+               transition: 0.3s;
           }
           .ico-loteria{
                background-image: url('/img/icons/toolbar_03.gif');
@@ -63,6 +96,7 @@ body {
                background-position: center;
                background-repeat: no-repeat;
                margin: auto;
+               transition: 0.3s;
           }
           .ico-catalogo{
                background-image: url('/img/icons/toolbar_04.gif');
@@ -71,6 +105,7 @@ body {
                background-position: center;
                background-repeat: no-repeat;
                margin: auto;
+               transition: 0.3s;
           }
           .ico-eventos{
                background-image: url('/img/icons/v20_b3.gif');
@@ -79,6 +114,7 @@ body {
                background-position: center;
                background-repeat: no-repeat;
                margin: auto;
+               transition: 0.3s;
           }
           .ico-equipo{
                background-image: url('/img/icons/star_3.gif');
@@ -87,6 +123,7 @@ body {
                background-position: center;
                background-repeat: no-repeat;
                margin: auto;
+               transition: 0.3s;
           }
           .ico-vacantes{
                background-image: url('/img/icons/v22_4(1).gif');
@@ -95,6 +132,7 @@ body {
                background-position: center;
                background-repeat: no-repeat;
                margin: auto;
+               transition: 0.3s;
           }
           .ico-utilidades{
                background-image: url('/img/icons/pwrup_pins.gif');
@@ -103,6 +141,7 @@ body {
                background-position: center;
                background-repeat: no-repeat;
                margin: auto;
+               transition: 0.3s;
           }
           .ico-iniciar{
                background-image: url('/img/icons/room_icon_password.gif');
@@ -112,6 +151,7 @@ body {
                background-repeat: no-repeat;
                background-size: contain;
                margin: auto;
+               transition: 0.3s;
           }
           a {
                color: #616161;
@@ -574,6 +614,7 @@ body {
                padding: 10px;
                height: auto;
                box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219);
+               margin-bottom: 20px;
                .noticia {
                     box-shadow: 0px 2px 5px rgba(54, 54, 54, 0.219);
                     width: 100%;
@@ -593,7 +634,7 @@ body {
                               border-bottom: 1px solid #d1d1d1;
                          }
                          .usuario-noticia{
-                              background:rgb(255, 110, 141);
+                              background:#1022ae;
                               color: white;
                               width: 170px;
                               padding: 10px;
@@ -607,8 +648,8 @@ body {
                               }
                          }
                          .tiempo-noticia{
-                              background:rgb(226, 226, 226);
-                              color: rgb(46, 46, 46);
+                              background:#505050;
+                              color: white;
                               width: 130px;
                               padding: 10px;
                               font-size: 13px;
@@ -710,6 +751,12 @@ body {
                          color: black;
                     }
                }
+          }
+          .contenedor-blogs {
+               background:white;
+               padding: 10px;
+               height: auto;
+               box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219);
           }
      }
      @media (max-width: 991.98px) {

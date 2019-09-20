@@ -26,69 +26,98 @@ body {
       transition: 0.3s; }
       .navbar .navbar-nav .nav-link:hover {
         background: #eaeaea; }
+        .navbar .navbar-nav .nav-link:hover .ico-noticias {
+          transform: translate(0px, -5px); }
+        .navbar .navbar-nav .nav-link:hover .ico-inicio {
+          transform: translate(0px, -5px); }
+        .navbar .navbar-nav .nav-link:hover .ico-iniciar {
+          transform: translate(0px, -5px); }
+        .navbar .navbar-nav .nav-link:hover .ico-blogs {
+          transform: translate(0px, -5px); }
+        .navbar .navbar-nav .nav-link:hover .ico-loteria {
+          transform: translate(0px, -5px); }
+        .navbar .navbar-nav .nav-link:hover .ico-catalogo {
+          transform: translate(0px, -5px); }
+        .navbar .navbar-nav .nav-link:hover .ico-eventos {
+          transform: translate(0px, -5px); }
+        .navbar .navbar-nav .nav-link:hover .ico-equipo {
+          transform: translate(0px, -5px); }
+        .navbar .navbar-nav .nav-link:hover .ico-vacantes {
+          transform: translate(0px, -5px); }
+        .navbar .navbar-nav .nav-link:hover .ico-utilidades {
+          transform: translate(0px, -5px); }
     .navbar .navbar-nav .ico-inicio {
       background-image: url("/img/icons/v22_1(1).gif");
       width: 40px;
       height: 40px;
       background-position: center;
       background-repeat: no-repeat;
-      margin: auto; }
+      margin: auto;
+      transition: 0.3s; }
     .navbar .navbar-nav .ico-noticias {
       background-image: url("/img/icons/text.gif");
       width: 40px;
       height: 40px;
       background-position: center;
       background-repeat: no-repeat;
-      margin: auto; }
+      margin: auto;
+      transition: 0.3s; }
     .navbar .navbar-nav .ico-blogs {
       background-image: url("/img/icons/v22_5.gif");
       width: 40px;
       height: 40px;
       background-position: center;
       background-repeat: no-repeat;
-      margin: auto; }
+      margin: auto;
+      transition: 0.3s; }
     .navbar .navbar-nav .ico-loteria {
       background-image: url("/img/icons/toolbar_03.gif");
       width: 40px;
       height: 40px;
       background-position: center;
       background-repeat: no-repeat;
-      margin: auto; }
+      margin: auto;
+      transition: 0.3s; }
     .navbar .navbar-nav .ico-catalogo {
       background-image: url("/img/icons/toolbar_04.gif");
       width: 40px;
       height: 40px;
       background-position: center;
       background-repeat: no-repeat;
-      margin: auto; }
+      margin: auto;
+      transition: 0.3s; }
     .navbar .navbar-nav .ico-eventos {
       background-image: url("/img/icons/v20_b3.gif");
       width: 40px;
       height: 40px;
       background-position: center;
       background-repeat: no-repeat;
-      margin: auto; }
+      margin: auto;
+      transition: 0.3s; }
     .navbar .navbar-nav .ico-equipo {
       background-image: url("/img/icons/star_3.gif");
       width: 40px;
       height: 40px;
       background-position: center;
       background-repeat: no-repeat;
-      margin: auto; }
+      margin: auto;
+      transition: 0.3s; }
     .navbar .navbar-nav .ico-vacantes {
       background-image: url("/img/icons/v22_4(1).gif");
       width: 40px;
       height: 40px;
       background-position: center;
       background-repeat: no-repeat;
-      margin: auto; }
+      margin: auto;
+      transition: 0.3s; }
     .navbar .navbar-nav .ico-utilidades {
       background-image: url("/img/icons/pwrup_pins.gif");
       width: 40px;
       height: 40px;
       background-position: center;
       background-repeat: no-repeat;
-      margin: auto; }
+      margin: auto;
+      transition: 0.3s; }
     .navbar .navbar-nav .ico-iniciar {
       background-image: url("/img/icons/room_icon_password.gif");
       width: 40px;
@@ -96,7 +125,8 @@ body {
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
-      margin: auto; }
+      margin: auto;
+      transition: 0.3s; }
     .navbar .navbar-nav a {
       color: #616161;
       font-weight: bold;
@@ -492,7 +522,8 @@ body {
       background: white;
       padding: 10px;
       height: auto;
-      box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219); }
+      box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219);
+      margin-bottom: 20px; }
       .principal .contenido-inicio .contenedor-noticias .noticia {
         box-shadow: 0px 2px 5px rgba(54, 54, 54, 0.219);
         width: 100%;
@@ -509,7 +540,7 @@ body {
             padding-bottom: 15px;
             border-bottom: 1px solid #d1d1d1; }
           .principal .contenido-inicio .contenedor-noticias .noticia .noticia-texto .usuario-noticia {
-            background: #ff6e8d;
+            background: #1022ae;
             color: white;
             width: 170px;
             padding: 10px;
@@ -521,8 +552,8 @@ body {
               margin-left: 10px;
               margin-right: 5px; }
           .principal .contenido-inicio .contenedor-noticias .noticia .noticia-texto .tiempo-noticia {
-            background: #e2e2e2;
-            color: #2e2e2e;
+            background: #505050;
+            color: white;
             width: 130px;
             padding: 10px;
             font-size: 13px;
@@ -607,6 +638,11 @@ body {
         color: black; }
         .principal .contenido-inicio .contenedor-twitter .twitter-timeline:hover {
           color: black; }
+    .principal .contenido-inicio .contenedor-blogs {
+      background: white;
+      padding: 10px;
+      height: auto;
+      box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219); }
   @media (max-width: 991.98px) {
     .principal .fondo {
       height: auto; }

@@ -210,6 +210,14 @@
                                    <a class="twitter-timeline" data-height="530" href="https://twitter.com/HabboLiciousES?ref_src=twsrc%5Etfw">Twitter por Habbolicious</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                               </div>
                          </div>
+                         <div class="col-lg-8">
+                              <div class="contenedor-titulo" style="background-image: url(https://images.habbo.com/web_images/habbo-web-articles/lpromo_march18UA.png);">
+                                   <h4>Actividad reciente en blog</h4>
+                              </div>
+                              <div class="contenedor-blogs">
+                                   
+                              </div>
+                         </div>
                     </div>
                </div>
           </div>
