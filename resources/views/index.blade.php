@@ -215,7 +215,104 @@
                                    <h4>Actividad reciente en blog</h4>
                               </div>
                               <div class="contenedor-blogs">
-                                   
+                                   <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="blog">
+                                                  <div class="img-blog" style="background-image: url(http://habbofests.com/admin/assets/uploads/guide-60242d99fed0f66278f3f271bd8d2271.png);">
+                                                       <div class="capa1">
+                                                            <div class="datos">
+                                                                 <div class="datos-img" style="background-image:url(https://www.habbo.es/habbo-imaging/avatarimage?user=0acqua0&direction=2&head_direction=3&gesture=sml&action=none&size=b);"></div>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                                  <div class="cuadro-blog">
+                                                       <h4>Título</h4>
+                                                       <span><i class="fas fa-user"></i> <strong>0acqua0</strong></span>
+                                                       <span><i class="far fa-clock"></i> hace 1 día</span>
+                                                  </div>
+                                            </div>
+                                       </div>
+                                        <div class="col-lg-4">
+                                             <div class="blog">
+                                                  <div class="img-blog" style="background-image: url(http://habbofests.com/admin/assets/uploads/guide-60242d99fed0f66278f3f271bd8d2271.png);">
+                                                       <div class="capa1">
+                                                            <div class="datos">
+                                                                 <div class="datos-img" style="background-image:url(https://www.habbo.es/habbo-imaging/avatarimage?user=0acqua0&direction=2&head_direction=3&gesture=sml&action=none&size=b);"></div>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                                  <div class="cuadro-blog">
+                                                       <h4>Título</h4>
+                                                       <span><i class="fas fa-user"></i> <strong>0acqua0</strong></span>
+                                                       <span><i class="far fa-clock"></i> hace 1 día</span>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                             <div class="blog">
+                                                  <div class="img-blog" style="background-image: url(http://habbofests.com/admin/assets/uploads/guide-60242d99fed0f66278f3f271bd8d2271.png);">
+                                                       <div class="capa1">
+                                                            <div class="datos">
+                                                                 <div class="datos-img" style="background-image:url(https://www.habbo.es/habbo-imaging/avatarimage?user=0acqua0&direction=2&head_direction=3&gesture=sml&action=none&size=b);"></div>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                                  <div class="cuadro-blog">
+                                                       <h4>Título</h4>
+                                                       <span><i class="fas fa-user"></i> <strong>0acqua0</strong></span>
+                                                       <span><i class="far fa-clock"></i> hace 1 día</span>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                             <div class="blog">
+                                                  <div class="img-blog" style="background-image: url(http://habbofests.com/admin/assets/uploads/guide-60242d99fed0f66278f3f271bd8d2271.png);">
+                                                       <div class="capa1">
+                                                            <div class="datos">
+                                                                 <div class="datos-img" style="background-image:url(https://www.habbo.es/habbo-imaging/avatarimage?user=0acqua0&direction=2&head_direction=3&gesture=sml&action=none&size=b);"></div>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                                  <div class="cuadro-blog">
+                                                       <h4>Título</h4>
+                                                       <span><i class="fas fa-user"></i> <strong>0acqua0</strong></span>
+                                                       <span><i class="far fa-clock"></i> hace 1 día</span>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                             <div class="blog">
+                                                  <div class="img-blog" style="background-image: url(http://habbofests.com/admin/assets/uploads/guide-60242d99fed0f66278f3f271bd8d2271.png);">
+                                                       <div class="capa1">
+                                                            <div class="datos">
+                                                                 <div class="datos-img" style="background-image:url(https://www.habbo.es/habbo-imaging/avatarimage?user=0acqua0&direction=2&head_direction=3&gesture=sml&action=none&size=b);"></div>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                                  <div class="cuadro-blog">
+                                                       <h4>Título</h4>
+                                                       <span><i class="fas fa-user"></i> <strong>0acqua0</strong></span>
+                                                       <span><i class="far fa-clock"></i> hace 1 día</span>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                             <div class="blog">
+                                                  <div class="img-blog" style="background-image: url(http://habbofests.com/admin/assets/uploads/guide-60242d99fed0f66278f3f271bd8d2271.png);">
+                                                       <div class="capa1">
+                                                            <div class="datos">
+                                                                 <div class="datos-img" style="background-image:url(https://www.habbo.es/habbo-imaging/avatarimage?user=0acqua0&direction=2&head_direction=3&gesture=sml&action=none&size=b);"></div>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                                  <div class="cuadro-blog">
+                                                       <h4>Título</h4>
+                                                       <span><i class="fas fa-user"></i> <strong>0acqua0</strong></span>
+                                                       <span><i class="far fa-clock"></i> hace 1 día</span>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
                               </div>
                          </div>
                     </div>

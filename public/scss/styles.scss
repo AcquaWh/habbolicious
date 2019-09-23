@@ -290,6 +290,7 @@ body {
      margin-top: 60px;
      margin-bottom: 100px;
      .fondo {
+          margin-bottom: 160px;
           background-image: url(/img/extra/t39MERG.png);
           height: 380px;
           background-size: 700px;
@@ -367,7 +368,9 @@ body {
                     border-radius: 5px;
                     margin-bottom: 10px;
                     font-weight: bold;
+                    white-space: nowrap;
                     overflow: hidden;
+                    text-overflow: ellipsis;
                }
                .cancion-radio {
                     padding: 10px;
@@ -378,9 +381,12 @@ body {
                     font-size: 13px;
                     border-radius: 5px;
                     margin-bottom: 10px;
+                    white-space: nowrap;
                     overflow: hidden;
+                    text-overflow: ellipsis;
                }
                .menu-radio {
+                    margin-bottom: 14px;
                     .dj {
                          display: inline-block;
                          background: rgb(204, 204, 204);
@@ -462,15 +468,17 @@ body {
                .avatar-radio{
                     background: linear-gradient(180deg, #3586c1, #0c3a65);
                     color: white;
-                    height: 160px;
-                    padding: 10px;
+                    height: 100%;
+                    padding-top: 10px;
+                    padding-left: 10px;
+                    padding-right: 10px;
                     margin: auto;
                     .oyentes {
                          font-size: 13px;
                          position: absolute;
                     }
                     .avatar {
-                         height: 150px;
+                         height: 100%;
                          background-repeat: no-repeat;
                          background-position: center -9px;
                          transition: 0.6s;
@@ -492,9 +500,17 @@ body {
                          padding: 20px;
                          background: white;
                          padding-bottom: 33px;
+                         p {
+                              white-space: nowrap;
+                              overflow: hidden;
+                              text-overflow: ellipsis;
+                         }
                          .titulo-post{
                               font-weight: bold;
                               font-size: 18px;
+                              white-space: nowrap;
+                              overflow: hidden;
+                              text-overflow: ellipsis;
                          }
                          .tiempo-post{
                               float:right;
@@ -583,7 +599,6 @@ body {
      }
      /* Contenido */
      .contenido-inicio {
-          margin-top: 160px;
           .contenedor-titulo{
                background-position: center;
                padding-left: 15px;
@@ -635,9 +650,10 @@ body {
                          }
                          .usuario-noticia{
                               color: black;
-                              padding: 10px;
+                              padding: 5px;
                               font-size: 13px;
                               overflow: hidden;
+                              text-overflow: ellipsis;
                               display: inline-block;
                               border-radius: 5px;
                               i{
@@ -647,9 +663,10 @@ body {
                          }
                          .tiempo-noticia{
                               color: black;
-                              padding: 10px;
+                              padding: 5px;
                               font-size: 13px;
                               overflow: hidden;
+                              text-overflow: ellipsis;
                               border-radius: 5px;
                               display: inline-block;
                               i{
@@ -659,6 +676,7 @@ body {
                          }
                     }
                     .noticia-img{
+                         overflow: hidden;
                          background-size: cover;
                          background-position: center;
                          height: 157px;
@@ -698,6 +716,7 @@ body {
                               bottom: 0;
                          }
                          .capa1 {
+                              margin-top: 130px;
                               position:absolute;
                               top:0;
                               left:0;
@@ -731,6 +750,7 @@ body {
                               }
                               .capa1 {
                                    opacity: 1;
+                                   margin-top: 0px;
                               }
                          }
                     }
@@ -753,10 +773,73 @@ body {
                padding: 10px;
                height: auto;
                box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219);
+               transition: 0.3s;
+               .blog{
+                    margin-bottom: 10px;
+                    .cuadro-blog{
+                         background-color: white;
+                         box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219);
+                         padding: 10px;
+                         z-index: 1;
+                         position: relative;
+                         h4 {
+                              font-weight: bold;
+                              font-size: 17px;
+                              margin-bottom: 0px;
+                              white-space: nowrap;
+                              overflow: hidden;
+                              text-overflow: ellipsis;
+                         }
+                         span {
+                              font-size: 12px;
+                              text-overflow: ellipsis;
+                              color: gray;
+                         }
+                    }
+                    .img-blog{
+                         background-size: cover;
+                         background-position: center;
+                         height: 100px;
+                         transition: 0.3s;
+                         z-index: 1;
+                         position: relative;
+                         .capa1 {
+                              position:absolute;
+                              top:0;
+                              left:0;
+                              width:100%;
+                              height:100%;
+                              background: linear-gradient(to bottom, rgba(231,56,39,0) 0%, rgba(255, 68, 224, 0.753) 100%);
+                              z-index:-1;
+                              opacity: 0;
+                              transition: 0.3s;
+                              margin-top:60px;
+                              .datos {
+                                   height: 130px;
+                                   position: relative;
+                                   .datos-img {
+                                        width: 121px;
+                                        height: 100px;
+                                        position: absolute;
+                                        z-index: 1;
+                                        background-repeat: no-repeat;
+                                        background-position: 0px 20px;
+                                   }
+                              }
+                         }
+                    }
+                    &:hover {
+                         .capa1 {
+                              opacity: 1;
+                              margin-top: 0px;
+                         }
+                    }
+               }
           }
      }
      @media (max-width: 991.98px) {
           .fondo {
+               margin-bottom: 20px;
                height: auto;
                .radio {
                     .titulo-radio{
@@ -770,7 +853,9 @@ body {
                          border-radius: 5px;
                          margin-bottom: 10px;
                          font-weight: bold;
+                         white-space: nowrap;
                          overflow: hidden;
+                         text-overflow: ellipsis;
                     }
                     .cancion-radio {
                          padding: 10px;
@@ -782,9 +867,12 @@ body {
                          font-size: 13px;
                          border-radius: 5px;
                          margin-bottom: 10px;
+                         white-space: nowrap;
                          overflow: hidden;
+                         text-overflow: ellipsis;
                     }
                     .avatar-radio{
+                         
                          .avatar {
                               height: 150px;
                               background-repeat: no-repeat;
@@ -805,64 +893,70 @@ body {
                } 
           } 
           .contenido-inicio {
-               margin-top: 20px;
+               margin-top: 0px;
           }
      }
      /* Moviles mega-pequeños */
      @media (max-width: 356px) {
-          .fondo {
-               height: auto;
-               .radio {
-                    .menu-ra{
-                         padding-left: 10px;
-                         padding-right: 10px;
-                         .titulo-radio{
-                              width: 100%;
-                              margin-bottom: 10px;
-                              margin-left: 0px !important;
-                              text-align: center;
-                         }
-                         .cancion-radio{
-                              width: 100%;
-                              margin-bottom: 10px;
-                              margin-left: 0px !important;
-                              text-align: center;
-                         }
-                         .dj {
-                              width: 100%;
-                              margin-bottom: 10px;
-                              margin-left: 0px !important;
-                              text-align: center;
-                         }
-                         .play {
-                              width: 100%;
-                              margin-bottom: 10px;
-                              margin-left: 0px !important;
-                              text-align: center;
-                         }
-                         .stop {
-                              width: 100%;
-                              margin-bottom: 10px;
-                              margin-left: 0px !important;
-                              text-align: center;
-                         }
-                         .enviar-peticion {
-                              width: 100%;
-                              margin-left: 0px !important;
-                              margin-bottom: 10px;
-                              text-align: center;
-                         }
-                         .menu-radio {
-                              margin-bottom: 13px;
-                              margin-left: 0px !important;
-                              .volumen{
+          .principal {
+               .fondo {
+                    margin-bottom: 20px;
+                    height: auto;
+                    .radio {
+                         .menu-ra{
+                              padding-left: 10px;
+                              padding-right: 10px;
+                              .titulo-radio{
+                                   width: 100%;
+                                   margin-bottom: 10px;
+                                   margin-left: 0px !important;
+                                   text-align: center;
+                              }
+                              .cancion-radio{
+                                   width: 100%;
+                                   margin-bottom: 10px;
+                                   margin-left: 0px !important;
+                                   text-align: center;
+                              }
+                              .dj {
+                                   width: 100%;
+                                   margin-bottom: 10px;
+                                   margin-left: 0px !important;
+                                   text-align: center;
+                              }
+                              .play {
+                                   width: 100%;
+                                   margin-bottom: 10px;
+                                   margin-left: 0px !important;
+                                   text-align: center;
+                              }
+                              .stop {
+                                   width: 100%;
+                                   margin-bottom: 10px;
+                                   margin-left: 0px !important;
+                                   text-align: center;
+                              }
+                              .enviar-peticion {
                                    width: 100%;
                                    margin-left: 0px !important;
+                                   margin-bottom: 10px;
+                                   text-align: center;
+                              }
+                              .menu-radio {
+                                   margin-bottom: 13px;
+                                   margin-left: 0px !important;
+                                   .volumen{
+                                        width: 100%;
+                                        margin-left: 0px !important;
+                                   }
                               }
                          }
-                    }
+                    } 
+               }
+               .contenido-inicio {
+                    margin-top: 0px;
                } 
-          } 
+          }
      }
 }
 footer {
