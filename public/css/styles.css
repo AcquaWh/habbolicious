@@ -540,9 +540,7 @@ body {
             padding-bottom: 15px;
             border-bottom: 1px solid #d1d1d1; }
           .principal .contenido-inicio .contenedor-noticias .noticia .noticia-texto .usuario-noticia {
-            background: #1022ae;
-            color: white;
-            width: 170px;
+            color: black;
             padding: 10px;
             font-size: 13px;
             overflow: hidden;
@@ -552,9 +550,7 @@ body {
               margin-left: 10px;
               margin-right: 5px; }
           .principal .contenido-inicio .contenedor-noticias .noticia .noticia-texto .tiempo-noticia {
-            background: #505050;
-            color: white;
-            width: 130px;
+            color: black;
             padding: 10px;
             font-size: 13px;
             overflow: hidden;
