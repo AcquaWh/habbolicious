@@ -648,7 +648,8 @@ body {
     background: white;
     padding: 10px;
     height: auto;
-    box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219); }
+    box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219);
+    margin-bottom: 20px; }
     .principal .contenido-inicio .contenedor-twitter .twitter-timeline {
       color: black; }
       .principal .contenido-inicio .contenedor-twitter .twitter-timeline:hover {
@@ -714,11 +715,14 @@ body {
     padding: 10px;
     height: auto;
     box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219);
-    transition: 0.3s; }
+    transition: 0.3s;
+    text-align: center;
+    margin-bottom: 20px; }
     .principal .contenido-inicio .contenedor-placas .placas {
       width: 50px;
       height: 50px;
-      background-color: #ff00dd5e;
+      background-color: #e6e6e6;
+      box-shadow: 0 2px rgba(0, 0, 0, 0.18);
       background-repeat: no-repeat;
       background-position: 50%;
       border-radius: 5px;
@@ -726,6 +730,81 @@ body {
       transition: 0.3s; }
       .principal .contenido-inicio .contenedor-placas .placas:hover {
         background-color: #850073c4; }
+  .principal .contenido-inicio .contenedor-eventos {
+    background: white;
+    padding: 10px;
+    height: auto;
+    box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219);
+    transition: 0.3s;
+    text-align: center;
+    margin-bottom: 20px; }
+    .principal .contenido-inicio .contenedor-eventos .evento {
+      background-color: white;
+      box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219); }
+      .principal .contenido-inicio .contenedor-eventos .evento .evento-cont {
+        text-align: left;
+        padding-top: 10px;
+        padding-bottom: 10px; }
+        .principal .contenido-inicio .contenedor-eventos .evento .evento-cont h4 {
+          font-size: 17px;
+          font-weight: bold;
+          margin-bottom: 20px; }
+        .principal .contenido-inicio .contenedor-eventos .evento .evento-cont span {
+          font-size: 13px;
+          bottom: 0px;
+          position: absolute;
+          color: #4e4e4e;
+          margin-bottom: 10px;
+          margin-top: 10px; }
+      .principal .contenido-inicio .contenedor-eventos .evento .evento-img {
+        background-color: #ff80c6;
+        height: 90px;
+        background-position: center;
+        z-index: 1;
+        position: relative; }
+        .principal .contenido-inicio .contenedor-eventos .evento .evento-img .capa1 {
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(to bottom, rgba(231, 56, 39, 0) 0%, rgba(255, 68, 224, 0.753) 100%);
+          z-index: -1;
+          opacity: 0;
+          transition: 0.3s; }
+      .principal .contenido-inicio .contenedor-eventos .evento:hover .evento-img .capa1 {
+        opacity: 1; }
+  .principal .contenido-inicio .contenedor-djs {
+    background: white;
+    padding: 10px;
+    height: auto;
+    box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219);
+    transition: 0.3s;
+    text-align: center;
+    margin-bottom: 20px; }
+    .principal .contenido-inicio .contenedor-djs .djtacado {
+      background-color: white;
+      box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219); }
+      .principal .contenido-inicio .contenedor-djs .djtacado .dj-img {
+        background-color: #ffd100;
+        height: 120px;
+        background-position: center;
+        z-index: 1;
+        position: relative;
+        background-position-y: -25px;
+        transition: 0.3s; }
+      .principal .contenido-inicio .contenedor-djs .djtacado .dj-contenido {
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        align-items: center;
+        display: inline-grid; }
+        .principal .contenido-inicio .contenedor-djs .djtacado .dj-contenido h4 {
+          font-size: 17px;
+          font-weight: bold; }
+        .principal .contenido-inicio .contenedor-djs .djtacado .dj-contenido span {
+          font-size: 13px; }
+    .principal .contenido-inicio .contenedor-djs:hover .djtacado .dj-img {
+      background-position-y: -40px; }
   @media (max-width: 991.98px) {
     .principal .fondo {
       margin-bottom: 20px;
@@ -770,7 +849,21 @@ body {
         .principal .fondo .radio .menu-radio .volumen {
           width: 100px; }
     .principal .contenido-inicio {
-      margin-top: 0px; } }
+      margin-top: 0px; }
+    .principal .contenedor-eventos {
+      background: white;
+      padding: 10px;
+      height: auto;
+      box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219);
+      transition: 0.3s;
+      text-align: center;
+      margin-bottom: 20px; }
+      .principal .contenedor-eventos .evento .evento-cont {
+        text-align: left;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px; } }
   @media (max-width: 356px) {
     .principal .principal .fondo {
       margin-bottom: 20px;
