@@ -1,5 +1,6 @@
 $( function() {
     $( "#slider" ).slider();
+    $('[data-toggle="tooltip"]').tooltip();
 } );
 $('.owl-carousel').owlCarousel({
      autoplay:true,

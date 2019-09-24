@@ -315,6 +315,16 @@
                                    </div>
                               </div>
                          </div>
+                         <div class="col-lg-4">
+                              <div class="contenedor-titulo" style="background-image: url(https://habbohelpersdotcom.files.wordpress.com/2018/08/lpromo_inventory_badges.png?w=760);">
+                                   <h4>Últimas placas</h4>
+                              </div>
+                              <div class="contenedor-placas">
+                                   @foreach($habbo['data'] as $placa)
+                                   <div class="placas" style="background-image: url({{ $placa['image'] }});" data-toggle="tooltip" data-placement="top" title="{{ $placa['name'] }}"></div>
+                               @endforeach
+                              </div>
+                         </div>
                     </div>
                </div>
           </div>

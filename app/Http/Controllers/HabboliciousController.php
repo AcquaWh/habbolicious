@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 class HabboliciousController extends Controller
 {
     public function index(){
-        return view('index');
+        $placas = file_get_contents("https://api.socialhabbo.com/badges?per_page=24&hotel=es");
+        return view('index')->with('habbo',json_decode($placas,true));
     }
     public function noticias(){
         return view('noticias');
