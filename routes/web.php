@@ -23,4 +23,5 @@ Route::get('/eventos','HabboliciousController@eventos')->name('eventos');
 Route::get('/equipo','HabboliciousController@equipo')->name('equipo');
 Route::get('/vacantes','HabboliciousController@vacantes')->name('vacantes');
 Route::get('/utilidades','HabboliciousController@utilidades')->name('utilidades');
+/* Route::auth(); */
 Auth::routes(['register' => false]);
