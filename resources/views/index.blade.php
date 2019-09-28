@@ -16,7 +16,7 @@
                               <div class="owl-carousel owl-theme">
                                    <div class="item" style="background-image:url(https://images.habbo.com/web_images/habbo-web-articles/ny_large_promo.png);"><h4>Estamos en construcción</h4><p>Arreglando problemas técnicos, pronto volveremos.</p></div>
                                    <div class="item" style="background-image:url(https://images.habbo.com/web_images/habbo-web-articles/lpromo_house18_gen.png);"><h4>Estamos enfriando tu postre</h4><p>Arreglando problemas técnicos, pronto volveremos.</p></div>
-                                   <div class="item" style="background-image:url(http://images.habbo.com/c_images/web_promo/lpromo_Star_Lounge.png);"><h4>Estamos creando dulces</h4><p>Arreglando problemas técnicos, pronto volveremos.</p></div>
+                                   <div class="item" style="background-image:url(https://images.habbo.com/c_images/web_promo/lpromo_Star_Lounge.png);"><h4>Estamos creando dulces</h4><p>Arreglando problemas técnicos, pronto volveremos.</p></div>
                                    <div class="item" style="background-image:url(https://images.habbo.com/web_images/habbo-web-articles/lpromo_UAloyaltycrowns.png);"><h4>Crea un nuevo mundo</h4><p>Arreglando problemas técnicos, pronto volveremos.</p></div>
                               </div>
                          </div>
@@ -250,7 +250,7 @@
                                    <div class="row">
                                         <div class="col-lg-4">
                                             <div class="blog">
-                                                  <div class="img-blog" style="background-image: url(http://habbofests.com/admin/assets/uploads/guide-60242d99fed0f66278f3f271bd8d2271.png);">
+                                                  <div class="img-blog" style="background-image: url(https://habbofests.com/admin/assets/uploads/guide-60242d99fed0f66278f3f271bd8d2271.png);">
                                                        <div class="capa1">
                                                             <div class="datos">
                                                                  <div class="datos-img" style="background-image:url(https://www.habbo.es/habbo-imaging/avatarimage?user=0acqua0&direction=2&head_direction=3&gesture=sml&action=none&size=b);"></div>
