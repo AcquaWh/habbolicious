@@ -131,7 +131,7 @@
                <div class="container">
                     <div class="row">
                          <div class="col-lg-8">
-                              <div class="contenedor-titulo" style="background-image: url(https://static.habbo-happy.net/img/articles/9f76a6_nuevacampa%C3%B1a2.png);">
+                              <div class="contenedor-titulo" style="background-image: url(/img/extra/9f76a6_nuevacampa%C3%B1a2.png);">
                                    <div class="ico-seccion-noticias"></div>
                                    <h4>Últimas noticias</h4>
                                    <p>Noticias y actualizaciones en Habbo y en todo el mundo.</p>
@@ -243,7 +243,7 @@
                                         </div>
                                    </div>
                               </div>
-                              <div class="contenedor-titulo" style="background-image: url(https://images.habbo.com/web_images/habbo-web-articles/lpromo_march18UA.png);">
+                              <div class="contenedor-titulo" style="background-image: url(/img/extra/lpromo_march18UA.png);">
                                    <h4>Actividad reciente en blog</h4>
                               </div>
                               <div class="contenedor-blogs">
@@ -348,13 +348,13 @@
                               </div>
                          </div>
                          <div class="col-lg-4">
-                              <div class="contenedor-titulo" style="background-image: url(https://habbotemplarios.com/wp-content/uploads/2015/03/lpromo_cland_bundle.png);">
+                              <div class="contenedor-titulo" style="background-image: url(/img/extra/lpromo_cland_bundle.png);">
                                    <h4>Twitter</h4>
                               </div>
                               <div class="contenedor-twitter">
                                    <a class="twitter-timeline" data-height="530" href="https://twitter.com/HabboLiciousES?ref_src=twsrc%5Etfw">Twitter por Habbolicious</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                               </div>
-                              <div class="contenedor-titulo" style="background-image: url(https://habbohelpersdotcom.files.wordpress.com/2018/08/lpromo_inventory_badges.png?w=760);">
+                              <div class="contenedor-titulo" style="background-image: url(/img/extra/lpromo_inventory_badges.png?w=760);">
                                    <h4>Últimas placas</h4>
                               </div>
                               <div class="contenedor-placas">
@@ -362,7 +362,7 @@
                                    <div class="placas" style="background-image: url({{ $placa['image'] }});" data-toggle="tooltip" data-placement="top" title="{{ $placa['name'] }}"></div>
                                    @endforeach
                               </div>
-                              <div class="contenedor-titulo" style="background-image: url(https://static.habbo-happy.net/img/articles/ff271d_lpromo_HCClub_Bundle.png);">
+                              <div class="contenedor-titulo" style="background-image: url(/img/extra/ff271d_lpromo_HCClub_Bundle.png);">
                                    <h4>Eventos</h4>
                               </div>
                               <div class="contenedor-eventos">
@@ -382,7 +382,7 @@
                                         </div>
                                    </div>
                               </div>
-                              <div class="contenedor-titulo" style="background-image: url(https://imgur.com/cUUy4k3.png);">
+                              <div class="contenedor-titulo" style="background-image: url(/img/extra/cUUy4k3.png);">
                                    <h4>DJ Destacado</h4>
                               </div>
                               <div class="contenedor-djs">

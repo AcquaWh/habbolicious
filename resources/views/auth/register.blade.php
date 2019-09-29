@@ -137,6 +137,7 @@
                                    <div class="col-lg-12">
                                         <form method="POST" action="{{ route('register') }}">
                                              @csrf
+                                             <div class="col-lg-12"><h1>Regístrate a Habbolicious</h1></div>
                                              <div class="form-group">
                                                   <label for="name" class="col-md-12 col-form-label">{{ __('Usuario') }}</label>
                                                   <div class="col-md-12">
@@ -209,12 +210,19 @@
                          </div>
                     </div>
                     <div class="col-lg-4 mt-3">
-                         <div class="card">
-                              <div class="card-body row">
-                                   <div class="col-lg-12">
-                                       ada
-                                   </div>
-                              </div>
+                         <div class="contenedor-titulo" style="background-image: url(/img/extra/lpromo_band19_gen.png);">
+                              <h4>Contraseña segura</h4>
+                         </div>
+                         <div class="contenedor-contra">
+                              En Habbolicious cuidamos la seguridad de los usuarios cifrando sus contraseñas y asegurando su enlace a la base de datos.
+                              <br><br>
+                              <strong>A pesar de que ciframos las contraseñas, recomendamos no utilizar la misma contraseña que utilizes en Habbo, entre otras redes.</strong>
+                         </div>
+                         <div class="contenedor-titulo" style="background-image: url(/img/extra/lpromo_cland_bundle.png);">
+                              <h4>Twitter</h4>
+                         </div>
+                         <div class="contenedor-twitter">
+                              <a class="twitter-timeline" data-height="330" href="https://twitter.com/HabboLiciousES?ref_src=twsrc%5Etfw">Twitter por Habbolicious</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                          </div>
                     </div>
                 </div>
