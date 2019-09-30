@@ -25,7 +25,7 @@
      <header>
           <nav class="navbar navbar-expand-md fixed-top">
                <div class="container">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="{{route('index')}}">
                          <img class="habbolicious" src="/img/logo.png" alt=""/>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,7 +61,7 @@
                                    <a class="nav-link" href="{{route('utilidades')}}"><div class="ico-utilidades"></div>Utilidades</a>
                               </li>
                               <li class="nav-item">
-                                   <button id="iniciarhabbo" class="nav-link ini-habbo"><div class="ico-iniciar"></div>Iniciar</button>
+                                   <button id="iniciarhabbo" class="nav-link ini-habbo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div class="ico-iniciar"></div>Iniciar</button>
                               </li>
                          </ul>
                     </div>

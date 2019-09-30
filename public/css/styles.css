@@ -26,7 +26,11 @@ body {
     .navbar .navbar-nav .ini-habbo {
       box-shadow: none !important;
       background: none;
-      border: none; }
+      border: none;
+      color: #616161;
+      font-weight: bold !important; }
+    .navbar .navbar-nav button {
+      margin: auto; }
     .navbar .navbar-nav .nav-link {
       transition: 0.3s; }
       .navbar .navbar-nav .nav-link:hover {
@@ -271,7 +275,7 @@ body {
     padding-left: 0px;
     padding-right: 0px; }
   #iniciar-sesion .bg-iniciar-sesion {
-    background: url(https://images.habbo.com/habbo-web/america/es/assets/images/app_summary_image-1200x628.85a9f5dc.png);
+    background: url(/img/extra/app_summary_image-1200x628.85a9f5dc.png);
     height: 100%;
     background-size: cover;
     background-position: center; }
