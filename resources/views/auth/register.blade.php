@@ -149,9 +149,19 @@
                                                   @enderror
                                                   </div>
                                              </div>
-                    
                                              <div class="form-group">
-                                                  <label for="email" class="col-md-12 col-form-label">{{ __('Correo') }}</label>
+                                                  <label for="habbo" class="col-md-12 col-form-label">{{ __('Habbo') }}</label>
+                                                  <div class="col-md-12">
+                                                       <input id="habbo" type="text" class="form-control @error('habbo') is-invalid @enderror" name="habbo" value="{{ old('habbo') }}" required autocomplete="habbo" autofocus>
+                                                       @error('habbo')
+                                                            <span class="invalid-feedback" role="alert">
+                                                                 <strong>Ingresa tu usuario de Habbo</strong>
+                                                            </span>
+                                                       @enderror
+                                                  </div>
+                                             </div>
+                                             <div class="form-group">
+                                                  <label for="email" class="col-md-12 col-form-label">{{ __('Correo (Será verificado)') }}</label>
                     
                                                   <div class="col-md-12">
                                                   <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
