@@ -292,7 +292,6 @@ body {
      }
 }
 .habbomodal{
-     box-shadow: none !important;
      background: none;
      border: none;
      color: black;
@@ -307,7 +306,6 @@ body {
      background-color: #fff;
      overflow-x: hidden;
      transition: 0.5s;
-     padding-top: 60px;
      span {
           text-decoration: none;
           font-size: 25px;
@@ -320,13 +318,46 @@ body {
           right: 25px;
           font-size: 36px;
           margin-left: 50px;
+          z-index:1;
+     }
+     .pad-iniciar {
+          padding-left: 0px;
+          padding-right: 0px;
+     }
+     .bg-iniciar-sesion {
+          background: url(https://images.habbo.com/habbo-web/america/es/assets/images/app_summary_image-1200x628.85a9f5dc.png);
+          height: 100%;
+          background-size: cover;
+          background-position: center;
+     }
+     .formulario-habbo {
+          box-shadow: 0px 0px 10px #0000006b;
+          background: #ffffff;
+          height: 100% !important;
+          padding: 30px;
+          align-items: center;
+          justify-items: center;
+          display: flex;
+          padding-left: 150px;
      }
 }
-@media screen and (max-height: 450px) {
+@media (max-width: 991.98px) {
+     .habbomodal {
+          color: white;
+          text-shadow: 0px 0px 10px black;
+     }
+}
+@media (max-width: 767.98px) {
      #iniciar-sesion {
-          padding-top: 15px;
-          span {
-               font-size: 18px;
+          .formulario-habbo {
+               box-shadow: 0px 0px 10px #0000006b;
+               background: #ffffff;
+               height: 100% !important;
+               padding: 30px;
+               align-items: center;
+               justify-items: center;
+               display: flex;
+               padding-left: 50px;
           }
      }
 }

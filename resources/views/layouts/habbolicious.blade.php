@@ -70,55 +70,60 @@
      </header>
      <div id="iniciar-sesion">
           <button id="cerrarhabbo" class="closebtn habbomodal"><i class="fas fa-times"></i></button>
-          <div class="container">
-               <div class="row">
-                    <div class="col-lg-6">
+          <div class="h-100">
+               <div class="row justify-content-center h-100">
+                    <div class="col-lg-6 pad-iniciar">
+                         <div class="bg-iniciar-sesion"></div>
                     </div>
-                    <div class="col-lg-6">
-                         <span>Iniciar sesión</span>
-                         <form method="POST" action="{{ route('login') }}">
-                              @csrf
-                              <div class="form-group">
-                                   <label for="email" class="col-form-label">{{ __('Correo') }}</label>
-                                   <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-     
-                                   @error('email')
-                                        <span class="invalid-feedback" role="alert">
-                                             <strong>Comprueba sí el correo es correcto.</strong>
-                                        </span>
-                                   @enderror
-                              </div>
-                              <div class="form-group">
-                                   <label for="password" class="col-md-4 col-form-label">{{ __('Contraseña') }}</label>
-                                   <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-     
-                                   @error('password')
-                                        <span class="invalid-feedback" role="alert">
-                                             <strong>Comprueba sí la contraseña es correcta.</strong>
-                                        </span>
-                                   @enderror
-                              </div>
-                              <div class="form-group">
-                                   <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-     
-                                        <label class="form-check-label" for="remember">
-                                             {{ __('Recuérdame') }}
-                                        </label>
+                    <div class="col-lg-6 pad-iniciar">
+                         <div class="formulario-habbo">
+                              <form method="POST" action="{{ route('login') }}">
+                                   @csrf
+                                   <div class="form-group">
+                                        <span>Iniciar sesión</span>
                                    </div>
-                              </div>
-                              <div class="form-group mb-0">
-                                   <button type="submit" class="btn btn-primary">
-                                        {{ __('Iniciar sesión') }}
-                                   </button>
-     
-                                   @if (Route::has('password.request'))
-                                        <a class="btn btn-link" href="{{ route('password.request') }}">
-                                             {{ __('Olvidaste tu contraseña?') }}
-                                        </a>
-                                   @endif
-                              </div>
-                         </form>
+                                   <div class="form-group">
+                                        <label for="email" class="col-form-label">{{ __('Correo') }}</label>
+                                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+          
+                                        @error('email')
+                                             <span class="invalid-feedback" role="alert">
+                                                  <strong>Comprueba sí el correo es correcto.</strong>
+                                             </span>
+                                        @enderror
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="password" class="col-form-label">{{ __('Contraseña') }}</label>
+                                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+          
+                                        @error('password')
+                                             <span class="invalid-feedback" role="alert">
+                                                  <strong>Comprueba sí la contraseña es correcta.</strong>
+                                             </span>
+                                        @enderror
+                                   </div>
+                                   <div class="form-group">
+                                        <div class="form-check">
+                                             <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+          
+                                             <label class="form-check-label" for="remember">
+                                                  {{ __('Recuérdame') }}
+                                             </label>
+                                        </div>
+                                   </div>
+                                   <div class="form-group mb-0">
+                                        <button type="submit" class="btn btn-primary">
+                                             {{ __('Iniciar sesión') }}
+                                        </button>
+          
+                                        @if (Route::has('password.request'))
+                                             <a class="btn btn-link" href="{{ route('password.request') }}">
+                                                  {{ __('Olvidaste tu contraseña?') }}
+                                             </a>
+                                        @endif
+                                   </div>
+                              </form>
+                         </div>
                     </div>
                </div>
           </div>
