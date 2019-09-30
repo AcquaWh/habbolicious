@@ -131,7 +131,7 @@
                <div class="container">
                     <div class="row">
                          <div class="col-lg-8">
-                              <div class="contenedor-titulo" style="background-image: url(/img/extra/9f76a6_nuevacampa%C3%B1a2.png);">
+                              <div class="contenedor-titulo" style="background-image: url(/img/extra/noticias_habbo.png);">
                                    <div class="ico-seccion-noticias"></div>
                                    <h4>Últimas noticias</h4>
                                    <p>Noticias y actualizaciones en Habbo y en todo el mundo.</p>
