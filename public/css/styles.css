@@ -7,7 +7,8 @@ body {
 .navbar {
   background: #fff;
   box-shadow: 0px 3px 12px rgba(107, 107, 107, 0.39);
-  padding: 0px; }
+  padding: 0px;
+  z-index: 3; }
   .navbar .habbolicious {
     height: 70px;
     transition: 0.3s; }
@@ -22,6 +23,10 @@ body {
       color: #b1b1b1; }
   .navbar .navbar-nav {
     text-align: center; }
+    .navbar .navbar-nav .ini-habbo {
+      box-shadow: none !important;
+      background: none;
+      border: none; }
     .navbar .navbar-nav .nav-link {
       transition: 0.3s; }
       .navbar .navbar-nav .nav-link:hover {
@@ -235,6 +240,40 @@ body {
   .navbar .navbar-collapse {
     overflow-y: auto;
     max-height: 260px; } }
+.habbomodal {
+  box-shadow: none !important;
+  background: none;
+  border: none;
+  color: black; }
+
+#iniciar-sesion {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px; }
+  #iniciar-sesion span {
+    text-decoration: none;
+    font-size: 25px;
+    color: #000;
+    transition: 0.3s; }
+  #iniciar-sesion .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px; }
+
+@media screen and (max-height: 450px) {
+  #iniciar-sesion {
+    padding-top: 15px; }
+    #iniciar-sesion span {
+      font-size: 18px; } }
 /* P├ígina principal */
 .principal {
   margin-top: 60px;
