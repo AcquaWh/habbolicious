@@ -270,7 +270,7 @@ body {
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-    z-index: 1; }
+    z-index: 2; }
   #iniciar-sesion .pad-iniciar {
     padding-left: 0px;
     padding-right: 0px; }
@@ -278,7 +278,42 @@ body {
     background: url(/img/extra/app_summary_image-1200x628.85a9f5dc.png);
     height: 100%;
     background-size: cover;
-    background-position: center; }
+    background-position: center;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 0px 0px 10px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    transition: 0.3s; }
+    #iniciar-sesion .bg-iniciar-sesion img {
+      transition: 0.3s;
+      padding-left: 20px; }
+      #iniciar-sesion .bg-iniciar-sesion img:hover {
+        -moz-transform: translate(0px, -12px);
+        -webkit-transform: translate(0px, -12px);
+        -o-transform: translate(0px, -12px);
+        -ms-transform: translate(0px, -12px);
+        transform: translate(0px, -12px); }
+    #iniciar-sesion .bg-iniciar-sesion a {
+      color: white;
+      transition: 0.3s; }
+      #iniciar-sesion .bg-iniciar-sesion a:hover {
+        text-decoration: none;
+        color: white;
+        font-size: 50px; }
+    #iniciar-sesion .bg-iniciar-sesion:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, #8500ff 0%, #00adff99 100%);
+      z-index: -5; }
   #iniciar-sesion .formulario-habbo {
     box-shadow: 0px 0px 10px #0000006b;
     background: #ffffff;
@@ -292,8 +327,13 @@ body {
 @media (max-width: 991.98px) {
   .habbomodal {
     color: white;
-    text-shadow: 0px 0px 10px black; } }
+    text-shadow: 0px 0px 10px black; }
+
+  #iniciar-sesion .bg-iniciar-sesion img {
+    height: 100px; } }
 @media (max-width: 767.98px) {
+  #iniciar-sesion .bg-iniciar-sesion img {
+    height: 100px; }
   #iniciar-sesion .formulario-habbo {
     box-shadow: 0px 0px 10px #0000006b;
     background: #ffffff;

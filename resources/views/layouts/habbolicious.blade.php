@@ -73,7 +73,16 @@
           <div class="h-100">
                <div class="row justify-content-center h-100">
                     <div class="col-lg-6 pad-iniciar">
-                         <div class="bg-iniciar-sesion"></div>
+                         <div class="bg-iniciar-sesion">
+                              <div class="row">
+                                   <div class="col-lg-12">
+                                        <img class="img-fluid" src="/img/extra/frank.png">
+                                   </div>
+                                   <div class="col-lg-12">
+                                        <a href="{{ route('register') }}">Registrate aquí</a>
+                                   </div>
+                              </div>
+                         </div>
                     </div>
                     <div class="col-lg-6 pad-iniciar">
                          <div class="formulario-habbo">
