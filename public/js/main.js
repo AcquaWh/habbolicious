@@ -37,7 +37,7 @@ $( function() {
     var radiohabbo = document.createElement('audio');
     $('#slider').append(radiohabbo);
     radiohabbo.id = "radiohabbo";
-    iniciaraudio('//radio.hostedred.com:8077/stream', 0);
+    iniciaraudio('https://habbolicious.radioca.st/stream', 0);
     function iniciaraudio(archivo, volumen) {
         radiohabbo.src = archivo;
         radiohabbo.setAttribute('loop', 'loop');
@@ -56,14 +56,14 @@ $( function() {
     /* Api */
     function api(){
         $.ajax({
-            url: "https://nap.casthost.net:2199/rpc/habbolicious/streaminfo.get",
+            url: "https://nebula.shoutca.st/rpc/habbolicious/streaminfo.get",
             type: 'GET',
             success: function(json){
                 json.data.forEach(function (item) {
                     if(item.track.title == ""){
 						$(".cancion-radio").html("");
 						$(".titulo-radio").html("");
-						$(".avatar").css( "background-image","url(https://www.habbo.es/habbo-imaging/avatarimage?user=0acqua0&direction=3&head_direction=3&gesture=sml&action=none&size=l);");
+						$(".avatar").css( "background-image","url(https://www.habbo.es/habbo-imaging/avatarimage?user=xCoositta&direction=3&head_direction=3&gesture=sml&action=none&size=l)");
 						$(".cancion-radio").html("<span><i class='fas fa-music' aria-hidden='true'></i></span> No disponible");
 						$(".titulo-radio").html("<span><i class='fas fa-user' aria-hidden='true'></i></span> No hay DJ");
 					} else {
@@ -73,8 +73,12 @@ $( function() {
 						var artista = item.track.artist;
 						$(".oyentes").html("");
 						$(".cancion-radio").html("");
-						$(".titulo-radio").html("");
-						$(".avatar").css( "background-image","url(https://www.habbo.es/habbo-imaging/avatarimage?user="+titulo+"&direction=3&head_direction=3&gesture=sml&action=none&size=l);");
+                        $(".titulo-radio").html("");
+                        if(dj == "Habbolicious"){
+                            $(".avatar").css("background-image","url('https://www.habbo.es/habbo-imaging/avatarimage?user=xCoositta&direction=3&head_direction=3&gesture=sml&action=none&size=l')");
+                        } else {
+                            $(".avatar").css("background-image","url('https://www.habbo.es/habbo-imaging/avatarimage?user="+dj+"&direction=3&head_direction=3&gesture=sml&action=none&size=l')");
+                        }
 						$(".oyentes").html("Oyentes: "+oyente+" habbos");
 						$(".cancion-radio").html("<span><i class='fas fa-music' aria-hidden='true'></i></span>"+artista+" - "+titulo);
 						$(".titulo-radio").html("<span><i class='fas fa-user' aria-hidden='true'></i></span>"+dj);

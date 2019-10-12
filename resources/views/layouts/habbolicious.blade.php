@@ -150,8 +150,111 @@
                </div>
           </div>
      </div>
-             
+     <main role="main" class="flex-shrink-0">
+          <div class="principal">
+               <!-- Contenido principal -->
+               <div class="fondo">
+               <div class="globos"></div>
+               <div class="container">
+               <div class="row">
+                    <div class="col-lg-6">
+                         <div class="owl-carousel owl-theme">
+                              <div class="item" style="background-image:url(//images.habbo.com/web_images/habbo-web-articles/ny_large_promo.png);"><h4>Estamos en construcción</h4><p>Arreglando problemas técnicos, pronto volveremos.</p></div>
+                              <div class="item" style="background-image:url(//images.habbo.com/web_images/habbo-web-articles/lpromo_house18_gen.png);"><h4>Estamos enfriando tu postre</h4><p>Arreglando problemas técnicos, pronto volveremos.</p></div>
+                              <div class="item" style="background-image:url(//images.habbo.com/c_images/web_promo/lpromo_Star_Lounge.png);"><h4>Estamos creando dulces</h4><p>Arreglando problemas técnicos, pronto volveremos.</p></div>
+                              <div class="item" style="background-image:url(//images.habbo.com/web_images/habbo-web-articles/lpromo_UAloyaltycrowns.png);"><h4>Crea un nuevo mundo</h4><p>Arreglando problemas técnicos, pronto volveremos.</p></div>
+                         </div>
+                    </div>
+                    <div class="col-lg-6">
+                         <div class="radio">
+                              <div class="row">
+                                   <div class="col-lg-8">
+                                        <div class="menu-ra row">
+                                             <div class="col-lg-12">
+                                                  <div class="titulo-radio">
+                                                       <span><i class="fas fa-user"></i></span> Fernanda Cruz
+                                                  </div>
+                                                  <div class="cancion-radio">
+                                                       <span><i class="fas fa-music"></i></span> Skrillex & Alvin Risk - Try It Out
+                                                  </div>
+                                                  <div class="menu-radio">
+                                                       <div class="dj"><i class="fas fa-heart"></i> 0 likes</div>
+                                                       <div class="play"><i class="fas fa-play"></i></div>
+                                                       <div class="stop"><i class="fas fa-stop"></i></div>
+                                                       <div class="enviar-peticion"><i class="fas fa-envelope"></i></div>
+                                                       <div class="volumen"><div id="slider"></div></div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="col-lg-4">
+                                        <div class="avatar-radio">
+                                             <div class="oyentes">Oyentes: 2 habbos</div>
+                                             <div class="avatar"></div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-lg-12">
+                         <div class="noticias-usuarios">
+                              <div class="row">
+                                   <div class="col-lg-4">
+                                        <div class="post-noticias">
+                                             <div class="imagen-post" style="background:url();">
+                                                  <div class="datos">
+                                                       <div class="datos-img" style="background:url(http://www.habbo.es/habbo-imaging/avatarimage?&user=0acqua0&action=&direction=3&head_direction=3&img_format=png&gesture=&headonly=0&size=l);"></div>
+                                                       <div class="datos-usuario"><i class="fas fa-user"></i>Publicado por: 0acqua0</div>
+                                                  </div>
+                                             </div>
+                                             <div class="cuadro-noticias">
+                                                  <div class="avatar-noticias" style="background-image: url(/storage/bojack.png);"></div>
+                                                  <span class="titulo-post">Título post</span>
+                                                  <p>Comentario de usuario</p>
+                                                  <span class="tiempo-post">Hace 2 horas</span>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="col-lg-4">
+                                        <div class="post-noticias">
+                                             <div class="imagen-post" style="background:url();">
+                                                  <div class="datos">
+                                                       <div class="datos-img" style="background:url(http://www.habbo.es/habbo-imaging/avatarimage?&user=0acqua0&action=&direction=3&head_direction=3&img_format=png&gesture=&headonly=0&size=l);"></div>
+                                                       <div class="datos-usuario"><i class="fas fa-user"></i>Publicado por: 0acqua0</div>
+                                                  </div>
+                                             </div>
+                                             <div class="cuadro-noticias">
+                                                  <div class="avatar-noticias" style="background-image: url(/storage/bojack.png);"></div>
+                                                  <span class="titulo-post">Título post</span>
+                                                  <p>Comentario de usuario</p>
+                                                  <span class="tiempo-post">Hace 2 horas</span>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="col-lg-4">
+                                        <div class="post-noticias">
+                                             <div class="imagen-post" style="background:url();">
+                                                  <div class="datos">
+                                                       <div class="datos-img" style="background:url(http://www.habbo.es/habbo-imaging/avatarimage?&user=0acqua0&action=&direction=3&head_direction=3&img_format=png&gesture=&headonly=0&size=l);"></div>
+                                                       <div class="datos-usuario"><i class="fas fa-user"></i>Publicado por: 0acqua0</div>
+                                                  </div>
+                                             </div>
+                                             <div class="cuadro-noticias">
+                                                  <div class="avatar-noticias" style="background-image: url(/storage/bojack.png);"></div>
+                                                  <span class="titulo-post">Título post</span>
+                                                  <p>Comentario de usuario</p>
+                                                  <span class="tiempo-post">Hace 2 horas</span>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
      @yield('content')
+     </main>
      <footer class="footer mt-auto">
           <div class="container">
                <div class="row">
