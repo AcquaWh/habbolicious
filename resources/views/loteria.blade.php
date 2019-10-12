@@ -32,29 +32,11 @@
                                                             <span><i class="fas fa-music"></i></span> Skrillex & Alvin Risk - Try It Out
                                                        </div>
                                                        <div class="menu-radio">
-                                                            <a href="#">
-                                                                 <div class="dj">
-                                                                      <i class="fas fa-heart"></i> 2 likes
-                                                                 </div>
-                                                            </a>
-                                                            <a href="#">
-                                                                 <div class="play">
-                                                                      <i class="fas fa-play"></i>
-                                                                 </div>
-                                                            </a>
-                                                            <a href="#">
-                                                                 <div class="stop">
-                                                                      <i class="fas fa-stop"></i>
-                                                                 </div>
-                                                            </a>
-                                                            <a href="#">
-                                                                 <div class="enviar-peticion">
-                                                                      <i class="fas fa-envelope"></i>
-                                                                 </div>
-                                                            </a>
-                                                            <div class="volumen">
-                                                                 <div id="slider"></div>
-                                                            </div>
+                                                            <div class="dj"><i class="fas fa-heart"></i> 0 likes</div>
+                                                            <div class="play"><i class="fas fa-play"></i></div>
+                                                            <div class="stop"><i class="fas fa-stop"></i></div>
+                                                            <div class="enviar-peticion"><i class="fas fa-envelope"></i></div>
+                                                            <div class="volumen"><div id="slider"></div></div>
                                                        </div>
                                                   </div>
                                              </div>

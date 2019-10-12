@@ -60,9 +60,22 @@
                               <li class="nav-item">
                                    <a class="nav-link" href="{{route('utilidades')}}"><div class="ico-utilidades"></div>Utilidades</a>
                               </li>
+                              @if (Auth::check())
+                              <li class="nav-item">
+                                   <div class="dropdown">
+                                        <button class="nav-link ini-habbo" id="menu-usuario" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div class="ico-usuario" style="background-image:url(/storage/bojack.png);"></div>{{Auth::user()->name}}</button>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="menu-usuario">
+                                             <a class="dropdown-item" href="{{route('perfil',Auth::user()->name)}}">Perfil</a>
+                                             <a class="dropdown-item" href="">Editar perfil</a>
+                                             <a class="dropdown-item" href="">Cerrar sesión</a>
+                                        </div>
+                                   </div>
+                              </li>
+                              @else
                               <li class="nav-item">
                                    <button id="iniciarhabbo" class="nav-link ini-habbo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div class="ico-iniciar"></div>Iniciar</button>
                               </li>
+                              @endif
                          </ul>
                     </div>
                </div>
@@ -79,7 +92,7 @@
                                         <img class="img-fluid" src="/img/extra/frank.png">
                                    </div>
                                    <div class="col-lg-12">
-                                        <a href="{{ route('register') }}">Registrate aquí</a>
+                                        <a href="{{ route('register') }}">Regístrate aquí</a>
                                    </div>
                               </div>
                          </div>

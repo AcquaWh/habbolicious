@@ -3,11 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Perfil;
+use App\LikePerfil;
+use Auth;
+use App\User;
 
 class HabboliciousController extends Controller
 {
     public function index(){
         $placas = file_get_contents("https://api.socialhabbo.com/badges?per_page=24&hotel=es");
+        if(Auth::check()){
+            $fotousuario = Perfil::select('id_user')->where('id_user','')->get();
+        }
         return view('index')->with('habbo',json_decode($placas,true));
     }
     public function noticias(){

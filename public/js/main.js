@@ -60,16 +60,25 @@ $( function() {
             type: 'GET',
             success: function(json){
                 json.data.forEach(function (item) {
-                    var oyente = item.listenertotal;
-                    var dj = item.title;
-                    var titulo = item.track.title;
-                    var artista = item.track.artist;
-                    $(".oyentes").html("");
-                    $(".cancion-radio").html("");
-                    $(".titulo-radio").html("");
-                    $(".oyentes").html("Oyentes: "+oyente+" habbos");
-                    $(".cancion-radio").html("<span><i class='fas fa-music' aria-hidden='true'></i></span>"+artista+" - "+titulo);
-                    $(".titulo-radio").html("<span><i class='fas fa-user' aria-hidden='true'></i></span>"+dj);
+                    if(item.track.title == ""){
+						$(".cancion-radio").html("");
+						$(".titulo-radio").html("");
+						$(".avatar").css( "background-image","url(https://www.habbo.es/habbo-imaging/avatarimage?user=0acqua0&direction=3&head_direction=3&gesture=sml&action=none&size=l);");
+						$(".cancion-radio").html("<span><i class='fas fa-music' aria-hidden='true'></i></span> No disponible");
+						$(".titulo-radio").html("<span><i class='fas fa-user' aria-hidden='true'></i></span> No hay DJ");
+					} else {
+						var oyente = item.listenertotal;
+						var dj = item.title;
+						var titulo = item.track.title;
+						var artista = item.track.artist;
+						$(".oyentes").html("");
+						$(".cancion-radio").html("");
+						$(".titulo-radio").html("");
+						$(".avatar").css( "background-image","url(https://www.habbo.es/habbo-imaging/avatarimage?user="+titulo+"&direction=3&head_direction=3&gesture=sml&action=none&size=l);");
+						$(".oyentes").html("Oyentes: "+oyente+" habbos");
+						$(".cancion-radio").html("<span><i class='fas fa-music' aria-hidden='true'></i></span>"+artista+" - "+titulo);
+						$(".titulo-radio").html("<span><i class='fas fa-user' aria-hidden='true'></i></span>"+dj);
+					}
                 });
             }
         });

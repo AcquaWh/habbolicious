@@ -24,3 +24,4 @@ Route::get('/equipo','HabboliciousController@equipo')->name('equipo');
 Route::get('/vacantes','HabboliciousController@vacantes')->name('vacantes');
 Route::get('/utilidades','HabboliciousController@utilidades')->name('utilidades');
 Auth::routes(['verify' => true]);
+Route::get('/{usuario}','PerfilController@index')->middleware('verified')->name('perfil');

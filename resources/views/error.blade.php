@@ -1,5 +1,5 @@
 @extends('layouts.habbolicious')
-@section('title','HabboLicious • Utilidades')
+@section('title','HabboLicious • Error')
 
 @section('customstyles')
 @endsection
@@ -106,6 +106,9 @@
                          </div>
                     </div>
                </div>
+          </div>
+          <div class="contenido-inicio">
+               <br><br><br><br><h1>ERROR!!!</h1>
           </div>
      </div>
 </main>
