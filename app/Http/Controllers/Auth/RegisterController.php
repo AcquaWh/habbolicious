@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\User;
+use App\Perfil;
+use App\Sweets;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -53,7 +55,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'g-recaptcha-response' => 'required',
+            //'g-recaptcha-response' => 'required',
         ]);
     }
 
@@ -67,7 +69,8 @@ class RegisterController extends Controller
     {
         $data['rol'] = "14";
         $data['ip'] = request()->ip();
-        return User::create([
+
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
@@ -75,5 +78,15 @@ class RegisterController extends Controller
             'id_rol' => $data['rol'],
             'ip' => $data['ip'],
         ]);
+        $data['id'] = $user->id;
+        Perfil::create([
+            'id_user' => $data['id'],
+        ]);
+        $data['cantidad'] = 30;
+        Sweets::create([
+            'id_user' => $data['id'],
+            'cantidad' => $data['cantidad'],
+        ]);
+        return $user;
     }
 }

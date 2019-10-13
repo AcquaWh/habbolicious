@@ -69,7 +69,7 @@
                                              <a class="dropdown-item" href="">Editar perfil</a>
                                              <form action="{{route('logout')}}" method="POST">
                                                   @csrf
-                                                  <button type="submit" class="dropdown-item">Cerrar sesión</button>
+                                                  <button type="submit" class="dropdown-item ini-habbo">Cerrar sesión</button>
                                              </form>
                                         </div>
                                    </div>
