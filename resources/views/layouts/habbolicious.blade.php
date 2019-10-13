@@ -63,7 +63,11 @@
                               @if (Auth::check())
                               <li class="nav-item">
                                    <div class="dropdown">
-                                        <button class="nav-link ini-habbo" id="menu-usuario" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div class="ico-usuario" style="background-image:url(/storage/bojack.png);"></div>{{Auth::user()->name}}</button>
+                                        @if (!$fotousuario->foto)
+                                        <button class="nav-link ini-habbo" id="menu-usuario" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div class="ico-usuario" style="background-image:url(/img/extra/avatar.png);"></div>{{Auth::user()->name}}</button>
+                                        @else
+                                        <button class="nav-link ini-habbo" id="menu-usuario" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div class="ico-usuario" style="background-image:url(/storage/{{$fotousuario->foto}});"></div>{{Auth::user()->name}}</button>
+                                        @endif
                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="menu-usuario">
                                              <a class="dropdown-item" href="{{route('perfil',Auth::user()->name)}}">Perfil</a>
                                              <a class="dropdown-item" href="">Editar perfil</a>

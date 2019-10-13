@@ -12,34 +12,59 @@ class HabboliciousController extends Controller
 {
     public function index(){
         $placas = file_get_contents("https://api.socialhabbo.com/badges?per_page=24&hotel=es");
-        if(Auth::check()){
-            $fotousuario = Perfil::select('id_user')->where('id_user','')->get();
-        }
-        return view('index')->with('habbo',json_decode($placas,true));
+
+        $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+        $argumentos = array();
+        $argumentos['fotousuario'] = $fotousuario;
+        return view('index',$argumentos)->with('habbo',json_decode($placas,true));
     }
     public function noticias(){
-        return view('noticias');
+        $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+        $argumentos = array();
+        $argumentos['fotousuario'] = $fotousuario;
+        return view('noticias',$argumentos);
     }
     public function blogs(){
-        return view('blogs');
+        $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+        $argumentos = array();
+        $argumentos['fotousuario'] = $fotousuario;
+        return view('blogs',$argumentos);
     }
     public function loteria(){
-        return view('loteria');
+        $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+        $argumentos = array();
+        $argumentos['fotousuario'] = $fotousuario;
+        return view('loteria',$argumentos);
     }
     public function catalogo(){
-        return view('catalogo');
+        $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+        $argumentos = array();
+        $argumentos['fotousuario'] = $fotousuario;
+        return view('catalogo',$argumentos);
     }
     public function eventos(){
-        return view('eventos');
+        $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+        $argumentos = array();
+        $argumentos['fotousuario'] = $fotousuario;
+        return view('eventos',$argumentos);
     }
     public function equipo(){
-        return view('equipo');
+        $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+        $argumentos = array();
+        $argumentos['fotousuario'] = $fotousuario;
+        return view('equipo',$argumentos);
     }
     public function vacantes(){
-        return view('vacantes');
+        $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+        $argumentos = array();
+        $argumentos['fotousuario'] = $fotousuario;
+        return view('vacantes',$argumentos);
     }
     public function utilidades(){
-        return view('utilidades');
+        $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+        $argumentos = array();
+        $argumentos['fotousuario'] = $fotousuario;
+        return view('utilidades', $argumentos);
     }
     public function validarUsuario($email){
         $correo = User::where('email',$email)->first();
