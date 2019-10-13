@@ -12,6 +12,7 @@
      <meta name="msapplication-TileColor" content="#9f00a7">
      <meta name="msapplication-TileImage" content="/img/favicons/mstile-144x144.png">
      <meta name="theme-color" content="#ffffff">
+     <meta name="csrf-token" content="{{ csrf_token() }}" />
      <title>@yield('title')</title>
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
      <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
@@ -70,7 +71,6 @@
                                         @endif
                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="menu-usuario">
                                              <a class="dropdown-item" href="{{route('perfil',Auth::user()->name)}}">Perfil</a>
-                                             <a class="dropdown-item" href="">Editar perfil</a>
                                              <form action="{{route('logout')}}" method="POST">
                                                   @csrf
                                                   <button type="submit" class="dropdown-item ini-habbo">Cerrar sesión</button>
@@ -265,7 +265,7 @@
                          <img class="habbolicious" src="/img/logo.png" alt=""/>
                     </div>
                     <div class="col-lg-9">
-                         <p class="mapa"><a href="">Inicio</a> / <a href="">Noticias</a> / <a href="">Blog</a> / <a href="">Catálogo</a> / <a href="">Eventos</a> / <a href="">Equipo</a> / <a href="">Vacantes</a> / <a href="">Utilidades</a> / <a href="">Normas</a> / <a href="">Términos</a> /<br> <a href="">Contáctanos</a></p>
+                    <p class="mapa"><a href="{{route('index')}}">Inicio</a> / <a href="{{route('noticias')}}">Noticias</a> / <a href="{{route('blogs')}}">Blog</a> / <a href="{{route('catalogo')}}">Catálogo</a> / <a href="{{route('eventos')}}">Eventos</a> / <a href="{{route('equipo')}}">Equipo</a> / <a href="{{route('vacantes')}}">Vacantes</a> / <a href="{{route('utilidades')}}">Utilidades</a> / <a href="">Normas</a> / <a href="">Términos</a> /<br> <a href="">Contáctanos</a></p>
                          <span class="habboli">©2019, Habbolicious<br></span>
                          <span>Habbolicious no está afiliado, respaldado, patrocinado o aprobado específicamente por Sulake Suomi o sus afiliados. Habbolicious puede usar las marcas comerciales y otras propiedades intelectuales de Habbo, lo cual está permitido bajo la Política del sitio de fans de Habbo.</span>
                     </div>

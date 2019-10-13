@@ -1,5 +1,5 @@
 @extends('layouts.habbolicious')
-@section('title','HabboLicious • Iniciar Sesión')
+@section('title','HabboLicious • Error 404')
 
 @section('customstyles')
 @endsection
@@ -26,4 +26,7 @@
 @endsection
 
 @section('customscripts')
+<script>
+     $("#iniciar-sesion").css("width","100%");
+</script>
 @endsection

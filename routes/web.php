@@ -26,3 +26,6 @@ Route::get('/utilidades','HabboliciousController@utilidades')->name('utilidades'
 Auth::routes(['verify' => true]);
 Route::get('/validar-usuario/{correo}','HabboliciousController@validarUsuario');
 Route::get('/{usuario}','PerfilController@index')->middleware('verified')->name('perfil');
+Route::post('/comentario-perfil/{id}','ComentarioPerfilController@store')->middleware('verified')->name('comentario-perfil.store');
+Route::post('/likeperfil/{id}','PerfilController@likeperfil')->middleware('verified')->name('likeperfil');
+Route::get('/contadorlikes/{id}','PerfilController@contadorlikes')->middleware('verified')->name('contadorlikes');

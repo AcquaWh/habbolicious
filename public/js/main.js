@@ -58,7 +58,7 @@ $( function() {
     var radiohabbo = document.createElement('audio');
     $('#slider').append(radiohabbo);
     radiohabbo.id = "radiohabbo";
-    iniciaraudio('https://habbolicious.radioca.st/stream', 0);
+    //iniciaraudio('https://habbolicious.radioca.st/stream', 0);
     function iniciaraudio(archivo, volumen) {
         radiohabbo.src = archivo;
         radiohabbo.setAttribute('loop', 'loop');
