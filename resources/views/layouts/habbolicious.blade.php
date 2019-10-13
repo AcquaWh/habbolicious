@@ -67,7 +67,10 @@
                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="menu-usuario">
                                              <a class="dropdown-item" href="{{route('perfil',Auth::user()->name)}}">Perfil</a>
                                              <a class="dropdown-item" href="">Editar perfil</a>
-                                             <a class="dropdown-item" href="">Cerrar sesión</a>
+                                             <form action="{{route('logout')}}" method="POST">
+                                                  @csrf
+                                                  <button type="submit" class="dropdown-item">Cerrar sesión</button>
+                                             </form>
                                         </div>
                                    </div>
                               </li>
