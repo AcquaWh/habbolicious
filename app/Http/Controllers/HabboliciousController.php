@@ -41,4 +41,12 @@ class HabboliciousController extends Controller
     public function utilidades(){
         return view('utilidades');
     }
+    public function validarUsuario($email){
+        $correo = User::where('email',$email)->first();
+        if($correo){
+            return response()->json(['success'=>'El correo ya existe'],200);
+        } else {
+            return response()->json(['error'=>'El correo no existe'],404);
+        }
+    }
 }

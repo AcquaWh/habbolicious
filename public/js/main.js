@@ -33,6 +33,27 @@ $( function() {
             iniciarvolumen(ui.value / 100);
         }
     });
+    $("#email").on("change",function(){
+        var correo = $('#email').val();
+        $.ajax({
+            url: '/validar-usuario/'+correo,
+            type: "GET",
+            success: function(response){
+                $("#email").css('border','1px solid green');
+                $("#mensajeinicio").empty();
+                $('#iniciarsesion').on('submit', function(e){
+                    e.submit();
+                });
+            },
+            error: function(response){
+                $("#email").css('border','1px solid red');
+                $("#mensajeinicio").html("No existe este correo, intenta de nuevo");
+                $('#iniciarsesion').on('submit', function(e){
+                    e.preventDefault();
+                });
+            }
+        });
+    });
     /* Audio */
     var radiohabbo = document.createElement('audio');
     $('#slider').append(radiohabbo);

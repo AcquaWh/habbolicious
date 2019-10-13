@@ -102,7 +102,7 @@
                     </div>
                     <div class="col-lg-6 pad-iniciar">
                          <div class="formulario-habbo">
-                              <form method="POST" action="{{ route('login') }}">
+                              <form id="iniciarsesion" method="POST" action="{{ route('login') }}">
                                    @csrf
                                    <div class="form-group">
                                         <span>Iniciar sesión</span>
@@ -110,11 +110,9 @@
                                    <div class="form-group">
                                         <label for="email" class="col-form-label">{{ __('Correo') }}</label>
                                         <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-          
+                                        <small id="mensajeinicio"></small>
                                         @error('email')
-                                             <span class="invalid-feedback" role="alert">
-                                                  <strong>Comprueba sí el correo es correcto.</strong>
-                                             </span>
+                                             <small>Comprueba sí el correo es correcto o contraseña</small>
                                         @enderror
                                    </div>
                                    <div class="form-group">
@@ -122,9 +120,7 @@
                                         <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
           
                                         @error('password')
-                                             <span class="invalid-feedback" role="alert">
-                                                  <strong>Comprueba sí la contraseña es correcta.</strong>
-                                             </span>
+                                             <small>Comprueba sí la contraseña es correcta</small>
                                         @enderror
                                    </div>
                                    <div class="form-group">
@@ -279,5 +275,10 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" type="text/javascript"></script>
      @yield('customscripts')
      <script src="/js/main.js" type="text/javascript"></script>
+     @error('email')
+          <script>
+               $("#iniciar-sesion").css("width","100%");
+          </script>
+     @enderror
 </body>
 </html>
