@@ -26,6 +26,9 @@ class ComentarioPerfilController extends Controller
         $comentario->cuerpo = $request->input('comentario');
         $comentario->id_perfil = $fotousuario->id;
         if($comentario->save()){
+            $sweets = Sweets::where('id_user',Auth::user()->id)->first();
+            $sweets->cantidad = $sweets->cantidad+30;
+            $sweets->save();
             return redirect()->route('perfil',$usuario_perfil->name)->with('exito','Comentario publicado');
         } else {
             return redirect()->route('perfil',$usuario_perfil->name)->with('error','Comentario no se pudo publicar');

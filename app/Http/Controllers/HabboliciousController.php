@@ -4,21 +4,34 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Perfil;
+use App\Noticias;
+use App\Blogs;
+use App\Eventos;
 use App\LikePerfil;
 use Auth;
 use App\User;
+use Carbon\Carbon;
 
 class HabboliciousController extends Controller
 {
     public function index(){
+        Carbon::setLocale('es');
         $placas = file_get_contents("https://api.socialhabbo.com/badges?per_page=24&hotel=es");
+        $noticias = Noticias::select('users.name','hb_noticias.titulo','hb_noticias.descripcion','hb_noticias.cuerpo','hb_noticias.created_at','hb_noticias.portada')->orderBy('created_at', 'desc')->
+        leftJoin('users','hb_noticias.id_user','users.id')
+        ->take(6)->get();
+        $blogs = Blogs::orderBy('created_at', 'desc')->take(8)->get();
+        $eventos = Eventos::orderBy('created_at', 'desc')->take(1)->get();
+        $argumentos = array();
+        $argumentos['noticias'] = $noticias;
+        $argumentos['blogs'] = $blogs;
+        $argumentos['eventos'] = $eventos;
         if(Auth::check()){
             $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
-            $argumentos = array();
             $argumentos['fotousuario'] = $fotousuario;
             return view('index',$argumentos)->with('habbo',json_decode($placas,true));
         }
-        return view('index')->with('habbo',json_decode($placas,true));
+        return view('index',$argumentos)->with('habbo',json_decode($placas,true));
     }
     public function noticias(){
         if(Auth::check()){

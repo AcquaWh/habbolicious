@@ -208,14 +208,14 @@
                                         <div class="post-noticias">
                                              <div class="imagen-post" style="background:url();">
                                                   <div class="datos">
-                                                       <div class="datos-img" style="background:url(http://www.habbo.es/habbo-imaging/avatarimage?&user=0acqua0&action=&direction=3&head_direction=3&img_format=png&gesture=&headonly=0&size=l);"></div>
-                                                       <div class="datos-usuario"><i class="fas fa-user"></i>Publicado por: 0acqua0</div>
+                                                       <div class="datos-img" style="background:url(https://www.habbo.es/habbo-imaging/avatarimage?user=xCoositta&direction=3&head_direction=3&gesture=sml&action=none&size=l);"></div>
+                                                       <div class="datos-usuario"><i class="fas fa-user"></i>Publicado por: xCoositta</div>
                                                   </div>
                                              </div>
                                              <div class="cuadro-noticias">
                                                   <div class="avatar-noticias" style="background-image: url(/storage/bojack.png);"></div>
-                                                  <span class="titulo-post">Título post</span>
-                                                  <p>Comentario de usuario</p>
+                                                  <span class="titulo-post">No existe post</span>
+                                                  <p>Animaté a comentar en noticias</p>
                                                   <span class="tiempo-post">Hace 2 horas</span>
                                              </div>
                                         </div>
@@ -224,14 +224,14 @@
                                         <div class="post-noticias">
                                              <div class="imagen-post" style="background:url();">
                                                   <div class="datos">
-                                                       <div class="datos-img" style="background:url(http://www.habbo.es/habbo-imaging/avatarimage?&user=0acqua0&action=&direction=3&head_direction=3&img_format=png&gesture=&headonly=0&size=l);"></div>
-                                                       <div class="datos-usuario"><i class="fas fa-user"></i>Publicado por: 0acqua0</div>
+                                                       <div class="datos-img" style="background:url(https://www.habbo.es/habbo-imaging/avatarimage?user=xCoositta&direction=3&head_direction=3&gesture=sml&action=none&size=l);"></div>
+                                                       <div class="datos-usuario"><i class="fas fa-user"></i>Publicado por: xCoositta</div>
                                                   </div>
                                              </div>
                                              <div class="cuadro-noticias">
                                                   <div class="avatar-noticias" style="background-image: url(/storage/bojack.png);"></div>
-                                                  <span class="titulo-post">Título post</span>
-                                                  <p>Comentario de usuario</p>
+                                                  <span class="titulo-post">No existe post</span>
+                                                  <p>Animaté a comentar en noticias</p>
                                                   <span class="tiempo-post">Hace 2 horas</span>
                                              </div>
                                         </div>
@@ -240,14 +240,14 @@
                                         <div class="post-noticias">
                                              <div class="imagen-post" style="background:url();">
                                                   <div class="datos">
-                                                       <div class="datos-img" style="background:url(http://www.habbo.es/habbo-imaging/avatarimage?&user=0acqua0&action=&direction=3&head_direction=3&img_format=png&gesture=&headonly=0&size=l);"></div>
-                                                       <div class="datos-usuario"><i class="fas fa-user"></i>Publicado por: 0acqua0</div>
+                                                       <div class="datos-img" style="background:url(https://www.habbo.es/habbo-imaging/avatarimage?user=xCoositta&direction=3&head_direction=3&gesture=sml&action=none&size=l);"></div>
+                                                       <div class="datos-usuario"><i class="fas fa-user"></i>Publicado por: xCoositta</div>
                                                   </div>
                                              </div>
                                              <div class="cuadro-noticias">
                                                   <div class="avatar-noticias" style="background-image: url(/storage/bojack.png);"></div>
-                                                  <span class="titulo-post">Título post</span>
-                                                  <p>Comentario de usuario</p>
+                                                  <span class="titulo-post">No existe post</span>
+                                                  <p>Animaté a comentar en noticias</p>
                                                   <span class="tiempo-post">Hace 2 horas</span>
                                              </div>
                                         </div>
