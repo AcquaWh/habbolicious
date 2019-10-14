@@ -12,59 +12,85 @@ class HabboliciousController extends Controller
 {
     public function index(){
         $placas = file_get_contents("https://api.socialhabbo.com/badges?per_page=24&hotel=es");
-
-        $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
-        $argumentos = array();
-        $argumentos['fotousuario'] = $fotousuario;
-        return view('index',$argumentos)->with('habbo',json_decode($placas,true));
+        if(Auth::check()){
+            $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+            $argumentos = array();
+            $argumentos['fotousuario'] = $fotousuario;
+            return view('index',$argumentos)->with('habbo',json_decode($placas,true));
+        }
+        return view('index')->with('habbo',json_decode($placas,true));
     }
     public function noticias(){
-        $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
-        $argumentos = array();
-        $argumentos['fotousuario'] = $fotousuario;
-        return view('noticias',$argumentos);
+        if(Auth::check()){
+            $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+            $argumentos = array();
+            $argumentos['fotousuario'] = $fotousuario;
+            return view('noticias',$argumentos);
+        }
+        return view('noticias');
     }
     public function blogs(){
-        $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
-        $argumentos = array();
-        $argumentos['fotousuario'] = $fotousuario;
-        return view('blogs',$argumentos);
+        if(Auth::check()){
+            $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+            $argumentos = array();
+            $argumentos['fotousuario'] = $fotousuario;
+            return view('blogs',$argumentos);
+        }
+        return view('blogs');
     }
     public function loteria(){
-        $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
-        $argumentos = array();
-        $argumentos['fotousuario'] = $fotousuario;
-        return view('loteria',$argumentos);
+        if(Auth::check()){
+            $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+            $argumentos = array();
+            $argumentos['fotousuario'] = $fotousuario;
+            return view('loteria',$argumentos);
+        }
+            return view('loteria');
     }
     public function catalogo(){
-        $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
-        $argumentos = array();
-        $argumentos['fotousuario'] = $fotousuario;
-        return view('catalogo',$argumentos);
+        if(Auth::check()){
+            $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+            $argumentos = array();
+            $argumentos['fotousuario'] = $fotousuario;
+            return view('catalogo',$argumentos);
+        }
+        return view('catalogo');
     }
     public function eventos(){
-        $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
-        $argumentos = array();
-        $argumentos['fotousuario'] = $fotousuario;
-        return view('eventos',$argumentos);
+        if(Auth::check()){
+            $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+            $argumentos = array();
+            $argumentos['fotousuario'] = $fotousuario;
+            return view('eventos',$argumentos);
+        }
+        return view('eventos');
     }
     public function equipo(){
-        $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
-        $argumentos = array();
-        $argumentos['fotousuario'] = $fotousuario;
-        return view('equipo',$argumentos);
+        if(Auth::check()){
+            $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+            $argumentos = array();
+            $argumentos['fotousuario'] = $fotousuario;
+            return view('equipo',$argumentos);
+        }
+        return view('equipo');
     }
     public function vacantes(){
-        $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
-        $argumentos = array();
-        $argumentos['fotousuario'] = $fotousuario;
-        return view('vacantes',$argumentos);
+        if(Auth::check()){
+            $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+            $argumentos = array();
+            $argumentos['fotousuario'] = $fotousuario;
+            return view('vacantes',$argumentos);
+        }
+        return view('vacantes');
     }
     public function utilidades(){
-        $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
-        $argumentos = array();
-        $argumentos['fotousuario'] = $fotousuario;
-        return view('utilidades', $argumentos);
+        if(Auth::check()){
+            $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+            $argumentos = array();
+            $argumentos['fotousuario'] = $fotousuario;
+            return view('utilidades', $argumentos);
+        }
+        return view('utilidades');
     }
     public function validarUsuario($email){
         $correo = User::where('email',$email)->first();

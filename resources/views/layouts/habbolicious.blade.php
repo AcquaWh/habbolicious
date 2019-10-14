@@ -19,6 +19,7 @@
      <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet"/>
      <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet"/>
      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+     <link id="bsdp-css" href="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker3.min.css" rel="stylesheet">
      <link href="/css/styles.css" rel="stylesheet" type="text/css" />
      @yield('customstyles')
 </head>
@@ -71,6 +72,7 @@
                                         @endif
                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="menu-usuario">
                                              <a class="dropdown-item" href="{{route('perfil',Auth::user()->name)}}">Perfil</a>
+                                             <a class="dropdown-item" href="{{route('perfil.edit',Auth::user()->id)}}">Editar Perfil</a>
                                              <form action="{{route('logout')}}" method="POST">
                                                   @csrf
                                                   <button type="submit" class="dropdown-item ini-habbo">Cerrar sesión</button>
@@ -277,6 +279,8 @@
      <script src="https://kit.fontawesome.com/4ad22adeec.js"></script>
      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" type="text/javascript"></script>
+     <script src="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
+     <script src="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/locales/bootstrap-datepicker.es.min.js" charset="UTF-8"></script>
      @yield('customscripts')
      <script src="/js/main.js" type="text/javascript"></script>
      @error('email')

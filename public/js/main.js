@@ -33,6 +33,36 @@ $( function() {
             iniciarvolumen(ui.value / 100);
         }
     });
+    $('#fecha').datepicker({
+        language: "es",
+        format: 'yyyy/mm/dd'
+    });
+    function doClickActualizar(event) {
+        if ($("#contra").val() == $("#confirmarcontra").val()) {
+            $("#frmActualizarPerfil").submit();
+        } else {
+            $("#passwordError").html("<i class='fa fa-times-circle-o'></i> Las contraseñas no coinciden");
+            $(".grupo-password").addClass("has-error");
+        }
+    }
+    $("#confirmarcontra").on("input",function () {
+            if ($("#contra").val() == $("#confirmarcontra").val()) {
+                $("#passwordError").html("");
+                $(".grupo-password").removeClass("has-error");
+            }
+            else {
+                $("#passwordError").html("<i class='fa fa-times-circle-o'></i> Las contraseñas no coinciden");
+                $(".grupo-password").addClass("has-error");
+            }
+    });
+    $("#confirmarcontra").focus(function () {
+            $("#passwordError").html("");
+            $(".grupo-password").removeClass("has-error");
+    });
+    $(function () {
+            $("#passwordError").html("");
+            $("#btnActualizar").click(doClickActualizar);
+    });
     $("#email").on("change",function(){
         var correo = $('#email').val();
         $.ajax({

@@ -50,7 +50,32 @@ class PerfilController extends Controller
         }
     }
     public function edit($id){
-        
+        $usuario_perfil = User::find($id);
+        $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+        $argumentos = array();
+        $argumentos['fotousuario'] = $fotousuario;
+        $argumentos['usuario_perfil'] = $usuario_perfil;
+        return view('perfileditar',$argumentos);
+    }
+    public function update(Request $request, $id) {
+        $usuario = User::find($id);
+        $perfil = Perfil::where('id_user',$usuario->id)->first();
+        if ($request->input('contra') && $request->input('contra') != '') {
+            $usuario->password = bcrypt($request->input('contra'));
+        }
+        $usuario->name = $request->input('nombre');
+        $usuario->habbo = $request->input('habbo');
+        $perfil->cumple = $request->input('cumple');
+        $perfil->twitter = $request->input('twitter');
+        $perfil->video_youtube = $request->input('youtube');
+        $perfil->portada = $request->input('portada');
+        $perfil->foto = $request->input('fotos');
+        if($usuario->save()){
+            if($perfil->save()){
+                return redirect()->route('perfil.edit',$id)->with('exito','Perfil actualizado');
+            }
+        }
+        return redirect()->route('perfil.edit',$id)->with('error','Perfil no actualizado');
     }
     public function contadorlikes($id){
         $like = LikePerfil::select('id')->where('id_perfil',$id)->count();

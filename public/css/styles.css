@@ -680,14 +680,32 @@ body {
     position: relative;
     padding: 20px;
     box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219); }
+    .principal .contenido-inicio .cuadro-perfil .guardarperfil {
+      width: 100%; }
     .principal .contenido-inicio .cuadro-perfil .descripcion {
       padding: 20px;
       box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219);
       margin-bottom: 20px; }
+      .principal .contenido-inicio .cuadro-perfil .descripcion .needsclick {
+        z-index: 2;
+        position: relative;
+        background: #e2e2e2;
+        border: transparent;
+        text-align: center; }
+        .principal .contenido-inicio .cuadro-perfil .descripcion .needsclick i {
+          font-size: 50px; }
     .principal .contenido-inicio .cuadro-perfil .datos {
       padding: 20px;
       box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219);
       margin-bottom: 20px; }
+      .principal .contenido-inicio .cuadro-perfil .datos .needsclick {
+        z-index: 2;
+        position: relative;
+        background: #e2e2e2;
+        border: transparent;
+        text-align: center; }
+        .principal .contenido-inicio .cuadro-perfil .datos .needsclick i {
+          font-size: 50px; }
     .principal .contenido-inicio .cuadro-perfil .youtube {
       padding: 20px;
       box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219);

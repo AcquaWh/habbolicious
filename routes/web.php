@@ -29,3 +29,7 @@ Route::get('/{usuario}','PerfilController@index')->middleware('verified')->name(
 Route::post('/comentario-perfil/{id}','ComentarioPerfilController@store')->middleware('verified')->name('comentario-perfil.store');
 Route::post('/likeperfil/{id}','PerfilController@likeperfil')->middleware('verified')->name('likeperfil');
 Route::get('/contadorlikes/{id}','PerfilController@contadorlikes')->middleware('verified')->name('contadorlikes');
+Route::get('/editar/{id}','PerfilController@edit')->middleware('verified')->name('perfil.edit');
+Route::put('/actualizar/{id}','PerfilController@update')->middleware('verified')->name('perfil.update');
+Route::post('/portada', 'SubirarchivoController@portada')->middleware('verified')->name('portada');
+Route::post('/avatar', 'SubirarchivoController@avatar')->middleware('verified')->name('avatar');
