@@ -690,8 +690,7 @@ body {
       .principal .contenido-inicio .cuadro-perfil .descripcion .needsclick {
         z-index: 2;
         position: relative;
-        background: #e2e2e2;
-        border: transparent;
+        border: 2px solid black;
         text-align: center; }
         .principal .contenido-inicio .cuadro-perfil .descripcion .needsclick i {
           font-size: 50px; }
@@ -702,8 +701,7 @@ body {
       .principal .contenido-inicio .cuadro-perfil .datos .needsclick {
         z-index: 2;
         position: relative;
-        background: #e2e2e2;
-        border: transparent;
+        border: 2px solid black;
         text-align: center; }
         .principal .contenido-inicio .cuadro-perfil .datos .needsclick i {
           font-size: 50px; }
