@@ -54,6 +54,10 @@
                                                   <label>URL Video Youtube</label>
                                                   <input type="text" name="youtube" class="form-control" placeholder="https://www.youtube.com/embed/6U1PCr2dIQ0" value="{{$fotousuario->video_youtube}}">
                                              </div>
+                                             <div class="form-group">
+                                                  <label>Sobre mí</label>
+                                                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Escribe más sobre ti" name="sobremi">{{$fotousuario->sobremi}}</textarea>
+                                             </div>
                                         </div>
                                    </div>
                                    <div class="col-lg-6">

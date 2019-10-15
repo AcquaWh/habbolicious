@@ -71,6 +71,7 @@ class PerfilController extends Controller
         $perfil->twitter = $request->input('twitter');
         $perfil->video_youtube = $request->input('youtube');
         $perfil->portada = $request->input('portada');
+        $perfil->sobremi = $request->input('sobremi');
         $perfil->foto = $request->input('fotos');
         if($usuario->save()){
             if($perfil->save()){
