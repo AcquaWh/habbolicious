@@ -9,8 +9,8 @@
      <div class="container">
           <div class="row justify-content-center">
                <div class="col-lg-12 mt-3">
-                    @if($fotousuario->portada)<div class="portada" style="background-image:url(/storage/{{$fotousuario->portada}});">@else<div class="portada"> @endif
-                         @if($fotousuario->foto)<div class="avatarfoto" style="background-image:url(/storage/{{$fotousuario->foto}});"></div>@else<div class="avatarfoto" style="background-image:url(/img/extra/avatar.png);"></div>@endif
+                    @if($fotousuario->portada)<div class="portada" style="background-image:url(/img/portada/{{$fotousuario->portada}});">@else<div class="portada"> @endif
+                         @if($fotousuario->foto)<div class="avatarfoto" style="background-image:url(/img/avatar/{{$fotousuario->foto}});"></div>@else<div class="avatarfoto" style="background-image:url(/img/extra/avatar.png);"></div>@endif
                          <h3 class="avatarnombre">{{$usuario_perfil->name}}</h3>
                          <button id="likesperfil" class="megusta btn btn-danger"><i class="far fa-thumbs-up"></i> {{$likes}} likes</button>
                     </div>
@@ -98,7 +98,7 @@
                                              <div class="comentarios-div">
                                                   <div class="row">
                                                        <div class="col-lg-2">
-                                                            @if(!$comenta->foto)<div class="avatarcomen" style="background-image:url(/img/extra/avatar.png);"></div>@else <div class="avatarcomen" style="background-image:url(/storage/{{$comenta->foto}});"></div>@endif
+                                                            @if(!$comenta->foto)<div class="avatarcomen" style="background-image:url(/img/extra/avatar.png);"></div>@else <div class="avatarcomen" style="background-image:url(/img/avatar/{{$comenta->foto}});"></div>@endif
                                                        </div>
                                                        <div class="col-lg-10">
                                                             <strong><a href="">{{$comenta->name}}</a></strong>

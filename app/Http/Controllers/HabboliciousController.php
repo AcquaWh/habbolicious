@@ -29,7 +29,6 @@ class HabboliciousController extends Controller
         if(Auth::check()){
             $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
             $argumentos['fotousuario'] = $fotousuario;
-            return view('index',$argumentos)->with('habbo',json_decode($placas,true));
         }
         return view('index',$argumentos)->with('habbo',json_decode($placas,true));
     }

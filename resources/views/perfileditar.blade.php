@@ -64,7 +64,7 @@
                                              <div class="needsclick dropzone" id="document-dropzone"></div>
                                              @if($fotousuario->portada)
                                              <div class="mt-3 text-center">
-                                                  <img class="img-fluid" width="200" src="/storage/{{$fotousuario->portada}}"/>
+                                                  <img class="img-fluid" width="200" src="/img/portada/{{$fotousuario->portada}}"/>
                                              </div>
                                              @endif
                                         </div>
@@ -75,7 +75,7 @@
                                              <div class="needsclick dropzone" id="avatar-dropzone"></div>
                                              @if($fotousuario->foto)
                                              <div class="mt-3 text-center">
-                                                  <img class="img-fluid" width="200" src="/storage/{{$fotousuario->foto}}"/>
+                                                  <img class="img-fluid" width="200" src="/img/avatar/{{$fotousuario->foto}}"/>
                                              </div>
                                              @endif
                                         </div>

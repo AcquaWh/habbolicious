@@ -1,4 +1,4 @@
-@extends('layouts.habbolicious')
+@extends('layouts.verificar')
 @section('title','HabboLicious • Verifica tu correo')
 
 @section('customstyles')
@@ -38,5 +38,3 @@
 </div>
 @endsection
 
-@section('customscripts')
-@endsection

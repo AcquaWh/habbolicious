@@ -15,7 +15,7 @@
                                    <img class="img-fluid" src="/img/extra/register9.gif" alt=""/>
                               </div>
                               <div class="col-lg-12">
-                                   <h1 class="errortitulo mt-3 text-center">La sección a la que intentas acceder no existe</h1>
+                                   <h1 class="errortitulo mt-3 text-center">Debes iniciar sesión para acceder a esta sección.</h1>
                               </div>
                          </div>
                     </div>

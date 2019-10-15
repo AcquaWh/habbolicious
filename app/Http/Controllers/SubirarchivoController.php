@@ -18,7 +18,7 @@ class SubirarchivoController extends Controller
         if($request->hasFile('file')){
             $archivo = $request->file('file');
             $nombre = 'foto' . time() . $archivo->getClientOriginalName();
-            $request->file('file')->storeAs('public', $nombre);
+            $request->file('file')->move(public_path('/img/portada'),$nombre);
         }
         return array(
             'name' => $nombre,
@@ -30,7 +30,7 @@ class SubirarchivoController extends Controller
         if($request->hasFile('file')){
             $archivo = $request->file('file');
             $nombre = 'foto' . time() . $archivo->getClientOriginalName();
-            $request->file('file')->storeAs('public', $nombre);
+            $request->file('file')->move(public_path('/img/avatar'),$nombre);
         }
         return array(
             'name' => $nombre,
