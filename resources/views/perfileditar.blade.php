@@ -52,7 +52,7 @@
                                              </div>
                                              <div class="form-group">
                                                   <label>URL Video Youtube</label>
-                                                  <input type="text" name="youtube" class="form-control" placeholder="https://www.youtube.com/watch?v=6U1PCr2dIQ0" value="{{$fotousuario->video_youtube}}">
+                                                  <input type="text" name="youtube" class="form-control" placeholder="https://www.youtube.com/embed/6U1PCr2dIQ0" value="{{$fotousuario->video_youtube}}">
                                              </div>
                                         </div>
                                    </div>
@@ -65,6 +65,7 @@
                                              @if($fotousuario->portada)
                                              <div class="mt-3 text-center">
                                                   <img class="img-fluid" width="200" src="/img/portada/{{$fotousuario->portada}}"/>
+                                                  <input type="hidden" name="portada" value="{{$fotousuario->foto}}">
                                              </div>
                                              @endif
                                         </div>
@@ -76,6 +77,7 @@
                                              @if($fotousuario->foto)
                                              <div class="mt-3 text-center">
                                                   <img class="img-fluid" width="200" src="/img/avatar/{{$fotousuario->foto}}"/>
+                                                  <input type="hidden" name="fotos" value="{{$fotousuario->foto}}">
                                              </div>
                                              @endif
                                         </div>

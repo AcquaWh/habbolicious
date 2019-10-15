@@ -22,7 +22,7 @@ class ComentarioPerfilController extends Controller
         $usuario_perfil = User::where('id',$id)->first();
         $fotousuario = Perfil::where('id_user',$usuario_perfil->id)->first();
         $comentario = new ComentariosPerfil;
-        $comentario->id_user = $usuario_perfil->id;
+        $comentario->id_user = Auth::user()->id;
         $comentario->cuerpo = $request->input('comentario');
         $comentario->id_perfil = $fotousuario->id;
         if($comentario->save()){
@@ -33,5 +33,13 @@ class ComentarioPerfilController extends Controller
         } else {
             return redirect()->route('perfil',$usuario_perfil->name)->with('error','Comentario no se pudo publicar');
         }
+    }
+    public function destroy($id){
+        $comentario = ComentariosPerfil::find($id);
+        $usuario_perfil = User::where('id',$comentario->id_perfil)->first();
+        if($comentario->delete()){
+            return redirect()->route('perfil',$usuario_perfil->name)->with('exito','Comentario borrado correctamente.');
+        }
+        return redirect()->route('perfil',$usuario_perfil->name)->with('error','No se pudo borrar comentario');
     }
 }

@@ -33,3 +33,4 @@ Route::get('/editar/{id}','PerfilController@edit')->middleware('verified')->name
 Route::put('/actualizar/{id}','PerfilController@update')->middleware('verified')->name('perfil.update');
 Route::post('/portada', 'SubirarchivoController@portada')->middleware('verified')->name('portada');
 Route::post('/avatar', 'SubirarchivoController@avatar')->middleware('verified')->name('avatar');
+Route::delete('/eliminar/comentario/{id}', 'ComentarioPerfilController@destroy')->middleware('verified')->name('comentario-perfil.destroy');

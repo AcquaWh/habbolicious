@@ -726,6 +726,9 @@ body {
       box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219);
       margin-bottom: 20px;
       transition: 0.5s; }
+      .principal .contenido-inicio .cuadro-perfil .comentarios-div .borrar {
+        position: absolute;
+        right: 10px; }
       .principal .contenido-inicio .cuadro-perfil .comentarios-div:hover {
         background: #d1e7ff; }
       .principal .contenido-inicio .cuadro-perfil .comentarios-div a {
