@@ -1,4 +1,4 @@
-@extends('layouts.habbolicious')
+@extends('layouts.plantilla')
 @section('title','Normas • ¡Endulza tu Habbo vida!')
 
 @section('customstyles')

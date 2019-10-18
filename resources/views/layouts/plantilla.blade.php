@@ -62,9 +62,29 @@
                               <li class="nav-item">
                                    <a class="nav-link" href="{{route('utilidades')}}"><div class="ico-utilidades"></div>Utilidades</a>
                               </li>
+                              @if (Auth::check())
+                              <li class="nav-item">
+                                   <div class="dropdown">
+                                        @if (!$fotousuario ?? ''->foto)
+                                        <button class="nav-link ini-habbo" id="menu-usuario" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div class="ico-usuario" style="background-image:url(/img/extra/avatar.png);"></div>{{Auth::user()->name}}</button>
+                                        @else
+                                        <button class="nav-link ini-habbo" id="menu-usuario" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div class="ico-usuario" style="background-image:url(/img/avatar/{{$fotousuario ?? ''->foto}});"></div>{{Auth::user()->name}}</button>
+                                        @endif
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="menu-usuario">
+                                             <a class="dropdown-item" href="{{route('perfil',Auth::user()->name)}}">Perfil</a>
+                                             <a class="dropdown-item" href="{{route('perfil.edit',Auth::user()->id)}}">Editar Perfil</a>
+                                             <form action="{{route('logout')}}" method="POST">
+                                                  @csrf
+                                                  <button type="submit" class="dropdown-item ini-habbo">Cerrar sesión</button>
+                                             </form>
+                                        </div>
+                                   </div>
+                              </li>
+                              @else
                               <li class="nav-item">
                                    <button id="iniciarhabbo" class="nav-link ini-habbo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div class="ico-iniciar"></div>Iniciar</button>
                               </li>
+                              @endif
                          </ul>
                     </div>
                </div>
@@ -138,7 +158,7 @@
      <main role="main" class="flex-shrink-0">
           <div class="principal">
                <!-- Contenido principal -->
-               <div class="fondo">
+               <div class="fondo pag-seccion">
                <div class="globos"></div>
                <div class="container">
                <div class="row">
@@ -176,60 +196,6 @@
                                         <div class="avatar-radio">
                                              <div class="oyentes">Oyentes: 2 habbos</div>
                                              <div class="avatar"></div>
-                                        </div>
-                                   </div>
-                              </div>
-                         </div>
-                    </div>
-                    <div class="col-lg-12">
-                         <div class="noticias-usuarios">
-                              <div class="row">
-                                   <div class="col-lg-4">
-                                        <div class="post-noticias">
-                                             <div class="imagen-post" style="background:url();">
-                                                  <div class="datos">
-                                                       <div class="datos-img" style="background:url(https://www.habbo.es/habbo-imaging/avatarimage?user=xCoositta&direction=3&head_direction=3&gesture=sml&action=none&size=l);"></div>
-                                                       <div class="datos-usuario"><i class="fas fa-user"></i>Publicado por: xCoositta</div>
-                                                  </div>
-                                             </div>
-                                             <div class="cuadro-noticias">
-                                                  <div class="avatar-noticias" style="background-image: url(/storage/bojack.png);"></div>
-                                                  <span class="titulo-post">No existe post</span>
-                                                  <p>Animaté a comentar en noticias</p>
-                                                  <span class="tiempo-post">Hace 2 horas</span>
-                                             </div>
-                                        </div>
-                                   </div>
-                                   <div class="col-lg-4">
-                                        <div class="post-noticias">
-                                             <div class="imagen-post" style="background:url();">
-                                                  <div class="datos">
-                                                       <div class="datos-img" style="background:url(https://www.habbo.es/habbo-imaging/avatarimage?user=xCoositta&direction=3&head_direction=3&gesture=sml&action=none&size=l);"></div>
-                                                       <div class="datos-usuario"><i class="fas fa-user"></i>Publicado por: xCoositta</div>
-                                                  </div>
-                                             </div>
-                                             <div class="cuadro-noticias">
-                                                  <div class="avatar-noticias" style="background-image: url(/storage/bojack.png);"></div>
-                                                  <span class="titulo-post">No existe post</span>
-                                                  <p>Animaté a comentar en noticias</p>
-                                                  <span class="tiempo-post">Hace 2 horas</span>
-                                             </div>
-                                        </div>
-                                   </div>
-                                   <div class="col-lg-4">
-                                        <div class="post-noticias">
-                                             <div class="imagen-post" style="background:url();">
-                                                  <div class="datos">
-                                                       <div class="datos-img" style="background:url(https://www.habbo.es/habbo-imaging/avatarimage?user=xCoositta&direction=3&head_direction=3&gesture=sml&action=none&size=l);"></div>
-                                                       <div class="datos-usuario"><i class="fas fa-user"></i>Publicado por: xCoositta</div>
-                                                  </div>
-                                             </div>
-                                             <div class="cuadro-noticias">
-                                                  <div class="avatar-noticias" style="background-image: url(/storage/bojack.png);"></div>
-                                                  <span class="titulo-post">No existe post</span>
-                                                  <p>Animaté a comentar en noticias</p>
-                                                  <span class="tiempo-post">Hace 2 horas</span>
-                                             </div>
                                         </div>
                                    </div>
                               </div>

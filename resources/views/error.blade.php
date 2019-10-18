@@ -1,4 +1,4 @@
-@extends('layouts.habbolicious')
+@extends('layouts.plantilla')
 @section('title','Error 404 • ¡Endulza tu Habbo vida!')
 
 @section('customstyles')

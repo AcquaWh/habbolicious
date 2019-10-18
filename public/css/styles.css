@@ -369,6 +369,15 @@ body {
   margin-bottom: 100px;
   /* Contenido */
   /* Moviles mega-peque├▒os */ }
+  .principal .pag-seccion {
+    margin-bottom: 40px !important;
+    height: 240px !important; }
+    .principal .pag-seccion .globos {
+      height: 235px !important; }
+    .principal .pag-seccion .radio {
+      margin-top: 40px !important; }
+    .principal .pag-seccion .owl-carousel {
+      margin-top: 40px !important; }
   .principal .fondo {
     margin-bottom: 160px;
     background-image: url(/img/extra/t39MERG.png);
