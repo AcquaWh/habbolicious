@@ -62,29 +62,7 @@
                               <li class="nav-item">
                                    <a class="nav-link" href="{{route('utilidades')}}"><div class="ico-utilidades"></div>Utilidades</a>
                               </li>
-                              @if (Auth::check())
-                              <li class="nav-item">
-                                   <div class="dropdown">
-                                        @if (!$fotousuario ?? ''->foto)
-                                        <button class="nav-link ini-habbo" id="menu-usuario" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div class="ico-usuario" style="background-image:url(/img/extra/avatar.png);"></div>{{Auth::user()->name}}</button>
-                                        @else
-                                        <button class="nav-link ini-habbo" id="menu-usuario" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div class="ico-usuario" style="background-image:url(/img/avatar/{{$fotousuario ?? ''->foto}});"></div>{{Auth::user()->name}}</button>
-                                        @endif
-                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="menu-usuario">
-                                             <a class="dropdown-item" href="{{route('perfil',Auth::user()->name)}}">Perfil</a>
-                                             <a class="dropdown-item" href="{{route('perfil.edit',Auth::user()->id)}}">Editar Perfil</a>
-                                             <form action="{{route('logout')}}" method="POST">
-                                                  @csrf
-                                                  <button type="submit" class="dropdown-item ini-habbo">Cerrar sesión</button>
-                                             </form>
-                                        </div>
-                                   </div>
-                              </li>
-                              @else
-                              <li class="nav-item">
-                                   <button id="iniciarhabbo" class="nav-link ini-habbo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div class="ico-iniciar"></div>Iniciar</button>
-                              </li>
-                              @endif
+                              
                          </ul>
                     </div>
                </div>
