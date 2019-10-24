@@ -24,7 +24,7 @@ Route::get('/equipo','HabboliciousController@equipo')->name('equipo');
 Route::get('/vacantes','HabboliciousController@vacantes')->name('vacantes');
 Route::get('/utilidades','HabboliciousController@utilidades')->name('utilidades');
 Route::get('/validar-usuario/{correo}','HabboliciousController@validarUsuario');
-Route::get('/{usuario}','PerfilController@index')->middleware('verified')->name('perfil');
+Route::get('/perfil/{usuario}','PerfilController@index')->middleware('verified')->name('perfil');
 Route::post('/comentario-perfil/{id}','ComentarioPerfilController@store')->middleware('verified')->name('comentario-perfil.store');
 Route::post('/likeperfil/{id}','PerfilController@likeperfil')->middleware('verified')->name('likeperfil');
 Route::get('/contadorlikes/{id}','PerfilController@contadorlikes')->middleware('verified')->name('contadorlikes');
@@ -33,4 +33,6 @@ Route::put('/actualizar/{id}','PerfilController@update')->middleware('verified')
 Route::post('/portada', 'SubirarchivoController@portada')->middleware('verified')->name('portada');
 Route::post('/avatar', 'SubirarchivoController@avatar')->middleware('verified')->name('avatar');
 Route::delete('/eliminar/comentario/{id}', 'ComentarioPerfilController@destroy')->middleware('verified')->name('comentario-perfil.destroy');
+/* Administrador */
+Route::get('/admin','AdminController@index')->middleware('verified')->name('admin.index'); 
 Auth::routes(['verify' => true]);

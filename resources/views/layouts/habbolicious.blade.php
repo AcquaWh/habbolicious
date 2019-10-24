@@ -177,10 +177,12 @@
                                         <div class="menu-ra row">
                                              <div class="col-lg-12">
                                                   <div class="titulo-radio">
-                                                       <span><i class="fas fa-user"></i></span> Fernanda Cruz
+                                                       <span><i class="fas fa-user"></i></span> 
+                                                       Fernanda Cruz
                                                   </div>
                                                   <div class="cancion-radio">
-                                                       <span><i class="fas fa-music"></i></span> Skrillex & Alvin Risk - Try It Out
+                                                       <span><i class="fas fa-music"></i></span> 
+                                                       Skrillex & Alvin Risk - Try It Out
                                                   </div>
                                                   <div class="menu-radio">
                                                        <div class="dj"><i class="fas fa-heart"></i> 0 likes</div>
@@ -214,8 +216,8 @@
                                              </div>
                                              <div class="cuadro-noticias">
                                                   <div class="avatar-noticias" style="background-image: url(/img/avatar/bojack.png);"></div>
-                                                  <span class="titulo-post">No existe post</span>
-                                                  <p>Animaté a comentar en noticias</p>
+                                                  <span class="titulo-post">Título</span>
+                                                  <p>Comentario</p>
                                                   <span class="tiempo-post">Hace 2 horas</span>
                                              </div>
                                         </div>
@@ -230,8 +232,8 @@
                                              </div>
                                              <div class="cuadro-noticias">
                                                   <div class="avatar-noticias" style="background-image: url(/img/avatar/bojack.png);"></div>
-                                                  <span class="titulo-post">No existe post</span>
-                                                  <p>Animaté a comentar en noticias</p>
+                                                  <span class="titulo-post">Título</span>
+                                                  <p>Comentario</p>
                                                   <span class="tiempo-post">Hace 2 horas</span>
                                              </div>
                                         </div>
@@ -246,8 +248,8 @@
                                              </div>
                                              <div class="cuadro-noticias">
                                                   <div class="avatar-noticias" style="background-image: url(/img/avatar/bojack.png);"></div>
-                                                  <span class="titulo-post">No existe post</span>
-                                                  <p>Animaté a comentar en noticias</p>
+                                                  <span class="titulo-post">Título</span>
+                                                  <p>Comentario</p>
                                                   <span class="tiempo-post">Hace 2 horas</span>
                                              </div>
                                         </div>

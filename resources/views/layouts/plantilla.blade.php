@@ -62,7 +62,9 @@
                               <li class="nav-item">
                                    <a class="nav-link" href="{{route('utilidades')}}"><div class="ico-utilidades"></div>Utilidades</a>
                               </li>
-                              
+                              <li class="nav-item">
+                                   <button id="iniciarhabbo" class="nav-link ini-habbo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div class="ico-iniciar"></div>Iniciar</button>
+                              </li>
                          </ul>
                     </div>
                </div>
