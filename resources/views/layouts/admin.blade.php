@@ -150,7 +150,7 @@
 							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon far fa-newspaper"></i><span class="m-menu__link-text">Información</span><i class="m-menu__ver-arrow la la-angle-right"></i></a>
 								<div class="m-menu__submenu "><span class="m-menu__arrow"></span>
 									<ul class="m-menu__subnav">
-										<li class="m-menu__item " aria-haspopup="true"><a href="#" class="m-menu__link "><span class="m-menu__link-text">Agregar Noticias</span></a></li>
+										<li class="m-menu__item " aria-haspopup="true"><a href="{{route('admin.noticias')}}" class="m-menu__link "><span class="m-menu__link-text">Noticias</span></a></li>
 									</ul>
 								</div>
 							</li>
@@ -212,10 +212,8 @@
 		<script src="/vendors/tooltip.js/dist/umd/tooltip.min.js" type="text/javascript"></script>
 		<script src="/vendors/perfect-scrollbar/dist/perfect-scrollbar.js" type="text/javascript"></script>
 		<script src="/vendors/wnumb/wNumb.js" type="text/javascript"></script>
-          <script src="/vendors/owl.carousel/dist/owl.carousel.js" type="text/javascript"></script>
 		<script src="/base/scripts.bundle.js" type="text/javascript"></script>
 		<script src="/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
-		<script src="/js/dashboard.js" type="text/javascript"></script>
 		@yield('customScripts')
 	</body>
 </html>

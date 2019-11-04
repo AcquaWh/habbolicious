@@ -17,7 +17,7 @@ class HabboliciousController extends Controller
     public function index(){
         Carbon::setLocale('es');
         $placas = file_get_contents("https://api.socialhabbo.com/badges?per_page=24&hotel=es");
-        $noticias = Noticias::select('users.name','hb_noticias.titulo','hb_noticias.descripcion','hb_noticias.cuerpo','hb_noticias.created_at','hb_noticias.portada')->orderBy('created_at', 'desc')->
+        $noticias = Noticias::select('users.habbo','users.name','hb_noticias.titulo','hb_noticias.descripcion','hb_noticias.cuerpo','hb_noticias.created_at','hb_noticias.portada')->orderBy('created_at', 'desc')->
         leftJoin('users','hb_noticias.id_user','users.id')
         ->take(6)->get();
         $blogs = Blogs::orderBy('created_at', 'desc')->take(8)->get();

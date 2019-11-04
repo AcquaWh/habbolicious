@@ -34,5 +34,12 @@ Route::post('/portada', 'SubirarchivoController@portada')->middleware('verified'
 Route::post('/avatar', 'SubirarchivoController@avatar')->middleware('verified')->name('avatar');
 Route::delete('/eliminar/comentario/{id}', 'ComentarioPerfilController@destroy')->middleware('verified')->name('comentario-perfil.destroy');
 /* Administrador */
-Route::get('/admin','AdminController@index')->middleware('verified')->name('admin.index'); 
+Route::get('/admin','AdminController@index')->middleware('verified')->name('admin.index');
+Route::get('/admin/noticias','NoticiasController@index')->middleware('verified')->name('admin.noticias');
+Route::get('/admin/crear-noticias/','NoticiasController@create')->middleware('verified')->name('admin.noticias.create');
+Route::get('/admin/editar-noticias/{id}','NoticiasController@edit')->middleware('verified')->name('admin.noticias.edit');
+Route::post('/admin/noticias/portada', 'NoticiasController@portada')->middleware('verified')->name('admin.noticias.subir');
+Route::post('/admin/noticias/crear','NoticiasController@store')->middleware('verified')->name('admin.noticias.store');
+Route::put('/admin/noticias/{id}','NoticiasController@update')->middleware('verified')->name('admin.noticias.update');
+Route::delete('/admin/noticias/eliminar/{id}','NoticiasController@destroy')->middleware('verified')->name('admin.noticias.destroy');
 Auth::routes(['verify' => true]);
