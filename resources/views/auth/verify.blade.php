@@ -1,4 +1,4 @@
-@extends('layouts.plantilla')
+@extends('layouts.verificar')
 @section('title','HabboLicious • Verifica tu correo')
 
 @section('customstyles')
