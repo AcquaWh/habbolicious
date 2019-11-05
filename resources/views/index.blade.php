@@ -18,7 +18,7 @@
                     <div class="contenedor-noticias">
                          @if(!$noticias->isEmpty())
                               @foreach($noticias as $noticia)
-                              <a href="">
+                              <a href="{{route('noticias.show',$noticia->id)}}">
                               <div class="noticia">
                                    <div class="row">
                                         <div class="col-lg-9">
