@@ -1029,6 +1029,11 @@ body {
                    height: 100%;
                    background-color: #5993d5;
                    border-color: #5993d5;
+                   transition: 0.3s;
+                   &:hover {
+                    background-color: #326094;
+                    border-color: #326094;
+                   }
               } 
           }
           .comentario {
@@ -1049,9 +1054,6 @@ body {
                          text-align: center;
                          color: white;
                          text-decoration: none;
-                    }
-                    &:hover {
-                         background: #ff97b2;
                     }
                }
                .cuenta {
