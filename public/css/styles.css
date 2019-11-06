@@ -878,7 +878,8 @@ body {
       height: 100%;
       display: table;
       background: #f980a0;
-      transition: 0.3s; }
+      transition: 0.3s;
+      color: white; }
       .principal .contenido-inicio .comentario .reaccion a {
         display: table-cell;
         vertical-align: middle;

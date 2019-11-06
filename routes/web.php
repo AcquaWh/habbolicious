@@ -17,6 +17,7 @@ Route::get('/', function () {
 Route::get('/','HabboliciousController@index')->name('index');
 Route::get('/noticias','HabboliciousController@noticias')->name('noticias');
 Route::get('/noticias/detalles/{id}','DetallesNoticiasController@show')->name('noticias.show');
+Route::post('/noticias/agregar/comentario/{id}', 'NoticiasComentarioController@store')->middleware('verified')->name('noticomentario.store');
 Route::get('/blogs','HabboliciousController@blogs')->name('blogs');
 Route::get('/loteria','HabboliciousController@loteria')->name('loteria');
 Route::get('/catalogo','HabboliciousController@catalogo')->name('catalogo');

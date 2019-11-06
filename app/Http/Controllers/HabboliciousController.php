@@ -11,6 +11,7 @@ use App\LikePerfil;
 use Auth;
 use App\User;
 use Carbon\Carbon;
+use App\ComentariosNoticias;
 
 class HabboliciousController extends Controller
 {
