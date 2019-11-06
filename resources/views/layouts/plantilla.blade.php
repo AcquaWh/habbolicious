@@ -166,11 +166,13 @@
                <div class="container">
                <div class="row">
                     <div class="col-lg-6">
-                         <div class="owl-carousel owl-theme">
-                              <div class="item" style="background-image:url(//images.habbo.com/web_images/habbo-web-articles/ny_large_promo.png);"><h4>Estamos en construcción</h4><p>Arreglando problemas técnicos, pronto volveremos.</p></div>
-                              <div class="item" style="background-image:url(//images.habbo.com/web_images/habbo-web-articles/lpromo_house18_gen.png);"><h4>Estamos enfriando tu postre</h4><p>Arreglando problemas técnicos, pronto volveremos.</p></div>
-                              <div class="item" style="background-image:url(//images.habbo.com/c_images/web_promo/lpromo_Star_Lounge.png);"><h4>Estamos creando dulces</h4><p>Arreglando problemas técnicos, pronto volveremos.</p></div>
-                              <div class="item" style="background-image:url(//images.habbo.com/web_images/habbo-web-articles/lpromo_UAloyaltycrowns.png);"><h4>Crea un nuevo mundo</h4><p>Arreglando problemas técnicos, pronto volveremos.</p></div>
+                         <div class="slider-noticias">
+                              <div class="owl-carousel owl-theme">
+                                   <div class="item" style="background-image:url(//images.habbo.com/web_images/habbo-web-articles/ny_large_promo.png);"><h4>Estamos en construcción</h4><p>Arreglando problemas técnicos, pronto volveremos.</p></div>
+                                   <div class="item" style="background-image:url(//images.habbo.com/web_images/habbo-web-articles/lpromo_house18_gen.png);"><h4>Estamos enfriando tu postre</h4><p>Arreglando problemas técnicos, pronto volveremos.</p></div>
+                                   <div class="item" style="background-image:url(//images.habbo.com/c_images/web_promo/lpromo_Star_Lounge.png);"><h4>Estamos creando dulces</h4><p>Arreglando problemas técnicos, pronto volveremos.</p></div>
+                                   <div class="item" style="background-image:url(//images.habbo.com/web_images/habbo-web-articles/lpromo_UAloyaltycrowns.png);"><h4>Crea un nuevo mundo</h4><p>Arreglando problemas técnicos, pronto volveremos.</p></div>
+                              </div>
                          </div>
                     </div>
                     <div class="col-lg-6">
