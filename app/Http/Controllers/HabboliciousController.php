@@ -23,10 +23,18 @@ class HabboliciousController extends Controller
         ->take(6)->get();
         $blogs = Blogs::orderBy('created_at', 'desc')->take(8)->get();
         $eventos = Eventos::orderBy('created_at', 'desc')->take(1)->get();
+        $comentarios = ComentariosNoticias::select('users.name','users.habbo','hb_perfil.foto','hb_comentarios_noticias.id_user','hb_comentarios_noticias.id_noticias','hb_comentarios_noticias.cuerpo','hb_comentarios_noticias.created_at','hb_noticias.titulo','hb_noticias.portada')
+        ->leftJoin('users','hb_comentarios_noticias.id_user','users.id')
+        ->leftJoin('hb_perfil','hb_comentarios_noticias.id_user','hb_perfil.id_user')
+        ->leftJoin('hb_noticias','hb_comentarios_noticias.id_user','hb_noticias.id_user')
+        ->take(3)
+        ->orderBy('hb_comentarios_noticias.created_at','DESC')
+        ->get();
         $argumentos = array();
         $argumentos['noticias'] = $noticias;
         $argumentos['blogs'] = $blogs;
         $argumentos['eventos'] = $eventos;
+        $argumentos['comentarios'] = $comentarios;
         if(Auth::check()){
             $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
             $argumentos['fotousuario'] = $fotousuario;

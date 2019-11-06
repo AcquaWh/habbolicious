@@ -211,54 +211,28 @@
                     <div class="col-lg-12">
                          <div class="noticias-usuarios">
                               <div class="row">
+                                   @foreach($comentarios as $comentario)
                                    <div class="col-lg-4">
                                         <div class="post-noticias">
-                                             <div class="imagen-post" style="background:url();">
+                                             <div class="imagen-post" style="background:url(/img/portada/{{$comentario->portada}}) !important;background-size: cover !important;background-position: center !important;">
                                                   <div class="datos">
-                                                       <div class="datos-img" style="background:url(https://www.habbo.es/habbo-imaging/avatarimage?user=xCoositta&direction=3&head_direction=3&gesture=sml&action=none&size=l);"></div>
-                                                       <div class="datos-usuario"><i class="fas fa-user"></i>Publicado por: xCoositta</div>
+                                                       <div class="datos-img" style="background:url(https://www.habbo.es/habbo-imaging/avatarimage?user={{$comentario->habbo}}&direction=3&head_direction=3&gesture=sml&action=none&size=l);"></div>
+                                                       <div class="datos-usuario"><i class="fas fa-user"></i>Publicado por: {{$comentario->name}}</div>
                                                   </div>
                                              </div>
                                              <div class="cuadro-noticias">
-                                                  <div class="avatar-noticias" style="background-image: url(/img/avatar/bojack.png);"></div>
-                                                  <span class="titulo-post">Título</span>
-                                                  <p>Comentario</p>
-                                                  <span class="tiempo-post">Hace 2 horas</span>
+                                                  @if(!$comentario->foto)
+                                                  <div class="avatar-noticias" style="background-image: url(/img/extra/avatar.png);"></div>
+                                                  @else 
+                                                  <div class="avatar-noticias" style="background-image: url(/img/avatar/{{$comentario->foto}});"></div>
+                                                  @endif
+                                                  <span class="titulo-post">{{$comentario->titulo}}</span>
+                                                  <p>{{$comentario->cuerpo}}</p>
+                                                  <span class="tiempo-post">{{$comentario->created_at->diffForHumans()}}</span>
                                              </div>
                                         </div>
                                    </div>
-                                   <div class="col-lg-4">
-                                        <div class="post-noticias">
-                                             <div class="imagen-post" style="background:url();">
-                                                  <div class="datos">
-                                                       <div class="datos-img" style="background:url(https://www.habbo.es/habbo-imaging/avatarimage?user=xCoositta&direction=3&head_direction=3&gesture=sml&action=none&size=l);"></div>
-                                                       <div class="datos-usuario"><i class="fas fa-user"></i>Publicado por: xCoositta</div>
-                                                  </div>
-                                             </div>
-                                             <div class="cuadro-noticias">
-                                                  <div class="avatar-noticias" style="background-image: url(/img/avatar/bojack.png);"></div>
-                                                  <span class="titulo-post">Título</span>
-                                                  <p>Comentario</p>
-                                                  <span class="tiempo-post">Hace 2 horas</span>
-                                             </div>
-                                        </div>
-                                   </div>
-                                   <div class="col-lg-4">
-                                        <div class="post-noticias">
-                                             <div class="imagen-post" style="background:url();">
-                                                  <div class="datos">
-                                                       <div class="datos-img" style="background:url(https://www.habbo.es/habbo-imaging/avatarimage?user=xCoositta&direction=3&head_direction=3&gesture=sml&action=none&size=l);"></div>
-                                                       <div class="datos-usuario"><i class="fas fa-user"></i>Publicado por: xCoositta</div>
-                                                  </div>
-                                             </div>
-                                             <div class="cuadro-noticias">
-                                                  <div class="avatar-noticias" style="background-image: url(/img/avatar/bojack.png);"></div>
-                                                  <span class="titulo-post">Título</span>
-                                                  <p>Comentario</p>
-                                                  <span class="tiempo-post">Hace 2 horas</span>
-                                             </div>
-                                        </div>
-                                   </div>
+                                   @endforeach
                               </div>
                          </div>
                     </div>

@@ -70,9 +70,9 @@
                                         <td>{{$noti->descripcion}}</td>
                                         <td>
                                              <a href="{{route('admin.noticias.edit',$noti->id)}}" class="btn btn-success"><i class="far fa-edit"></i></a>
-                                             <button class="btn btn-danger" data-toggle="modal" data-target="#m_modal_1"><i class="far fa-trash-alt"></i></button>
+                                             <button class="btn btn-danger" data-toggle="modal" data-target="#m_modal_{{$noti->id}}"><i class="far fa-trash-alt"></i></button>
                                         </td>
-                                        <div class="modal fade" id="m_modal_1" tabindex="-1" role="dialog" aria-labelledby="titulomodal" aria-hidden="true">
+                                        <div class="modal fade" id="m_modal_{{$noti->id}}" tabindex="-1" role="dialog" aria-labelledby="titulomodal" aria-hidden="true">
                                              <div class="modal-dialog" role="document">
                                                   <div class="modal-content">
                                                        <div class="modal-header">
