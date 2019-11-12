@@ -161,7 +161,7 @@
      <main role="main" class="flex-shrink-0">
           <div class="principal">
                <!-- Contenido principal -->
-               <div class="fondo">
+               <div class="fondo @if($comentarios->isEmpty()) pag-seccion @endif">
                <div class="globos"></div>
                <div class="container">
                <div class="row">
@@ -226,9 +226,11 @@
                                                   @else 
                                                   <div class="avatar-noticias" style="background-image: url(/img/avatar/{{$comentario->foto}});"></div>
                                                   @endif
-                                                  <span class="titulo-post">{{$comentario->titulo}}</span>
-                                                  <p>{{$comentario->cuerpo}}</p>
-                                                  <span class="tiempo-post">{{$comentario->created_at->diffForHumans()}}</span>
+                                                  <div class="detalles-post">
+                                                       <span class="titulo-post">{{$comentario->titulo}}</span>
+                                                       <br><span>{{$comentario->cuerpo}}</span>
+                                                       <span class="tiempo-post">{{$comentario->created_at->diffForHumans()}}</span>
+                                                  </div>
                                              </div>
                                         </div>
                                    </div>

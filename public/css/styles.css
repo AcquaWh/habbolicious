@@ -571,9 +571,13 @@ body {
           z-index: 1;
           position: relative;
           padding: 20px;
-          background: white;
-          padding-bottom: 33px; }
-          .principal .fondo .noticias-usuarios .post-noticias .cuadro-noticias p {
+          background: white; }
+          .principal .fondo .noticias-usuarios .post-noticias .cuadro-noticias .detalles-post {
+            width: 100%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden; }
+          .principal .fondo .noticias-usuarios .post-noticias .cuadro-noticias span {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis; }
@@ -584,6 +588,7 @@ body {
             overflow: hidden;
             text-overflow: ellipsis; }
           .principal .fondo .noticias-usuarios .post-noticias .cuadro-noticias .tiempo-post {
+            margin-top: 30px;
             float: right;
             font-size: 13px;
             font-weight: bold; }
@@ -593,7 +598,7 @@ body {
             background: black;
             position: absolute;
             border-radius: 50px;
-            margin-top: -63px;
+            margin-top: -83px;
             right: 40px;
             z-index: 1;
             background-color: #fff;

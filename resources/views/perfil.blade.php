@@ -102,7 +102,7 @@
                                                        </div>
                                                        <div class="col-lg-10">
                                                             <strong><a href="{{route('perfil',$comenta->name)}}">{{$comenta->name}}</a></strong>
-                                                            @if(Auth::user()->id == $infoperfil->id_user)
+                                                            @if(!Auth::user()->id == $infoperfil->id_user)
                                                             <form class="borrar d-inline" action="{{route('comentario-perfil.destroy',$comenta->id)}}" method="post">
                                                                  @method('delete')
                                                                  @csrf

@@ -1,4 +1,4 @@
-@extends('layouts.habbolicious')
+@extends('layouts.verificar')
 @section('title','HabboLicious • Regístrate')
 
 @section('customstyles')

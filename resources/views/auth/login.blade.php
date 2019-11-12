@@ -1,4 +1,4 @@
-@extends('layouts.habbolicious')
+@extends('layouts.verificar')
 @section('title','HabboLicious • Error 404')
 
 @section('customstyles')
