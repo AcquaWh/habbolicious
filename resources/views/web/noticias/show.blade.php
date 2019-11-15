@@ -75,15 +75,7 @@
                                    @else 
                                    <a href="{{route('perfil',$comentario->name)}}"><div class="avatarcomentario" style="background-image:url(/img/avatar/{{$comentario->foto}});"></div></a>
                                    @endif
-                                   @auth
-                                   <div class="reaccion">
-                                        <a href="">
-                                             <i class="far fa-thumbs-up"></i> 0 Likes
-                                        </a>
-                                   </div>
-                                   @else 
-                                   <button class="btn reaccion"><i class="far fa-thumbs-up"></i> 0 Likes</button>
-                                   @endauth
+                             
                                    <div class="detallesusuario">
                                         <span>
                                              <h1>{{$comentario->name}}</h1>

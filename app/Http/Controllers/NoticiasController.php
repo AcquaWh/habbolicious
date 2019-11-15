@@ -50,7 +50,7 @@ class NoticiasController extends Controller
     }
     public function edit($id){
         $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
-        $noticias = Noticias::select('id','titulo','descripcion','cuerpo','portada')->first();
+        $noticias = Noticias::select('id','titulo','descripcion','cuerpo','portada')->where('id',$id)->first();
         $argumentos['fotousuario'] = $fotousuario;
         $argumentos['noticias'] = $noticias;
         return view('admin.noticias.edit',$argumentos);

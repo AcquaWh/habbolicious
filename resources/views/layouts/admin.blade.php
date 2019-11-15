@@ -218,8 +218,7 @@
 							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon far fa-star"></i><span class="m-menu__link-text">Administración</span><i class="m-menu__ver-arrow la la-angle-right"></i></a>
 								<div class="m-menu__submenu "><span class="m-menu__arrow"></span>
 									<ul class="m-menu__subnav">
-										<li class="m-menu__item " aria-haspopup="true"><a href="#" class="m-menu__link "><span class="m-menu__link-text">Personalizar web</span></a></li>
-										<li class="m-menu__item " aria-haspopup="true"><a href="#" class="m-menu__link "><span class="m-menu__link-text">Rangos</span></a></li>
+										<li class="m-menu__item " aria-haspopup="true"><a href="{{route('admin.roles')}}" class="m-menu__link "><span class="m-menu__link-text">Administrar Rangos</span></a></li>
 									</ul>
 								</div>
 							</li>
@@ -243,7 +242,6 @@
 			</div>
 		</div>
           <div id="m_scroll_top" class="m-scroll-top"><i class="la la-arrow-up"></i></div>
-          
 		<script src="/vendors/jquery/dist/jquery.js" type="text/javascript"></script>
 		<script src="/vendors/popper.js/dist/umd/popper.js" type="text/javascript"></script>
 		<script src="/vendors/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>

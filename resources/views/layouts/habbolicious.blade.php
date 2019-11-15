@@ -161,7 +161,7 @@
      <main role="main" class="flex-shrink-0">
           <div class="principal">
                <!-- Contenido principal -->
-               <div class="fondo @if($comentarios->isEmpty()) pag-seccion @endif">
+               <div class="fondo pag-seccion @if($comentarios->isEmpty()) pag-seccion @endif">
                <div class="globos"></div>
                <div class="container">
                <div class="row">
@@ -208,36 +208,7 @@
                               </div>
                          </div>
                     </div>
-                    <div class="col-lg-12">
-                         <div class="noticias-usuarios">
-                              <div class="row">
-                                   @foreach($comentarios as $comentario)
-                                   <div class="col-lg-4">
-                                        <div class="post-noticias">
-                                             <div class="imagen-post" style="background:url(/img/portada/{{$comentario->portada}}) !important;background-size: cover !important;background-position: center !important;">
-                                                  <div class="datos">
-                                                       <div class="datos-img" style="background:url(https://www.habbo.es/habbo-imaging/avatarimage?user={{$comentario->habbo}}&direction=3&head_direction=3&gesture=sml&action=none&size=l);"></div>
-                                                       <div class="datos-usuario"><i class="fas fa-user"></i>Publicado por: {{$comentario->name}}</div>
-                                                  </div>
-                                             </div>
-                                             <div class="cuadro-noticias">
-                                                  @if(!$comentario->foto)
-                                                  <div class="avatar-noticias" style="background-image: url(/img/extra/avatar.png);"></div>
-                                                  @else 
-                                                  <div class="avatar-noticias" style="background-image: url(/img/avatar/{{$comentario->foto}});"></div>
-                                                  @endif
-                                                  <div class="detalles-post">
-                                                       <span class="titulo-post">{{$comentario->titulo}}</span>
-                                                       <br><span>{{$comentario->cuerpo}}</span>
-                                                       <span class="tiempo-post">{{$comentario->created_at->diffForHumans()}}</span>
-                                                  </div>
-                                             </div>
-                                        </div>
-                                   </div>
-                                   @endforeach
-                              </div>
-                         </div>
-                    </div>
+              
                </div>
           </div>
      </div>

@@ -18,7 +18,7 @@ class DetallesNoticiasController extends Controller
         ->leftJoin('users','hb_noticias.id_user','users.id')
         ->where('hb_noticias.id',$id)
         ->first();
-        $cuentacomentarios = ComentariosNoticias::select('id')->count();
+        $cuentacomentarios = ComentariosNoticias::select('id')->where('id_noticias',$id)->count();
         $comentarios = ComentariosNoticias::select('users.name','hb_perfil.foto','hb_comentarios_noticias.id_user','hb_comentarios_noticias.cuerpo','hb_comentarios_noticias.created_at')
         ->leftJoin('users','hb_comentarios_noticias.id_user','users.id')
         ->leftJoin('hb_perfil','hb_comentarios_noticias.id_user','hb_perfil.id_user')

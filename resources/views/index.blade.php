@@ -32,7 +32,7 @@
                                         <div class="col-lg-3">
                                              <div class="noticia-img" style="background-image: url(/img/portada/{{$noticia->portada}});">
                                                   <div class="capa1">
-                                                       <span><i class="far fa-comment-dots"></i> 0 Comentarios</span>
+                                                       <span><i class="far fa-comment-dots"></i> {{$cuentacomentarios}} Comentarios</span>
                                                        <span><i class="fas fa-heart"></i> 0 Me gusta</span>
                                                        <div class="usuario-noticia-img" style="background-image: url(http://www.habbo.es/habbo-imaging/avatarimage?&user={{$noticia->habbo}}&action=&direction=3&head_direction=3&img_format=png&gesture=&headonly=0&size=l);"></div>
                                                   </div>

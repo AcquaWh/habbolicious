@@ -68,7 +68,7 @@
                                         <td>{{$noti->name}}</td>
                                         <td>{{$noti->titulo}}</td>
                                         <td>{{$noti->descripcion}}</td>
-                                        <td>
+                                        <td class="editarnoti">
                                              <a href="{{route('admin.noticias.edit',$noti->id)}}" class="btn btn-success"><i class="far fa-edit"></i></a>
                                              <button class="btn btn-danger" data-toggle="modal" data-target="#m_modal_{{$noti->id}}"><i class="far fa-trash-alt"></i></button>
                                         </td>

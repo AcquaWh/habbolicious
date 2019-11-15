@@ -69,7 +69,7 @@
                                              @if($fotousuario->portada)
                                              <div class="mt-3 text-center">
                                                   <img class="img-fluid" width="200" src="/img/portada/{{$fotousuario->portada}}"/>
-                                                  <input type="hidden" name="portada" value="{{$fotousuario->foto}}">
+                                                  <input type="hidden" name="portada" value="{{$fotousuario->portada}}">
                                              </div>
                                              @endif
                                         </div>

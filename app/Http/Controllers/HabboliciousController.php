@@ -32,17 +32,20 @@ class HabboliciousController extends Controller
         ->take(3)
         ->orderBy('hb_comentarios_noticias.created_at','DESC')
         ->get();
-        /* Comentarios total */
-        
         $argumentos = array();
-        $argumentos['noticias'] = $noticias;
-        $argumentos['blogs'] = $blogs;
-        $argumentos['eventos'] = $eventos;
-        $argumentos['comentarios'] = $comentarios;
+        /* Comentarios total */
+        foreach($noticias as $noti){
+            $cuentacomentarios = ComentariosNoticias::select('id')->where('id_noticias',$noti->id)->count();
+        }
         if(Auth::check()){
             $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
             $argumentos['fotousuario'] = $fotousuario;
         }
+        $argumentos['noticias'] = $noticias;
+        $argumentos['blogs'] = $blogs;
+        $argumentos['eventos'] = $eventos;
+        $argumentos['comentarios'] = $comentarios;
+        $argumentos['cuentacomentarios'] = $cuentacomentarios;
         return view('index',$argumentos)->with('habbo',json_decode($placas,true));
     }
     public function noticias(){
