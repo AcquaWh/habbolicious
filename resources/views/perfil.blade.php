@@ -9,7 +9,7 @@
      <div class="container">
           <div class="row justify-content-center">
                <div class="col-lg-12 mt-3">
-                    @if($infoperfil->portada)<div class="portada" style="background-image:url(/img/portada/{{$infoperfil->portada}});">@else<div class="portada"> @endif
+                    @if($infoperfil->portada)<div class="portada" style="background-image:url('/img/portada/{{$infoperfil->portada}}');background-size:cover;">@else<div class="portada"> @endif
                          @if($infoperfil->foto)<div class="avatarfoto" style="background-image:url(/img/avatar/{{$infoperfil->foto}});"></div>@else<div class="avatarfoto" style="background-image:url(/img/extra/avatar.png);"></div>@endif
                          <h3 class="avatarnombre">{{$usuario_perfil->name}}</h3>
                          <button id="likesperfil" class="megusta btn btn-danger"><i class="far fa-thumbs-up"></i> {{$likes}} likes</button>

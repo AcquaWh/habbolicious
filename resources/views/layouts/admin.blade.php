@@ -83,7 +83,7 @@
 													@if (!$fotousuario->portada)
 													<div class="portada m-dropdown__header m--align-center">
 													@else
-													<div class="m-dropdown__header m--align-center" style="background: url(/img/portada/{{$fotousuario->portada}}); background-size: cover;">
+													<div class="m-dropdown__header m--align-center" style="background: url('/img/portada/{{$fotousuario->portada}}'); background-size: cover;">
 													@endif
 														<div class="m-card-user m-card-user--skin-dark">
 															<div class="m-card-user__pic">
