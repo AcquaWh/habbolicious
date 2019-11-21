@@ -11,11 +11,13 @@
             <div class="col-lg-8 mt-3">
                 <div class="card">
                     <div class="card-body row">
+                        <div class="col-lg-12">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
+                                Se ha enviado enlace a tu correo para resetear contraseña
                             </div>
                         @endif
+                        </div>
                         <div class="col-lg-12"><h1>Recupera tu contraseña</h1></div>
                         <div class="col-lg-12">
                             <form method="POST" action="{{ route('password.email') }}">
@@ -26,7 +28,7 @@
     
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
+                                            <strong>Tu correo no es correcto, intenta otra vez.</strong>
                                         </span>
                                     @enderror
                                 </div>

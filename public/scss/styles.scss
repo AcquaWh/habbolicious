@@ -815,6 +815,58 @@ body {
                     color: white;
                }
           }
+          .cuadro-staff {
+               background: white;
+               padding: 20px;
+               box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219);
+               margin-bottom: 20px;
+               h3 {
+                    font-size: 24px;
+                    margin-bottom: 14px;
+               }
+               .cuadro-staff-info {
+                    padding: 10px;
+                    background: white;
+                    margin-bottom: 10px;
+                    height: 86px;
+                    box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219);
+               }
+               .cuadro-staff-avatar {
+                    width: 48px;
+                    height: 48px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    float: left;
+               }
+               .cuadro-staff-infoex{
+                    margin-left: 76px;
+                    .user-style {
+                         display: inline-block;
+                         color: #337ab7;
+                    }
+                    a {
+                         color: #337ab7;
+                         text-decoration: none;
+                     }
+                    .cuadro-staff-texto {
+                         font-size: 85%;
+                    }
+                    .user-icon.salt {
+                         height: 21px;
+                         width: 21px;
+                         background: url(/img/icons/rainbowcloud.gif);
+                         display: inline-block;
+                         vertical-align: -3px;
+                    }
+                    .user-style.slushy {
+                         background-image: -webkit-gradient( linear,left top,right top,color-stop(0,#950707),color-stop(0.15,#bf7017),color-stop(0.3,#f2ec2f),color-stop(0.45,#218309),color-stop(0.6,#2681c9),color-stop(0.75,#480979));
+                         -webkit-background-clip: text;
+                         background-clip: text;
+                         -webkit-text-fill-color: transparent;
+                    }
+               }
+               
+          }
           .cuadro-perfil {
                background: white;
                position: relative;

@@ -10,6 +10,7 @@ use App\Eventos;
 use App\LikePerfil;
 use Auth;
 use App\User;
+use App\Roles;
 use Carbon\Carbon;
 use App\ComentariosNoticias;
 
@@ -34,7 +35,7 @@ class HabboliciousController extends Controller
         ->get();
         $argumentos = array();
         /* Comentarios total */
-        foreach($noticias as $noti){
+        foreach($noticias  as $noti){
             $cuentacomentarios = ComentariosNoticias::select('id')->where('id_noticias',$noti->id)->count();
         }
         if(Auth::check()){
@@ -94,13 +95,21 @@ class HabboliciousController extends Controller
         return view('eventos');
     }
     public function equipo(){
+        $equipo = Roles::where('nombre_rango','!=','Habbolicious')->get();
+        foreach($equipo as $equipos){
+            $datosequipo = User::select('users.name','hb_perfil.foto','users.descripcion')
+            ->leftJoin('hb_perfil','users.id','hb_perfil.id_user')
+            ->where('users.id_rol',$equipos->id)
+            ->get();
+            $equipos->datosnombre = $datosequipo;
+        }
+        $argumentos = array();
         if(Auth::check()){
             $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
-            $argumentos = array();
             $argumentos['fotousuario'] = $fotousuario;
-            return view('equipo',$argumentos);
         }
-        return view('equipo');
+        $argumentos['equipo'] = $equipo;
+        return view('equipo',$argumentos);
     }
     public function vacantes(){
         if(Auth::check()){

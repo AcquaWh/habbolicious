@@ -28,7 +28,6 @@
                     </span>
                </a>
           </div>
-          
      </div>
 </div>
 <div class="m-content">

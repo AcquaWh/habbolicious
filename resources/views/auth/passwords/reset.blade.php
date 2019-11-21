@@ -13,7 +13,7 @@
                     <div class="card-body row">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
+                               Se ha reseteado correctamente tu contraseña
                             </div>
                         @endif
                         <div class="col-lg-12"><h1>Recupera tu contraseña</h1></div>
@@ -22,27 +22,27 @@
                                 @csrf
                                 <input type="hidden" name="token" value="{{ $token }}">
                                 <div class="form-group">
-                                    <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Correo electrónico') }}</label>
+                                    <label for="email" class="col-form-label text-md-right">{{ __('Correo electrónico') }}</label>
                                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $email ?? old('email') }}" required autocomplete="email" autofocus>
         
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
+                                            <strong>El correo que estas insertando no existe</strong>
                                         </span>
                                     @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Contraseña nueva') }}</label>
+                                    <label for="password" class="col-form-label text-md-right">{{ __('Contraseña nueva') }}</label>
                                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
         
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
+                                            <strong>Tu contraseña no es valida</strong>
                                         </span>
                                     @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirma tu contraseña nueva') }}</label>
+                                    <label for="password-confirm" class="col-form-label text-md-right">{{ __('Confirma tu contraseña nueva') }}</label>
                                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                                 </div>
                                 <div class="form-groupmb-0">
