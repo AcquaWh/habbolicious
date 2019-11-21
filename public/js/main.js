@@ -41,7 +41,7 @@ $( function() {
         if ($("#contra").val() == $("#confirmarcontra").val()) {
             $("#frmActualizarPerfil").submit();
         } else {
-            $("#passwordError").html("<i class='fa fa-times-circle-o'></i> Las contraseñas no coinciden");
+            $("#passwordError").html("<i class='fa fa-times-circle-o'></i> Las contraseÃ±as no coinciden");
             $(".grupo-password").addClass("has-error");
         }
     }
@@ -51,7 +51,7 @@ $( function() {
                 $(".grupo-password").removeClass("has-error");
             }
             else {
-                $("#passwordError").html("<i class='fa fa-times-circle-o'></i> Las contraseñas no coinciden");
+                $("#passwordError").html("<i class='fa fa-times-circle-o'></i> Las contraseÃ±as no coinciden");
                 $(".grupo-password").addClass("has-error");
             }
     });
@@ -88,7 +88,7 @@ $( function() {
     var radiohabbo = document.createElement('audio');
     $('#slider').append(radiohabbo);
     radiohabbo.id = "radiohabbo";
-    iniciaraudio('https://habbolicious.radioca.st/stream', 0);
+    iniciaraudio('https://centova.wlservices.org:4002/stream', 0);
     function iniciaraudio(archivo, volumen) {
         radiohabbo.src = archivo;
         radiohabbo.setAttribute('loop', 'loop');
@@ -107,7 +107,7 @@ $( function() {
     /* Api */
     function api(){
         $.ajax({
-            url: "https://nebula.shoutca.st/rpc/habbolicious/streaminfo.get",
+            url: "https://centova.wlservices.org/rpc/habbolicious/streaminfo.get",
             type: 'GET',
             success: function(json){
                 json.data.forEach(function (item) {
@@ -118,7 +118,7 @@ $( function() {
 						$(".cancion-radio").html("<span><i class='fas fa-music' aria-hidden='true'></i></span> No disponible");
 						$(".titulo-radio").html("<span><i class='fas fa-user' aria-hidden='true'></i></span> No hay DJ");
 					} else {
-						var oyente = item.listenertotal;
+						var oyente = item.listeners;
 						var dj = item.title;
 						var titulo = item.track.title;
 						var artista = item.track.artist;
@@ -139,6 +139,6 @@ $( function() {
         });
     }
     api();
-    setInterval(api,5000);
+    setInterval(api,500);
 } );
 

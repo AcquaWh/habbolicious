@@ -193,7 +193,7 @@
                          <img class="habbolicious" src="/img/logo.png" alt=""/>
                     </div>
                     <div class="col-lg-9">
-                    <p class="mapa"><a href="{{route('index')}}">Inicio</a> / <a href="{{route('noticias')}}">Noticias</a> / <a href="{{route('blogs')}}">Blog</a> / <a href="{{route('catalogo')}}">Catálogo</a> / <a href="{{route('eventos')}}">Eventos</a> / <a href="{{route('equipo')}}">Equipo</a> / <a href="{{route('vacantes')}}">Vacantes</a> / <a href="{{route('utilidades')}}">Utilidades</a> / <a href="">Normas</a> / <a href="">Términos</a> /<br> <a href="">Contáctanos</a></p>
+                    <p class="mapa"><a href="{{route('index')}}">Inicio</a> / <a href="{{route('noticias')}}">Noticias</a> / <a href="{{route('blogs')}}">Blog</a> / <a href="{{route('catalogo')}}">Catálogo</a> / <a href="{{route('eventos')}}">Eventos</a> / <a href="{{route('equipo')}}">Equipo</a> / <a href="{{route('vacantes')}}">Vacantes</a> / <a href="{{route('utilidades')}}">Utilidades</a> / <a href="">Normas</a> / <a href="">Términos</a> /<br></p>
                          <span class="habboli">©2019, Habbolicious<br></span>
                          <span>Habbolicious no está afiliado, respaldado, patrocinado o aprobado específicamente por Sulake Suomi o sus afiliados. Habbolicious puede usar las marcas comerciales y otras propiedades intelectuales de Habbo, lo cual está permitido bajo la Política del sitio de fans de Habbo.</span>
                     </div>

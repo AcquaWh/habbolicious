@@ -22,7 +22,7 @@ class HabboliciousController extends Controller
         /* Noticias listado */
         $noticias = Noticias::select('users.habbo','users.name','hb_noticias.id','hb_noticias.titulo','hb_noticias.descripcion','hb_noticias.cuerpo','hb_noticias.created_at','hb_noticias.portada')->orderBy('created_at', 'desc')->
         leftJoin('users','hb_noticias.id_user','users.id')
-        ->take(6)->get();
+        ->get();
         $blogs = Blogs::orderBy('created_at', 'desc')->take(8)->get();
         $eventos = Eventos::orderBy('created_at', 'desc')->take(1)->get();
         /* Comentarios destacados */
@@ -37,6 +37,10 @@ class HabboliciousController extends Controller
         /* Comentarios total */
         foreach($noticias  as $noti){
             $cuentacomentarios = ComentariosNoticias::select('id')->where('id_noticias',$noti->id)->count();
+            $noti->cuenta = $cuentacomentarios;
+        }
+        foreach($noticias  as $noti){
+            $cuentacomentarios = ComentariosNoticias::select('id')->where('id_noticias',$noti->id)->count();
         }
         if(Auth::check()){
             $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
@@ -46,7 +50,6 @@ class HabboliciousController extends Controller
         $argumentos['blogs'] = $blogs;
         $argumentos['eventos'] = $eventos;
         $argumentos['comentarios'] = $comentarios;
-        $argumentos['cuentacomentarios'] = $cuentacomentarios;
         return view('index',$argumentos)->with('habbo',json_decode($placas,true));
     }
     public function noticias(){

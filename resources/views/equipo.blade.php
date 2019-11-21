@@ -18,7 +18,11 @@
                               <div class="col-lg-4">
                                    <div class="cuadro-staff-info">
                                         <div class="cuadro-staff-avatar">
+                                             @if(!$datos->foto)
+                                             <div style="background: url(/img/extra/avatar.png) no-repeat center;width: 62px;height: 62px;background-size: cover;border-radius: 50px;"></div>
+                                             @else
                                              <div style="background: url(/img/avatar/{{$datos->foto}}) no-repeat center;width: 62px;height: 62px;background-size: cover;border-radius: 50px;"></div>
+                                             @endif
                                         </div>
                                         <div class="cuadro-staff-infoex">
                                              <strong>
@@ -35,6 +39,11 @@
                               </div>
                               @endforeach
                               @else 
+                              <div class="col-lg-12">
+                                   <div class="mt-3 alert alert-primary" role="alert">
+                                        Aplica para este rango ahora mismo, anímate!
+                                   </div>
+                              </div>
                               @endif
                          </div>
                     </div>

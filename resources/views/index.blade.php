@@ -17,8 +17,8 @@
                     </div>
                     <div class="contenedor-noticias">
                          @if(!$noticias->isEmpty())
-                              @foreach($noticias as $noticia)
-                              <a href="{{route('noticias.show',$noticia->id)}}">
+                         @foreach($noticias as $noticia)
+                         <a href="{{route('noticias.show',$noticia->id)}}">
                               <div class="noticia">
                                    <div class="row">
                                         <div class="col-lg-9">
@@ -32,21 +32,24 @@
                                         <div class="col-lg-3">
                                              <div class="noticia-img" style="background-image: url(/img/portada/{{$noticia->portada}});">
                                                   <div class="capa1">
-                                                       <span><i class="far fa-comment-dots"></i> {{$cuentacomentarios}} Comentarios</span>
+                                                       <span><i class="far fa-comment-dots"></i> {{$noticia->cuenta}} Comentarios</span>
                                                        <span><i class="fas fa-heart"></i> 0 Me gusta</span>
-                                                       <div class="usuario-noticia-img" style="background-image: url(http://www.habbo.es/habbo-imaging/avatarimage?&user={{$noticia->habbo}}&action=&direction=3&head_direction=3&img_format=png&gesture=&headonly=0&size=l);"></div>
+                                                       <div class="usuario-noticia-img" style="background-image: url(https://www.habbo.es/habbo-imaging/avatarimage?&user={{$noticia->habbo}}&action=&direction=3&head_direction=3&img_format=png&gesture=&headonly=0&size=l);"></div>
                                                   </div>
                                              </div>
                                         </div>
                                    </div>
                               </div>
-                              </a>
-                              @endforeach
+                         </a>
+                         @endforeach
                          @else 
                          <div class="mt-3 alert alert-primary" role="alert">
                               No existe ninguna noticia aun
                          </div>
                          @endif
+                    </div>
+                    <div class="contenedor-noticias">
+            
                     </div>
                     <div class="contenedor-titulo" style="background-image: url(/img/extra/lpromo_march18UA.png);">
                          <h4>Actividad reciente en blog</h4>
@@ -119,7 +122,7 @@
                               </div>
                          @else
                          <div class="mt-3 alert alert-primary" role="alert">
-                              No existe ningun evento actual
+                              No existe ningún evento actual
                          </div>
                          @endif
                     </div>
