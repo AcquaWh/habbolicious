@@ -114,7 +114,7 @@ $( function() {
                     if(item.track.title == ""){
 						$(".cancion-radio").html("");
 						$(".titulo-radio").html("");
-						$(".avatar").css( "background-image","url(https://www.habbo.es/habbo-imaging/avatarimage?user=xCoositta&direction=3&head_direction=3&gesture=sml&action=none&size=l)");
+						$(".avatar").css( "background-image","url(https://www.habbo.es/habbo-imaging/avatarimage?user=HabboliciousFAN&direction=3&head_direction=3&gesture=sml&action=none&size=l)");
 						$(".cancion-radio").html("<span><i class='fas fa-music' aria-hidden='true'></i></span> No disponible");
 						$(".titulo-radio").html("<span><i class='fas fa-user' aria-hidden='true'></i></span> No hay DJ");
 					} else {

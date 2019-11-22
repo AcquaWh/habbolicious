@@ -48,9 +48,6 @@
                          </div>
                          @endif
                     </div>
-                    <div class="contenedor-noticias">
-            
-                    </div>
                     <div class="contenedor-titulo" style="background-image: url(/img/extra/lpromo_march18UA.png);">
                          <h4>Actividad reciente en blog</h4>
                     </div>

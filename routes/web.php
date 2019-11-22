@@ -25,6 +25,8 @@ Route::get('/eventos','HabboliciousController@eventos')->name('eventos');
 Route::get('/equipo','HabboliciousController@equipo')->name('equipo');
 Route::get('/vacantes','HabboliciousController@vacantes')->name('vacantes');
 Route::get('/utilidades','HabboliciousController@utilidades')->name('utilidades');
+Route::get('/normas','HabboliciousController@normas')->name('normas');
+Route::get('/terminos','HabboliciousController@terminos')->name('terminos');
 Route::get('/validar-usuario/{correo}','HabboliciousController@validarUsuario');
 Route::get('/perfil/{usuario}','PerfilController@index')->middleware('verified')->name('perfil');
 Route::post('/comentario-perfil/{id}','ComentarioPerfilController@store')->middleware('verified')->name('comentario-perfil.store');

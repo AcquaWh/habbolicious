@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use App\Perfil;
 use App\LikePerfil;
 use Auth;
+use App\Equipo;
 use App\User;
 use App\ComentariosNoticias;
 use App\ComentariosPerfil;
@@ -31,7 +32,7 @@ class PerfilController extends Controller
             $infoperfil = Perfil::where('id_user',$usuario_perfil->id)->first();
             $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
             $sweets = Sweets::where('id_user',$usuario_perfil->id)->first();
-            $roles = Roles::find($usuario_perfil->id_rol);
+            $roles = Equipo::select('srol')->where('id_user',$usuario_perfil->id)->first();
             $likes = LikePerfil::where('id_perfil',$infoperfil->id)->count();
             $comentarios = ComentariosNoticias::select('id')->where('id_user',$usuario_perfil->id)->count();
             $comentariosperfil = ComentariosPerfil::select('users.name','hb_comentarios_perfil.id','hb_comentarios_perfil.cuerpo','hb_comentarios_perfil.created_at','hb_perfil.foto')
@@ -54,7 +55,9 @@ class PerfilController extends Controller
     public function edit($id){
         $usuario_perfil = User::find($id);
         $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+        $roles = Equipo::select('srol')->where('id_user',$usuario_perfil->id)->first();
         $argumentos = array();
+        $argumentos['roles'] = $roles;
         $argumentos['fotousuario'] = $fotousuario;
         $argumentos['usuario_perfil'] = $usuario_perfil;
         return view('perfileditar',$argumentos);

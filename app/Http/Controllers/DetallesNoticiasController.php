@@ -8,6 +8,7 @@ use App\Noticias;
 use Auth;
 use App\User;
 use Carbon\Carbon;
+use App\Equipo;
 use App\ComentariosNoticias;
 class DetallesNoticiasController extends Controller
 {
@@ -30,7 +31,9 @@ class DetallesNoticiasController extends Controller
         $argumentos['cuentacomentarios'] = $cuentacomentarios;
         if(Auth::check()){
             $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+            $roles = Equipo::select('id_rol')->where('id_user',Auth::user()->id)->first();
             $argumentos['fotousuario'] = $fotousuario;
+            $argumentos['roles'] = $roles;
         }
         return view('web.noticias.show',$argumentos)->with('habbo',json_decode($placas,true));;
     }

@@ -73,7 +73,7 @@
                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="menu-usuario">
                                              <a class="dropdown-item" href="{{route('perfil',Auth::user()->name)}}">Perfil</a>
                                              <a class="dropdown-item" href="{{route('perfil.edit',Auth::user()->id)}}">Editar Perfil</a>
-                                             @if(Auth::user()->id_rol <= 12 )
+                                             @if($roles->id_rol <= 13)
                                              <a class="dropdown-item" href="{{route('admin.index')}}">Panel de admin</a>
                                              @endif
                                              <form action="{{route('logout')}}" method="POST">
@@ -221,9 +221,9 @@
                          <img class="habbolicious" src="/img/logo.png" alt=""/>
                     </div>
                     <div class="col-lg-9">
-                    <p class="mapa"><a href="{{route('index')}}">Inicio</a> / <a href="{{route('noticias')}}">Noticias</a> / <a href="{{route('blogs')}}">Blog</a> / <a href="{{route('catalogo')}}">Catálogo</a> / <a href="{{route('eventos')}}">Eventos</a> / <a href="{{route('equipo')}}">Equipo</a> / <a href="{{route('vacantes')}}">Vacantes</a> / <a href="{{route('utilidades')}}">Utilidades</a> / <a href="">Normas</a> / <a href="">Términos</a> /<br></p>
+                    <p class="mapa"><a href="{{route('index')}}">Inicio</a> / <a href="{{route('noticias')}}">Noticias</a> / <a href="{{route('blogs')}}">Blog</a> / <a href="{{route('catalogo')}}">Catálogo</a> / <a href="{{route('eventos')}}">Eventos</a> / <a href="{{route('equipo')}}">Equipo</a> / <a href="{{route('vacantes')}}">Vacantes</a> / <a href="{{route('utilidades')}}">Utilidades</a> / <a href="{{route('normas')}}">Normas</a> / <a href="{{route('terminos')}}">Términos</a> /<br></p>
                          <span class="habboli">©2019, Habbolicious<br></span>
-                         <span>Habbolicious no está afiliado, respaldado, patrocinado o aprobado específicamente por Sulake Suomi o sus afiliados. Habbolicious puede usar las marcas comerciales y otras propiedades intelectuales de Habbo, lo cual está permitido bajo la Política del sitio de fans de Habbo.</span>
+                         <span>Habbolicious no está afiliada a, respaldada, promocionada o aprobada específicamente por Sulake Oy o sus Afiliados. De acuerdo a la Política de Webs fans de Habbo, Habbolicious puede utilizar las marcas comerciales y otras propiedades intelectuales de Habbo.</span>
                     </div>
                </div>
           </div>

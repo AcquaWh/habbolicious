@@ -55,9 +55,11 @@
                                              <div class="seccion">
                                                   <i class="pr-3 fas fa-candy-cane"></i> {{$sweets->cantidad}} sweets
                                              </div>
+                                             @if($roles)
                                              <div class="seccion">
-                                                  <i class="pr-3 far fa-star"></i> {{$roles->nombre_rango}}
+                                                  <i class="pr-3 far fa-star"></i> {{$roles->srol}}
                                              </div>
+                                             @endif
                                         </div>
                                         @if($infoperfil->video_youtube)
                                         <div class="youtube">

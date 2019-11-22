@@ -7,6 +7,7 @@ use App\Perfil;
 use App\User;
 use Auth;
 use App\Roles;
+use App\Equipo;
 
 class RolesController extends Controller
 {
@@ -28,6 +29,9 @@ class RolesController extends Controller
     }
     public function create(){
         $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+        $roles = Equipo::select('id_rol')->where('id_user',Auth::user()->id)->first();
+        $argumentos = array();
+        $argumentos['roles'] = $roles;
         $argumentos['fotousuario'] = $fotousuario;
         return view('admin.roles.create',$argumentos);
     }

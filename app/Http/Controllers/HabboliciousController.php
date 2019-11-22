@@ -11,6 +11,7 @@ use App\LikePerfil;
 use Auth;
 use App\User;
 use App\Roles;
+use App\Equipo;
 use Carbon\Carbon;
 use App\ComentariosNoticias;
 
@@ -22,7 +23,7 @@ class HabboliciousController extends Controller
         /* Noticias listado */
         $noticias = Noticias::select('users.habbo','users.name','hb_noticias.id','hb_noticias.titulo','hb_noticias.descripcion','hb_noticias.cuerpo','hb_noticias.created_at','hb_noticias.portada')->orderBy('created_at', 'desc')->
         leftJoin('users','hb_noticias.id_user','users.id')
-        ->get();
+        ->take(6)->get();
         $blogs = Blogs::orderBy('created_at', 'desc')->take(8)->get();
         $eventos = Eventos::orderBy('created_at', 'desc')->take(1)->get();
         /* Comentarios destacados */
@@ -44,7 +45,9 @@ class HabboliciousController extends Controller
         }
         if(Auth::check()){
             $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+            $roles = Equipo::select('id_rol')->where('id_user',Auth::user()->id)->first();
             $argumentos['fotousuario'] = $fotousuario;
+            $argumentos['roles'] = $roles;
         }
         $argumentos['noticias'] = $noticias;
         $argumentos['blogs'] = $blogs;
@@ -53,84 +56,115 @@ class HabboliciousController extends Controller
         return view('index',$argumentos)->with('habbo',json_decode($placas,true));
     }
     public function noticias(){
+        $argumentos = array();
         if(Auth::check()){
             $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
-            $argumentos = array();
+            $roles = Equipo::select('id_rol')->where('id_user',Auth::user()->id)->first();
             $argumentos['fotousuario'] = $fotousuario;
-            return view('noticias',$argumentos);
+            $argumentos['roles'] = $roles;
         }
-        return view('noticias');
+        return view('noticias',$argumentos);
     }
     public function blogs(){
+        $argumentos = array();
         if(Auth::check()){
             $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
-            $argumentos = array();
+            $roles = Equipo::select('id_rol')->where('id_user',Auth::user()->id)->first();
             $argumentos['fotousuario'] = $fotousuario;
-            return view('blogs',$argumentos);
+            $argumentos['roles'] = $roles;
         }
-        return view('blogs');
+        return view('blogs',$argumentos);
     }
     public function loteria(){
+        $argumentos = array();
         if(Auth::check()){
             $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
-            $argumentos = array();
+            $roles = Equipo::select('id_rol')->where('id_user',Auth::user()->id)->first();
             $argumentos['fotousuario'] = $fotousuario;
-            return view('loteria',$argumentos);
+            $argumentos['roles'] = $roles;
         }
-            return view('loteria');
+            return view('loteria',$argumentos);
     }
     public function catalogo(){
+        $argumentos = array();
         if(Auth::check()){
             $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
-            $argumentos = array();
+            $roles = Equipo::select('id_rol')->where('id_user',Auth::user()->id)->first();
             $argumentos['fotousuario'] = $fotousuario;
-            return view('catalogo',$argumentos);
+            $argumentos['roles'] = $roles;
         }
-        return view('catalogo');
+        return view('catalogo',$argumentos);
     }
     public function eventos(){
+        $argumentos = array();
         if(Auth::check()){
             $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
-            $argumentos = array();
+            $roles = Equipo::select('id_rol')->where('id_user',Auth::user()->id)->first();
             $argumentos['fotousuario'] = $fotousuario;
-            return view('eventos',$argumentos);
+            $argumentos['roles'] = $roles;
         }
-        return view('eventos');
+        return view('eventos',$argumentos);
     }
     public function equipo(){
         $equipo = Roles::where('nombre_rango','!=','Habbolicious')->get();
         foreach($equipo as $equipos){
-            $datosequipo = User::select('users.name','hb_perfil.foto','users.descripcion')
+            $datosequipo = Equipo::select('users.name','hb_perfil.foto','users.habbo','hb_equipo.srol','hb_equipo.orden')
+            ->leftJoin('users','hb_equipo.id_user','users.id')
             ->leftJoin('hb_perfil','users.id','hb_perfil.id_user')
-            ->where('users.id_rol',$equipos->id)
+            ->where('hb_equipo.id_rol',$equipos->id)
+            ->orderBy('hb_equipo.orden','ASC')
             ->get();
             $equipos->datosnombre = $datosequipo;
         }
         $argumentos = array();
         if(Auth::check()){
             $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+            $roles = Equipo::select('id_rol')->where('id_user',Auth::user()->id)->first();
             $argumentos['fotousuario'] = $fotousuario;
+            $argumentos['roles'] = $roles;
         }
         $argumentos['equipo'] = $equipo;
         return view('equipo',$argumentos);
     }
     public function vacantes(){
+        $argumentos = array();
         if(Auth::check()){
             $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
-            $argumentos = array();
+            $roles = Equipo::select('id_rol')->where('id_user',Auth::user()->id)->first();
             $argumentos['fotousuario'] = $fotousuario;
-            return view('vacantes',$argumentos);
+            $argumentos['roles'] = $roles;
         }
-        return view('vacantes');
+        return view('vacantes',$argumentos);
     }
     public function utilidades(){
+        $argumentos = array();
         if(Auth::check()){
             $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
-            $argumentos = array();
+            $roles = Equipo::select('id_rol')->where('id_user',Auth::user()->id)->first();
             $argumentos['fotousuario'] = $fotousuario;
-            return view('utilidades', $argumentos);
+            $argumentos['roles'] = $roles;
         }
-        return view('utilidades');
+        return view('utilidades',$argumentos);
+    }
+    public function normas(){
+        $argumentos = array();
+        if(Auth::check()){
+            $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+            $roles = Equipo::select('id_rol')->where('id_user',Auth::user()->id)->first();
+            $argumentos['fotousuario'] = $fotousuario;
+            $argumentos['roles'] = $roles;
+        }
+        return view('normas',$argumentos);
+    }
+    public function terminos(){
+        $argumentos = array();
+        if(Auth::check()){
+            $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+            $roles = Equipo::select('id_rol')->where('id_user',Auth::user()->id)->first();
+            $argumentos['fotousuario'] = $fotousuario;
+            $argumentos['roles'] = $roles;
+        }
+        return view('terminos',$argumentos);
     }
     public function validarUsuario($email){
         $correo = User::where('email',$email)->first();

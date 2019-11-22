@@ -15,13 +15,13 @@
                          <div class="row">
                               @if(!$equip->datosnombre->isEmpty())
                               @foreach($equip->datosnombre as $datos)
-                              <div class="col-lg-4">
+                              <div class="col-lg-6">
                                    <div class="cuadro-staff-info">
                                         <div class="cuadro-staff-avatar">
                                              @if(!$datos->foto)
                                              <div style="background: url(/img/extra/avatar.png) no-repeat center;width: 62px;height: 62px;background-size: cover;border-radius: 50px;"></div>
                                              @else
-                                             <div style="background: url(/img/avatar/{{$datos->foto}}) no-repeat center;width: 62px;height: 62px;background-size: cover;border-radius: 50px;"></div>
+                                             <div style="background: url(/img/avatar/{{$datos->foto}}) no-repeat center;width: 62px;height: 62px;background-size: cover;border-radius:50px;margin-top:13px;"></div>
                                              @endif
                                         </div>
                                         <div class="cuadro-staff-infoex">
@@ -30,10 +30,14 @@
                                                        <a href="/perfil/{{$datos->name}}">
                                                             <span class="user-icon salt"></span> 
                                                             <span class="user-style slushy">{{$datos->name}}</span>
+                                                            <br>Habbo: {{$datos->habbo}}
                                                        </a>
                                                   </div>
                                              </strong>
-                                             <div class="cuadro-staff-texto">{{$datos->descripcion}}</div>
+                                             <div class="cuadro-staff-texto">{{$datos->srol}}</div>
+                                        </div>
+                                        <div class="cuadro-staff-habbo">
+                                             <img src="https://www.habbo.es/habbo-imaging/avatarimage?user={{$datos->habbo}}&amp;direction=4&amp;head_direction=4&amp;gesture=sml&amp;action=none&amp;size=b" onerror="this.src='/img/onerror_big.gif'">
                                         </div>
                                    </div>
                               </div>

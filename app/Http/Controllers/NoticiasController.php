@@ -8,6 +8,7 @@ use App\Noticias;
 use Auth;
 use App\User;
 use Carbon\Carbon;
+use App\Equipo;
 
 class NoticiasController extends Controller
 {
@@ -21,13 +22,18 @@ class NoticiasController extends Controller
         $noticias = Noticias::select('users.name','hb_noticias.id','hb_noticias.titulo','hb_noticias.descripcion','hb_noticias.created_at')
         ->leftJoin('users','hb_noticias.id_user','users.id')
         ->get();
+        $roles = Equipo::select('id_rol')->where('id_user',Auth::user()->id)->first();
         $argumentos = array();
+        $argumentos['roles'] = $roles;
         $argumentos['noticias'] = $noticias;
         $argumentos['fotousuario'] = $fotousuario;
         return view('admin.noticias.index',$argumentos);  
     }
     public function create(){
         $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+        $roles = Equipo::select('id_rol')->where('id_user',Auth::user()->id)->first();
+        $argumentos = array();
+        $argumentos['roles'] = $roles;
         $argumentos['fotousuario'] = $fotousuario;
         return view('admin.noticias.create',$argumentos);
     }
@@ -51,6 +57,9 @@ class NoticiasController extends Controller
     public function edit($id){
         $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
         $noticias = Noticias::select('id','titulo','descripcion','cuerpo','portada')->where('id',$id)->first();
+        $roles = Equipo::select('id_rol')->where('id_user',Auth::user()->id)->first();
+        $argumentos = array();
+        $argumentos['roles'] = $roles;
         $argumentos['fotousuario'] = $fotousuario;
         $argumentos['noticias'] = $noticias;
         return view('admin.noticias.edit',$argumentos);

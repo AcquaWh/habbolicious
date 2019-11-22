@@ -828,18 +828,26 @@ body {
                     padding: 10px;
                     background: white;
                     margin-bottom: 10px;
-                    height: 86px;
+                    height: 110px;
                     box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219);
                }
                .cuadro-staff-avatar {
-                    width: 48px;
-                    height: 48px;
+                    width: 62px;
+                    height: 100%;
                     background-position: center;
                     background-repeat: no-repeat;
                     float: left;
                }
+               .cuadro-staff-habbo{
+                    float: right;
+                    height: 84px;
+                    width: 60px;
+                    overflow: hidden;
+               }
                .cuadro-staff-infoex{
-                    margin-left: 76px;
+                    margin-left: 16px;
+                    width: 155px;
+                    float: left;
                     .user-style {
                          display: inline-block;
                          color: #337ab7;
@@ -1293,6 +1301,17 @@ body {
                               }
                          }
                     }
+               }
+          }
+          .contenedor-normas {
+               background: white;
+               padding: 20px;
+               height: auto;
+               box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219);
+               margin-bottom: 20px;
+               h3 {
+                    font-size: 24px;
+                    margin-bottom: 14px;
                }
           }
           .contenedor-twitter {
