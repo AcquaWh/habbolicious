@@ -16,7 +16,18 @@ $( function() {
             }
         }
     })
-    /* Menu */
+    /* Galletas*/
+    function compruebaAceptaCookies() {
+        if(localStorage.aceptaCookies == 'true'){
+            $("#cajacookies").remove();
+        }
+    }
+    $("#aceptargalletas").click(function(){
+        localStorage.aceptaCookies = 'true';
+        $("#cajacookies").fadeOut(300, function(){ $(this).remove();});
+    });
+    compruebaAceptaCookies();
+
     $("#iniciarhabbo").click(function(){
         $("#iniciar-sesion").css("width","100%");
     });
@@ -141,5 +152,5 @@ $( function() {
     }
     api();
     setInterval(api,15000);
-} );
+});
 

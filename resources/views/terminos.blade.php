@@ -10,8 +10,8 @@
           <div class="row justify-content-center">
                <div class="col-lg-8">
                    <div class="contenedor-normas">
-					   <h5>Los términos y condiciones que se muestran a continuación, se estipula a los términos y condiciones de la Manera Habbo.<h5>
                         <h3>Términos y condiciones</h3>
+                        <h5><strong>Los términos y condiciones que se muestran a continuación, se estipula a los términos y condiciones de la Manera Habbo.</strong></h5>
                          1-	Se deberá de respetar siempre la manera Habbo. No estará permitido dar datos personales propios o ajenos a otros miembros/usuarios de la web, pedir contraseñas, suplantar identidades, faltar el respeto, etc.
                          <br><br>
                          2-	El acoso y ciberbullying será penado entre aquellos usuarios y miembros del equipo que lo ejerzan ante terceros.

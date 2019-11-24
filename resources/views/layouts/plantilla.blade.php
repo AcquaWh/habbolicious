@@ -212,6 +212,10 @@
           </div>
      </div>
      @yield('content')
+     <div id="cajacookies">
+          <p>Éste sitio web usa cookies, si permanece aquí acepta su uso. Puede leer más sobre el uso de cookies en nuestra <a href="{{route('terminos')}}">política de privacidad</a>.</p>
+          <button id="aceptargalletas" class="btn pull-right"><i class="fas fa-cookie-bite"></i>  Aceptar nuestras galletitas</button>
+     </div>
      </main>
      <footer class="footer mt-auto">
           <div class="container">
