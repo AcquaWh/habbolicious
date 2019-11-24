@@ -48,6 +48,7 @@ Route::put('/admin/noticias/{id}','NoticiasController@update')->middleware('veri
 Route::delete('/admin/noticias/eliminar/{id}','NoticiasController@destroy')->middleware('verified')->name('admin.noticias.destroy');
 Route::get('/admin/roles','RolesController@index')->middleware('verified')->name('admin.roles');
 Route::put('/admin/roles/{id}','RolesController@update')->middleware('verified')->name('admin.roles.update');
+Route::post('/admin/roles-sec/{id}','RolesController@secundario')->middleware('verified')->name('admin.roles.secundario');
 Route::get('/admin/roles/crear','RolesController@create')->middleware('verified')->name('admin.roles.create');
 Route::post('/admin/roles/crear-rol','RolesController@store')->middleware('verified')->name('admin.roles.store');
 Route::delete('/admin/roles/eliminar/{id}','RolesController@destroy')->middleware('verified')->name('admin.roles.destroy');

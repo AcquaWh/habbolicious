@@ -55,7 +55,7 @@
                                    </tr>
                               </thead>
                               <tbody>
-                                   @foreach($roles as $rol)
+                                   @foreach($roleslista as $rol)
                                    <tr>
                                         <td>{{$rol->id}}</td>
                                         <td>{{$rol->nombre_rango}}</td>
@@ -85,7 +85,7 @@
                               <thead>
                                    <tr>
                                         <th>Usuario</th>
-                                        <th>Rango</th>
+                                        <th>Rangos</th>
                                         <th>IP</th>
                                         <th>Editar</th>
                                    </tr>
@@ -94,7 +94,11 @@
                                    @foreach($usuarios as $user)
                                    <tr>
                                         <td>{{$user->name}}</td>
-                                        <td>{{$user->rango}}</td>
+                                        @if($user->rango->isEmpty())
+                                        <td>No tiene rango asignado</td>
+                                        @else
+                                        <td>@foreach($user->rango as $derechos){{$derechos->rango}}<br>@endforeach</td>
+                                        @endif
                                         <td>{{$user->ip}}</td>
                                         <td>
                                              <div class="btn-group">
@@ -103,7 +107,8 @@
                                                   </button>
                                                   <div class="dropdown-menu">
                                                        <a class="dropdown-item cursor" data-toggle="modal" data-target="#contra_{{$user->id}}">Cambiar contraseña</a>
-                                                       <a class="dropdown-item cursor" data-toggle="modal" data-target="#rango_{{$user->id}}">Cambiar rango</a>
+                                                       <a class="dropdown-item cursor" data-toggle="modal" data-target="#rango_{{$user->id}}">Editar rango</a>
+                                                       <a class="dropdown-item cursor" data-toggle="modal" data-target="#rango2_{{$user->id}}">Agregar rango</a>
                                                        <a class="dropdown-item cursor" data-toggle="modal" data-target="#baja_{{$user->id}}">Dar de baja</a>
                                                   </div>
                                              </div>
@@ -136,7 +141,7 @@
                                                   <div class="modal-dialog modal-dialog-centered" role="document">
                                                        <div class="modal-content">
                                                             <div class="modal-header">
-                                                                 <h5 class="modal-title">Cambiar rol de usuario</h5>
+                                                                 <h5 class="modal-title">Editar rango</h5>
                                                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                  <span aria-hidden="true">&times;</span>
                                                                  </button>
@@ -146,11 +151,71 @@
                                                                  @method('PUT')
                                                                  <div class="modal-body">
                                                                       <div class="form-group">
-                                                                           <label>Nuevo rol a asignar</label>
-                                                                           <select class="form-control" name="rol">
-                                                                                @foreach($roles as $rol)
+                                                                           <label>Asignar rol</label>
+                                                                           <select class="form-control" name="rol" required>
+                                                                                @foreach($roleslista as $rol)
                                                                                 <option value="{{$rol->id}}">{{$rol->nombre_rango}}</option>
                                                                                 @endforeach
+                                                                           </select>
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                           <label>Descripción del rol</label>
+                                                                           <input class="form-control m-input" type="text" name="descripcion" placeholder="Escribe la descripción del rol" required>
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                           <label>Orden principal</label>
+                                                                           <select class="form-control" name="orden" required>
+                                                                                <option value="0">0</option>
+                                                                                <option value="1">1</option>
+                                                                                <option value="2">2</option>
+                                                                           </select>
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                           <strong>Rol actual:</strong><br>
+                                                                           @if($user->rango->isEmpty())
+                                                                           Ningún rango asignado
+                                                                           @else 
+                                                                           @foreach($user->rango as $derechos){{$derechos->rango}}<br>@endforeach
+                                                                           @endif   
+                                                                      </div>
+                                                                 </div>
+                                                                 <div class="modal-footer">
+                                                                      <button type="submit" class="btn btn-primary">Cambiar rol de usuario</button>
+                                                                 </div>
+                                                            </form>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <div class="modal fade" id="rango2_{{$user->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+                                                  <div class="modal-dialog modal-dialog-centered" role="document">
+                                                       <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                 <h5 class="modal-title">Agregar rango</h5>
+                                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                 <span aria-hidden="true">&times;</span>
+                                                                 </button>
+                                                            </div>
+                                                            <form method="POST" action="{{route('admin.roles.secundario',$user->id)}}">
+                                                                 @csrf
+                                                                 <div class="modal-body">
+                                                                      <div class="form-group">
+                                                                           <label>Asignar rol</label>
+                                                                           <select class="form-control" name="rol" required>
+                                                                                @foreach($roleslista as $rol)
+                                                                                <option value="{{$rol->id}}">{{$rol->nombre_rango}}</option>
+                                                                                @endforeach
+                                                                           </select>
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                           <label>Descripción del rol</label>
+                                                                           <input class="form-control m-input" type="text" name="descripcion" placeholder="Escribe la descripción del rol" required>
+                                                                      </div>
+                                                                      <div class="form-group">
+                                                                           <label>Orden principal</label>
+                                                                           <select class="form-control" name="orden" required>
+                                                                                <option value="0">0</option>
+                                                                                <option value="1">1</option>
+                                                                                <option value="2">2</option>
                                                                            </select>
                                                                       </div>
                                                                  </div>

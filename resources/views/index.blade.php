@@ -123,6 +123,7 @@
                          </div>
                          @endif
                     </div>
+				   <!-- DJ Descatado OFF 
                     <div class="contenedor-titulo" style="background-image: url(/img/extra/cUUy4k3.png);">
                          <h4>DJ Destacado</h4>
                     </div>
@@ -141,7 +142,7 @@
                                    </div>
                               </div>
                          </div> 
-                    </div>
+                    </div> -->
                </div>
           </div>
      </div>

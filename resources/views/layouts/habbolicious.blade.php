@@ -73,13 +73,16 @@
                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="menu-usuario">
                                              <a class="dropdown-item" href="{{route('perfil',Auth::user()->name)}}">Perfil</a>
                                              <a class="dropdown-item" href="{{route('perfil.edit',Auth::user()->id)}}">Editar Perfil</a>
+											@if($roles)
                                              @if($roles->id_rol <= 13)
                                              <a class="dropdown-item" href="{{route('admin.index')}}">Panel de admin</a>
                                              @endif
+									   @endif
                                              <form action="{{route('logout')}}" method="POST">
                                                   @csrf
                                                   <button type="submit" class="dropdown-item ini-habbo">Cerrar sesión</button>
                                              </form>
+									   
                                         </div>
                                    </div>
                               </li>

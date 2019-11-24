@@ -109,6 +109,7 @@ $( function() {
         $.ajax({
             url: "https://centova.wlservices.org/rpc/habbolicious/streaminfo.get",
             type: 'GET',
+            cache: false,
             success: function(json){
                 json.data.forEach(function (item) {
                     if(item.track.title == ""){
@@ -139,6 +140,6 @@ $( function() {
         });
     }
     api();
-    setInterval(api,500);
+    setInterval(api,15000);
 } );
 
