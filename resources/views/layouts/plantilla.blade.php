@@ -73,16 +73,15 @@
                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="menu-usuario">
                                              <a class="dropdown-item" href="{{route('perfil',Auth::user()->name)}}">Perfil</a>
                                              <a class="dropdown-item" href="{{route('perfil.edit',Auth::user()->id)}}">Editar Perfil</a>
-											@if($roles)
+									@if($roles)
                                              @if($roles->id_rol <= 13)
                                              <a class="dropdown-item" href="{{route('admin.index')}}">Panel de admin</a>
                                              @endif
-									   @endif
+									@endif
                                              <form action="{{route('logout')}}" method="POST">
                                                   @csrf
                                                   <button type="submit" class="dropdown-item ini-habbo">Cerrar sesión</button>
-                                             </form>
-									   		
+                                             </form>   		
                                         </div>
                                    </div>
                               </li>
@@ -235,8 +234,8 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" type="text/javascript"></script>
      <script src="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
      <script src="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/locales/bootstrap-datepicker.es.min.js" charset="UTF-8"></script>
-     @yield('customscripts')
      <script src="/js/main.js" type="text/javascript"></script>
+     @yield('customscripts')
      @error('email')
           <script>
                $("#iniciar-sesion").css("width","100%");
