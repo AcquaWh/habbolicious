@@ -471,6 +471,16 @@ body {
           background-color: #d66080;
           float: right;
      }
+     @media (max-width: 991.98px) {
+          p{
+               line-height: 20px;
+               float: inherit;
+               margin-bottom: 10px;
+          }
+          button {
+               float: inherit;
+          }
+     }
 }
 .principal {
      margin-top: 60px;
@@ -665,6 +675,12 @@ body {
                                    width: 16px;
                                    height: 16px;
                               }
+                         }
+                    }
+                    @media (max-width: 320px) {
+                         .volumen {
+                              margin-top: 10px;
+                              margin-left: 20px;
                          }
                     }
                }
@@ -892,7 +908,9 @@ body {
                     .user-icon.salt {
                          height: 21px;
                          width: 21px;
-                         background: url(/img/icons/rainbowcloud.gif);
+                         background: url(/img/icons/candyicon.png);
+                         background-repeat: no-repeat;
+                         background-position: center;
                          display: inline-block;
                          vertical-align: -3px;
                     }
@@ -903,7 +921,16 @@ body {
                          -webkit-text-fill-color: transparent;
                     }
                }
-               
+               @media(max-width: 991.98px){
+                    .cuadro-staff-infoex{
+                         width: 145px;
+                    }
+               }
+               @media(max-width: 360px){
+                    .cuadro-staff-infoex{
+                         width: 130px;
+                    }
+               }
           }
           .cuadro-perfil {
                background: white;
@@ -1579,7 +1606,7 @@ body {
                     margin-top: 14px !important;
                }
                .globos {
-                    height: 290px !important;
+                    height: 496px !important;
                }
           }
           .fondo {

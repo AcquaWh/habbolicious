@@ -389,6 +389,13 @@ body {
     color: white;
     background-color: #d66080;
     float: right; }
+  @media (max-width: 991.98px) {
+    #cajacookies p {
+      line-height: 20px;
+      float: inherit;
+      margin-bottom: 10px; }
+    #cajacookies button {
+      float: inherit; } }
 
 .principal {
   margin-top: 60px;
@@ -569,6 +576,10 @@ body {
               border: none;
               width: 16px;
               height: 16px; }
+        @media (max-width: 320px) {
+          .principal .fondo .radio .menu-radio .volumen {
+            margin-top: 10px;
+            margin-left: 20px; } }
       .principal .fondo .radio .avatar-radio {
         background: linear-gradient(180deg, #3586c1, #0c3a65);
         color: white;
@@ -756,7 +767,9 @@ body {
       .principal .contenido-inicio .cuadro-staff .cuadro-staff-infoex .user-icon.salt {
         height: 21px;
         width: 21px;
-        background: url(/img/icons/rainbowcloud.gif);
+        background: url(/img/icons/candyicon.png);
+        background-repeat: no-repeat;
+        background-position: center;
         display: inline-block;
         vertical-align: -3px; }
       .principal .contenido-inicio .cuadro-staff .cuadro-staff-infoex .user-style.slushy {
@@ -764,6 +777,12 @@ body {
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent; }
+    @media (max-width: 991.98px) {
+      .principal .contenido-inicio .cuadro-staff .cuadro-staff-infoex {
+        width: 145px; } }
+    @media (max-width: 360px) {
+      .principal .contenido-inicio .cuadro-staff .cuadro-staff-infoex {
+        width: 130px; } }
   .principal .contenido-inicio .cuadro-perfil {
     background: white;
     position: relative;
@@ -1309,7 +1328,7 @@ body {
     .principal .pag-seccion .radio {
       margin-top: 14px !important; }
     .principal .pag-seccion .globos {
-      height: 290px !important; }
+      height: 496px !important; }
     .principal .fondo {
       margin-bottom: 20px !important;
       height: auto !important; }
