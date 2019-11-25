@@ -31,6 +31,14 @@
                          9-	Cualquier duda referida a la fansite se deberá de hacer conocer a los administradores y, en caso de ser a un departamento específico, a los líderes y coordinadores de cada uno de ellos. En la propia web se encontrará una lista de aquellos que sean miembros, por lo que no se deberá de prestar atención a aquellos usuarios ajenos que digan de pertenecer o tener un rango dentro de HabboLicious, como tampoco se le deben de distribuir datos personales o de cuentas de RRSS. No nos hacemos responsables de aquellos daños y perjuicios causados por sujetos que no estén ligados a la misma fansite.
                          <br><br>
                          9.1 – Los integrantes de HabboLicious tampoco estarán en el derecho de reclamar datos privados o asociados a cuentas personales o de Habbo de otra persona, ya sean personalidades externas como compañeros de la web. Esta fansite valora y protege la intimidad y privacidad de todos los que la forman.
+                         <br><br>
+                         <strong>10 - POLÍTICA DE COOKIES </strong>
+                         <br><br>
+                         10.1 Una cookie es una pequeña información que es enviada por parte del sitio web y recibida en el navegador del usuario, de manera que la web puede recordar la configuración y ofrecer así un servicio personalizado en próximas visitas. 
+                         <br><br>
+                         10.2 Los tipos de cookie que usamos son (a) Básicas, para el correcto funcionamiento de la web como acceso a areas privadas o sesiones de los usuarios. (b) Publicidad, tienen como finalidad ofrecer publicidad acorde a los gustos de los usuarios para garantizar así que el contenido publicitario sea del máximo interés y adecuado para el visitante. Este tipo de cookies son usadas por aplicaciones como Adsense. (c) Seguridad, para prevenir el uso fraudulento de los servicios y proteger los datos de la web. Este tipo de cookies son usadas por aplicaciones como CloudFlare. (d) Análisis, cuyo principal objetivo es mejorar y conocer el funcionamiento real de los servicios. Este tipo de cookies son usadas por aplicaciones como Google Analytics. (e) Plugins, utilizados para ofrecer módulos sociales como Twitter o Facebook que permiten al visitante interactuar y compartir contenido entre la página web y las redes sociales. 
+                         <br><br>
+                         10.3 El usuario puede en cualquier momento eliminar, gestionar e incluso bloquear el uso de cookies a través de la opción privacidad que se encuentra en los ajustes/preferencias del navegador que se utilice. Al hacer estos ajustes dejarán de recibirse las mejoras que las cookies proporcionan y es posible que algunos servicios dejen de funcionar.                          
                          <br>
                     </div>
                </div>
