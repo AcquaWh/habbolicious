@@ -27,6 +27,11 @@
                               <button type="button" class="btn btn-rose" data-toggle="modal" data-target="#vacantes_{{$form->id}}">
                                    Aplicar para esta posición
                               </button>
+                              @if(!Auth::check())
+                              <div class="mt-3 alert alert-danger" role="alert">
+                                   Dulcesito, necesitas iniciar sesión antes de aplicar
+                              </div>
+                              @endif
                          </p>
                          @auth
                          <div class="modal fade" id="vacantes_{{$form->id}}" tabindex="-1" role="dialog" aria-hidden="true">
