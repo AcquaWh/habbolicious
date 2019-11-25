@@ -83,4 +83,12 @@ class VacantesController extends Controller
         }
         return redirect()->route('admin.vacantes.edit',$id)->with('error','No se pudo guardar vacante');
     }
+    public function destroy($id)
+    {
+        $formulario = VacantesFormulario::find($id);
+        if($formulario->delete()){
+            return redirect()->route('admin.vacantes')->with('exito','Vacante eliminado');
+        }
+        return redirect()->route('admin.vacantes')->with('exito','El vacante no se pudo eliminar');
+    }
 }

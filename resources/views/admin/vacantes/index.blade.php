@@ -68,7 +68,39 @@
                                         <td>{{$form->pregunta4}}</td>
                                         <td class="editarnoti">
                                              <a href="{{route('admin.vacantes.edit',$form->id)}}" class="btn btn-success"><i class="far fa-edit"></i></a>
+                                             <button class="btn btn-danger" data-toggle="modal" data-target="#m_modal_{{$form->id}}"><i class="far fa-trash-alt"></i></button>
                                         </td>
+                                        <div class="modal fade" id="m_modal_{{$form->id}}" tabindex="-1" role="dialog" aria-hidden="true">
+                                             <div class="modal-dialog" role="document">
+                                                  <div class="modal-content">
+                                                       <div class="modal-header">
+                                                            <h5 class="modal-title" id="titulomodal">
+                                                                 Eliminar vacante
+                                                            </h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                 <span aria-hidden="true">
+                                                                      ×
+                                                                 </span>
+                                                            </button>
+                                                       </div>
+                                                       <div class="modal-body">
+                                                            ¿Estás seguro de que quieres eliminarla?
+                                                       </div>
+                                                       <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                                                 Cerrar
+                                                            </button>
+                                                            <form action="{{route('admin.vacantes.destroy',$form->id)}}" method="POST">
+                                                                 @method('DELETE')
+                                                                 @csrf
+                                                                 <button type="submit" class="btn btn-danger">
+                                                                      Eliminar
+                                                                 </button>
+                                                            </form>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
                                    </tr>
                                    @endforeach
                               </tbody>

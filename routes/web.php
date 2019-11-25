@@ -58,4 +58,5 @@ Route::get('/admin/vacantes/crear','VacantesController@create')->middleware('ver
 Route::post('/admin/vacantes','VacantesController@store')->middleware('verified')->name('admin.vacantes.store');
 Route::get('/admin/vacantes/{id}','VacantesController@edit')->middleware('verified')->name('admin.vacantes.edit');
 Route::put('/admin/vacantes/editar/{id}','VacantesController@update')->middleware('verified')->name('admin.vacantes.update');
+Route::delete('/admin/vacantes/eliminar/{id}','VacantesController@destroy')->middleware('verified')->name('admin.vacantes.destroy');
 Auth::routes(['verify' => true]);
