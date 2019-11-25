@@ -51,12 +51,8 @@
                                                        <input type="text" class="form-control" name="pregunta1" placeholder="Escribe la respuesta" required>
                                                   </div>
                                                   <div class="form-group">
-                                                       <label>{{$form->pregunta1}}</label>
-                                                       <input type="text" class="form-control" name="pregunta1" placeholder="Escribe la respuesta" required>
-                                                  </div>
-                                                  <div class="form-group">
                                                        <label>{{$form->pregunta2}}</label>
-                                                       <input type="text" class="form-control" name="pregunta2" placeholder="Escribe la respuesta" required>
+                                                       <input type="text" class="form-control" name="pregunta2" placeholder="Escribe la respuesta" value="{{$form->titulo}}" required>
                                                   </div>
                                                   <div class="form-group">
                                                        <label>{{$form->pregunta3}}</label>
