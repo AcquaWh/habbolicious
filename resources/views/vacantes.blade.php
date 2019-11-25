@@ -32,6 +32,22 @@
                                    Dulcesito, necesitas iniciar sesión antes de aplicar
                               </div>
                               @endif
+                              @if(Session::has('error'))
+                              <div class="mt-3 alert alert-danger alert-dismissible fade show" role="alert">
+                              <strong>Error:</strong> {{Session::get('error')}}
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                   <span aria-hidden="true">&times;</span>
+                              </button>
+                              </div>
+                              @endif
+                              @if(Session::has('exito'))
+                              <div class="mt-3 alert alert-success alert-dismissible fade show" role="alert">
+                              <strong>Acción exitosa:</strong> {{Session::get('exito')}}
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                   <span aria-hidden="true">&times;</span>
+                              </button>
+                              </div>
+                              @endif
                          </p>
                          @auth
                          <div class="modal fade" id="vacantes_{{$form->id}}" tabindex="-1" role="dialog" aria-hidden="true">
@@ -48,19 +64,19 @@
                                              <div class="modal-body">
                                                   <div class="form-group">
                                                        <label>{{$form->pregunta1}}</label>
-                                                       <input type="text" class="form-control" name="pregunta1" placeholder="Escribe la respuesta" required>
+                                                       <input type="text" class="form-control" name="pregunta1" placeholder="Escribe la respuesta" required maxlength="200">
                                                   </div>
                                                   <div class="form-group">
                                                        <label>{{$form->pregunta2}}</label>
-                                                       <input type="text" class="form-control" name="pregunta2" placeholder="Escribe la respuesta" value="{{$form->titulo}}" required>
+                                                       <input type="text" class="form-control" name="pregunta2" placeholder="Escribe la respuesta" value="{{$form->titulo}}" required maxlength="200">
                                                   </div>
                                                   <div class="form-group">
                                                        <label>{{$form->pregunta3}}</label>
-                                                       <input type="text" class="form-control" name="pregunta3" placeholder="Escribe la respuesta" required>
+                                                       <input type="text" class="form-control" name="pregunta3" placeholder="Escribe la respuesta" required maxlength="200">
                                                   </div>
                                                   <div class="form-group">
                                                        <label>{{$form->pregunta4}}</label>
-                                                       <input type="text" class="form-control" name="pregunta4" placeholder="Escribe la respuesta" required>
+                                                       <input type="text" class="form-control" name="pregunta4" placeholder="Escribe la respuesta" required maxlength="200">
                                                   </div>
                                              </div>
                                              <div class="modal-footer">
