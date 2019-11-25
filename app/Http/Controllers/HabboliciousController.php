@@ -12,8 +12,11 @@ use Auth;
 use App\User;
 use App\Roles;
 use App\Equipo;
+use App\VacantesFormulario;
+use App\VacantesRegistro;
 use Carbon\Carbon;
 use App\ComentariosNoticias;
+use Mail;
 
 class HabboliciousController extends Controller
 {
@@ -137,6 +140,8 @@ class HabboliciousController extends Controller
         return view('equipo',$argumentos);
     }
     public function vacantes(){
+        $formulario = VacantesFormulario::select('titulo','cuerpo','pregunta1','pregunta2','pregunta3','pregunta4')->get();
+        $placas = file_get_contents("https://api.socialhabbo.com/badges?per_page=24&hotel=es");
         $argumentos = array();
         if(Auth::check()){
             $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
@@ -144,7 +149,8 @@ class HabboliciousController extends Controller
             $argumentos['fotousuario'] = $fotousuario;
             $argumentos['roles'] = $roles;
         }
-        return view('vacantes',$argumentos);
+        $argumentos['formulario'] = $formulario;
+        return view('vacantes',$argumentos)->with('habbo',json_decode($placas,true));
     }
     public function utilidades(){
         $argumentos = array();
@@ -175,6 +181,28 @@ class HabboliciousController extends Controller
             $argumentos['roles'] = $roles;
         }
         return view('terminos',$argumentos);
+    }
+    public function vacante(Request $request){
+        $vacantes = new VacantesRegistro;
+        $vacantes->id_user = Auth::user()->id;
+        $vacantes->pregunta1 = $request->input('pregunta1');
+        $vacantes->pregunta2 = $request->input('pregunta2');
+        $vacantes->pregunta3 = $request->input('pregunta3');
+        $vacantes->pregunta4 = $request->input('pregunta4');
+        $correousuario = Auth::user()->email;
+        Mail::send('emails.solicitud',$request->all(),function($msj) use($correousuario){
+            $msj->subject('Solicitud de vacante enviada correctamente!');
+            $msj->to($correousuario);
+        });
+        if($vacantes->save()){
+            $empresa = "habbolicious@outlook.es";
+            Mail::send('emails.registrosolicitud',$request->all(),function($msj) use($empresa){
+                $msj->subject('Se envio una nueva solicitud de vacante!');
+                $msj->to($empresa);
+            });
+            return redirect()->route('vacantes')->with('exito','Solicitud enviada correctamente');
+        }
+        return redirect()->route('vacantes')->with('error','La solicitud no se envio correctamente');
     }
     public function validarUsuario($email){
         $correo = User::where('email',$email)->first();

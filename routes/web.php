@@ -37,6 +37,7 @@ Route::put('/actualizar/{id}','PerfilController@update')->middleware('verified')
 Route::post('/portada', 'SubirarchivoController@portada')->middleware('verified')->name('portada');
 Route::post('/avatar', 'SubirarchivoController@avatar')->middleware('verified')->name('avatar');
 Route::delete('/eliminar/comentario/{id}', 'ComentarioPerfilController@destroy')->middleware('verified')->name('comentario-perfil.destroy');
+Route::post('/vacante/enviar','HabboliciousController@vacante')->middleware('verified')->name('vacante.enviar');
 /* Administrador */
 Route::get('/admin','AdminController@index')->middleware('verified')->name('admin.index');
 Route::get('/admin/noticias','NoticiasController@index')->middleware('verified')->name('admin.noticias');
