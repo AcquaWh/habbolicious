@@ -22,7 +22,7 @@ class HabboliciousController extends Controller
 {
     public function index(){
         Carbon::setLocale('es');
-        $placas = file_get_contents("https://api.socialhabbo.com/badges?per_page=24&hotel=es");
+        $placas = file_get_contents("https://api.habboapi.net/badges?per_page=24&hotel=es");
         /* Noticias listado */
         $noticias = Noticias::select('users.habbo','users.name','hb_noticias.id','hb_noticias.titulo','hb_noticias.descripcion','hb_noticias.cuerpo','hb_noticias.created_at','hb_noticias.portada')->orderBy('created_at', 'desc')->
         leftJoin('users','hb_noticias.id_user','users.id')
@@ -60,7 +60,7 @@ class HabboliciousController extends Controller
     }
     public function noticias(){
         Carbon::setLocale('es');
-        $placas = file_get_contents("https://api.socialhabbo.com/badges?per_page=24&hotel=es");
+        $placas = file_get_contents("https://api.habboapi.net/badges?per_page=24&hotel=es");
         $noticias = Noticias::select('users.habbo','users.name','hb_noticias.id','hb_noticias.titulo','hb_noticias.descripcion','hb_noticias.cuerpo','hb_noticias.created_at','hb_noticias.portada')->orderBy('created_at', 'desc')->
         leftJoin('users','hb_noticias.id_user','users.id')
         ->paginate(15);
@@ -141,7 +141,7 @@ class HabboliciousController extends Controller
     }
     public function vacantes(){
         $formulario = VacantesFormulario::select('titulo','cuerpo','pregunta1','pregunta2','pregunta3','pregunta4')->get();
-        $placas = file_get_contents("https://api.socialhabbo.com/badges?per_page=24&hotel=es");
+        $placas = file_get_contents("https://api.habboapi.net/badges?per_page=24&hotel=es");
         $argumentos = array();
         if(Auth::check()){
             $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();

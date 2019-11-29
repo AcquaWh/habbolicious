@@ -25,14 +25,17 @@ class PerfilController extends Controller
         $usuario_perfil = User::where('name',$usuario)->first();
         if(!$usuario_perfil){
             $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+            $roles = Equipo::select('id_rol')->where('id_user',Auth::user()->id)->first();
             $argumentos = array();
             $argumentos['fotousuario'] = $fotousuario;
+            $argumentos['roles'] = $roles;
             return view('error',$argumentos);
         } else {
             $infoperfil = Perfil::where('id_user',$usuario_perfil->id)->first();
             $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
             $sweets = Sweets::where('id_user',$usuario_perfil->id)->first();
-            $roles = Equipo::select('srol')->where('id_user',$usuario_perfil->id)->first();
+            $roles = Equipo::select('id_rol')->where('id_user',Auth::user()->id)->first();
+            $rolesusuario = Equipo::select('srol')->where('id_user',$usuario_perfil->id)->first();
             $likes = LikePerfil::where('id_perfil',$infoperfil->id)->count();
             $comentarios = ComentariosNoticias::select('id')->where('id_user',$usuario_perfil->id)->count();
             $comentariosperfil = ComentariosPerfil::select('users.name','hb_comentarios_perfil.id','hb_comentarios_perfil.cuerpo','hb_comentarios_perfil.created_at','hb_perfil.foto')
@@ -45,6 +48,7 @@ class PerfilController extends Controller
             $argumentos['fotousuario'] = $fotousuario;
             $argumentos['sweets'] = $sweets;
             $argumentos['roles'] = $roles;
+            $argumentos['rolesusuario'] = $rolesusuario;
             $argumentos['comentarios'] = $comentarios;
             $argumentos['comentariosperfil'] = $comentariosperfil;
             $argumentos['likes'] = $likes;
@@ -53,14 +57,26 @@ class PerfilController extends Controller
         }
     }
     public function edit($id){
-        $usuario_perfil = User::find($id);
-        $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
-        $roles = Equipo::select('srol')->where('id_user',$usuario_perfil->id)->first();
-        $argumentos = array();
-        $argumentos['roles'] = $roles;
-        $argumentos['fotousuario'] = $fotousuario;
-        $argumentos['usuario_perfil'] = $usuario_perfil;
-        return view('perfileditar',$argumentos);
+        if(Auth::user()->id == $id){
+            $usuario_perfil = User::find($id);
+            $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+            $roles = Equipo::select('srol')->where('id_user',$usuario_perfil->id)->first();
+            $argumentos = array();
+            $argumentos['roles'] = $roles;
+            $argumentos['fotousuario'] = $fotousuario;
+            $argumentos['usuario_perfil'] = $usuario_perfil;
+            return view('perfileditar',$argumentos);
+        } else {
+            $argumentos = array();
+            if(Auth::check()){
+                $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+                $roles = Equipo::select('id_rol')->where('id_user',Auth::user()->id)->first();
+                $argumentos['fotousuario'] = $fotousuario;
+                $argumentos['roles'] = $roles;
+            }
+            return view('error',$argumentos);
+        }
+        
     }
     public function update(Request $request, $id) {
         $usuario = User::find($id);

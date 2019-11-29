@@ -57,7 +57,7 @@
                                              </div>
                                              @if($roles)
                                              <div class="seccion">
-                                                  <i class="pr-3 far fa-star"></i> {{$roles->srol}}
+                                                  <i class="pr-3 far fa-star"></i> {{$rolesusuario->srol}}
                                              </div>
                                              @endif
                                         </div>

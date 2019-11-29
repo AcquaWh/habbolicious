@@ -123,26 +123,6 @@
                          </div>
                          @endif
                     </div>
-				   <!-- DJ Descatado OFF 
-                    <div class="contenedor-titulo" style="background-image: url(/img/extra/cUUy4k3.png);">
-                         <h4>DJ Destacado</h4>
-                    </div>
-                    <div class="contenedor-djs">
-                         <div class="djtacado">
-                              <div class="row">
-                                   <div class="col-lg-5">
-                                        <div class="dj-img" style="background-image: url(https://www.habbo.es/habbo-imaging/avatarimage?user=xCoositta&direction=2&head_direction=2&gesture=sml&action=none&size=l);">
-                                        </div>
-                                   </div>
-                                   <div class="col-lg-7">
-                                        <div class="dj-contenido">
-                                             <h4>xCoositta</h4>
-                                             <span>Recibió en total <strong>0 likes</strong></span>
-                                        </div>
-                                   </div>
-                              </div>
-                         </div> 
-                    </div> -->
                </div>
           </div>
      </div>

@@ -68,7 +68,7 @@
 .cursor {
   cursor: pointer; }
 
-.note-frame {
-  z-index: 20 !important; }
+.panel-heading {
+  z-index: 1 !important; }
 
 /*# sourceMappingURL=admin.css.map */
