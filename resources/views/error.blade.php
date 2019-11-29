@@ -14,8 +14,12 @@
                               <div class="col-lg-6 text-center">
                                    <img class="img-fluid" src="/img/extra/register9.gif" alt=""/>
                               </div>
-                              <div class="col-lg-6">
-                                   <h1 class="errortitulo mt-3 text-center">La sección a la que intentas acceder no existe</h1>
+                              <div class="col-lg-6 mt-3">
+                                   Hola Dulce,
+                                   <br><br>
+                                   No existe esta sección, lo sentimos!
+                                   <br><br>
+                                   <a href="{{route('index')}}" class="btn btn-secondary align-baseline">Regresar a la web</a>
                               </div>
                          </div>
                     </div>
