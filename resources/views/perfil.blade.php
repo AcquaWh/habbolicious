@@ -55,7 +55,7 @@
                                              <div class="seccion">
                                                   <i class="pr-3 fas fa-candy-cane"></i> {{$sweets->cantidad}} sweets
                                              </div>
-                                             @if($roles)
+                                             @if($rolesusuario)
                                              <div class="seccion">
                                                   <i class="pr-3 far fa-star"></i> {{$rolesusuario->srol}}
                                              </div>

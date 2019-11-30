@@ -1,6 +1,6 @@
 body {
      font-family: 'Ubuntu Condensed', sans-serif;
-     background: whitesmoke;
+     background: #e1eff9;
 }
 .navbar {
      background: #fff;
@@ -1200,6 +1200,11 @@ body {
                          }
                     }
                }   
+               @media (max-width: 767.98px) {
+                    img {
+                         width: 100% !important;
+                    }
+               }
           }
           .publicar-comentario{
                background: white;

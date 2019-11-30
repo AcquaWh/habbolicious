@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body {
   font-family: 'Ubuntu Condensed', sans-serif;
-  background: whitesmoke; }
+  background: #e1eff9; }
 
 .navbar {
   background: #fff;
@@ -992,6 +992,9 @@ body {
       border: 2px solid white; }
       .principal .contenido-inicio .detalles-noticias .detalles-footer .comentarios i {
         margin-right: 5px; }
+  @media (max-width: 767.98px) {
+    .principal .contenido-inicio .detalles-noticias img {
+      width: 100% !important; } }
   .principal .contenido-inicio .publicar-comentario {
     background: white;
     padding: 10px;
