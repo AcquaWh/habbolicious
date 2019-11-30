@@ -375,7 +375,7 @@ body {
   text-align: center;
   padding: 10px; }
   #cajacookies a {
-    color: #d66080;
+    color: #1d4d69;
     text-decoration: none; }
   #cajacookies i {
     margin-right: 10px; }
@@ -387,7 +387,7 @@ body {
   #cajacookies button {
     margin: 5px;
     color: white;
-    background-color: #d66080;
+    background-color: #589eae;
     float: right; }
   @media (max-width: 991.98px) {
     #cajacookies p {
@@ -413,7 +413,7 @@ body {
       margin-top: 42px !important; }
   .principal .fondo {
     margin-bottom: 160px;
-    background-image: url(/img/extra/t39MERG.png);
+    background-image: url(/img/extra/7VQgJ0h.png);
     height: 380px;
     background-size: 700px;
     background-color: #ffccfc;
@@ -423,7 +423,7 @@ body {
       position: absolute;
       width: 100%;
       height: 380px;
-      background-image: url(/img/extra/globos.png);
+      background-image: url(/img/extra/w6HyxLj.png);
       background-size: 200px;
       transition: 0.3s;
       animation: animatedBackground 10s linear infinite;
@@ -464,6 +464,10 @@ body {
         position: absolute;
         top: 110px;
         left: 20px; }
+        .principal .fondo .owl-carousel .owl-dots .owl-dot.active span {
+          background: white; }
+        .principal .fondo .owl-carousel .owl-dots .owl-dot span {
+          background: rgba(255, 255, 255, 0.582); }
       .principal .fondo .owl-carousel .item {
         height: 10rem;
         background: black;
@@ -471,6 +475,11 @@ body {
         background-size: cover;
         background-repeat: none;
         background-position: center; }
+        .principal .fondo .owl-carousel .item .titulo {
+          font-size: 1.5rem; }
+        .principal .fondo .owl-carousel .item span {
+          background: #0000009e;
+          padding: 10px; }
     .principal .fondo .radio {
       margin-top: 70px;
       background: white;
@@ -1491,7 +1500,7 @@ body {
         padding-right: 10px; } }
 
 footer {
-  background: #f980a0;
+  background: #589eae;
   text-align: right;
   padding-top: 30px !important;
   padding-bottom: 20px; }
@@ -1503,15 +1512,15 @@ footer {
     font-size: 16px; }
   footer .mapa {
     font-size: 16px;
-    color: #ffd2e8; }
+    color: white; }
     footer .mapa a {
       transition: 0.5s;
-      color: #ffd2e8; }
+      color: white; }
       footer .mapa a:hover {
         text-decoration: none;
         color: #ffffff; }
   footer span {
     font-size: 13px;
-    color: #ffd2e8; }
+    color: white; }
 
 /*# sourceMappingURL=styles.css.map */

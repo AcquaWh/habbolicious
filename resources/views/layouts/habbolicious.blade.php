@@ -28,7 +28,7 @@
           <nav class="navbar navbar-expand-md fixed-top">
                <div class="container">
                     <a class="navbar-brand" href="{{route('index')}}">
-                         <img class="habbolicious" src="/img/logo.png" alt=""/>
+                         <img class="habbolicious" src="/img/kRER70w.png" alt=""/>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                          <i class="fas fa-bars"></i>
@@ -171,10 +171,8 @@
                     <div class="col-lg-6">
                          <div class="slider-noticias">
                               <div class="owl-carousel owl-theme">
-                                   <div class="item" style="background-image:url(//images.habbo.com/web_images/habbo-web-articles/ny_large_promo.png);"><h4>Estamos en construcción</h4><p>Arreglando problemas técnicos, pronto volveremos.</p></div>
-                                   <div class="item" style="background-image:url(//images.habbo.com/web_images/habbo-web-articles/lpromo_house18_gen.png);"><h4>Estamos enfriando tu postre</h4><p>Arreglando problemas técnicos, pronto volveremos.</p></div>
-                                   <div class="item" style="background-image:url(//images.habbo.com/c_images/web_promo/lpromo_Star_Lounge.png);"><h4>Estamos creando dulces</h4><p>Arreglando problemas técnicos, pronto volveremos.</p></div>
-                                   <div class="item" style="background-image:url(//images.habbo.com/web_images/habbo-web-articles/lpromo_UAloyaltycrowns.png);"><h4>Crea un nuevo mundo</h4><p>Arreglando problemas técnicos, pronto volveremos.</p></div>
+                                   <div class="item" style="background-image:url(/img/portada/KwOrNTu.png);"><span class="titulo">Ponte el gorro de navidad!</span><br><br><span>Llego en invierno, nos esperan muchos eventos!</span></div>
+                                   <div class="item" style="background-image:url(/img/portada/dTkZQ0X.png);"><span class="titulo">Vacantes disponibles, ahora!</span><br><br><span>Entra a la sección de vacantes, animaté.</span></div>
                               </div>
                          </div>
                     </div>
@@ -225,7 +223,7 @@
           <div class="container">
                <div class="row">
                     <div class="col-lg-3 text-left m-auto">
-                         <img class="habbolicious" src="/img/logo.png" alt=""/>
+                         <img class="habbolicious" src="/img/kRER70w.png" alt=""/>
                     </div>
                     <div class="col-lg-9">
                     <p class="mapa"><a href="{{route('index')}}">Inicio</a> / <a href="{{route('noticias')}}">Noticias</a> / <a href="{{route('blogs')}}">Blog</a> / <a href="{{route('catalogo')}}">Catálogo</a> / <a href="{{route('eventos')}}">Eventos</a> / <a href="{{route('equipo')}}">Equipo</a> / <a href="{{route('vacantes')}}">Vacantes</a> / <a href="{{route('utilidades')}}">Utilidades</a> / <a href="{{route('normas')}}">Normas</a> / <a href="{{route('terminos')}}">Términos</a> /<br></p>
