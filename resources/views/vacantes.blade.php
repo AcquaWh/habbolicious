@@ -14,6 +14,22 @@
                          <p>¿Quieres pasartela bien? Te ofrecemos nuevas experiencias en Habbolicious, podras presenciar el crecimiento de esa gran comunidad. ¡Simplemente solicite a continuación y nos pondremos en contacto lo antes posible!</p>
                     </div>
                     <div class="contenedor-vacantes">
+                         @if(Session::has('error'))
+                         <div class="mt-3 alert alert-danger alert-dismissible fade show" role="alert">
+                         <strong>Error:</strong> {{Session::get('error')}}
+                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                         </button>
+                         </div>
+                         @endif
+                         @if(Session::has('exito'))
+                         <div class="mt-3 alert alert-success alert-dismissible fade show" role="alert">
+                         <strong>Acción exitosa:</strong> {{Session::get('exito')}}
+                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                         </button>
+                         </div>
+                         @endif
                          @if($formulario->isEmpty())
                          <div class="mt-3 alert alert-primary" role="alert">
                               No hay disponibles nuevas vacantes en la fansite
@@ -30,22 +46,6 @@
                               @if(!Auth::check())
                               <div class="mt-3 alert alert-danger" role="alert">
                                    Dulcesito, necesitas iniciar sesión antes de aplicar
-                              </div>
-                              @endif
-                              @if(Session::has('error'))
-                              <div class="mt-3 alert alert-danger alert-dismissible fade show" role="alert">
-                              <strong>Error:</strong> {{Session::get('error')}}
-                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                   <span aria-hidden="true">&times;</span>
-                              </button>
-                              </div>
-                              @endif
-                              @if(Session::has('exito'))
-                              <div class="mt-3 alert alert-success alert-dismissible fade show" role="alert">
-                              <strong>Acción exitosa:</strong> {{Session::get('exito')}}
-                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                   <span aria-hidden="true">&times;</span>
-                              </button>
                               </div>
                               @endif
                          </p>

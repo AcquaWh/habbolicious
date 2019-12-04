@@ -195,7 +195,7 @@ class HabboliciousController extends Controller
             $msj->to($correousuario);
         });
         if($vacantes->save()){
-            $empresa = "habbolicious@outlook.es";
+            $empresa = "vacanteshabbolicious@outlook.es";
             Mail::send('emails.registrosolicitud',$request->all(),function($msj) use($empresa){
                 $msj->subject('Se envio una nueva solicitud de vacante!');
                 $msj->to($empresa);
