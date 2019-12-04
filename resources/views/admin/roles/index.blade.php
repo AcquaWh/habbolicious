@@ -109,10 +109,10 @@
                                                        <a class="dropdown-item cursor" data-toggle="modal" data-target="#contra_{{$user->id}}">Cambiar contraseña</a>
                                                        <a class="dropdown-item cursor" data-toggle="modal" data-target="#rango_{{$user->id}}">Editar rango</a>
                                                        <a class="dropdown-item cursor" data-toggle="modal" data-target="#rango2_{{$user->id}}">Agregar rango</a>
-                                                       <a class="dropdown-item cursor" data-toggle="modal" data-target="#baja_{{$user->id}}">Dar de baja</a>
+                                                       <a class="dropdown-item cursor" data-toggle="modal" data-target="#baja_{{$user->id}}">Borrar usuario</a>
                                                   </div>
                                              </div>
-                                             <div class="modal fade" id="contra_{{$user->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                             <div class="modal fade" id="contra_{{$user->id}}" tabindex="-1" role="dialog" aria-hidden="true">
                                                   <div class="modal-dialog modal-dialog-centered" role="document">
                                                        <div class="modal-content">
                                                             <div class="modal-header">
@@ -137,7 +137,7 @@
                                                        </div>
                                                   </div>
                                              </div>
-                                             <div class="modal fade" id="rango_{{$user->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+                                             <div class="modal fade" id="rango_{{$user->id}}" tabindex="-1" role="dialog" aria-hidden="true">
                                                   <div class="modal-dialog modal-dialog-centered" role="document">
                                                        <div class="modal-content">
                                                             <div class="modal-header">
@@ -146,51 +146,58 @@
                                                                  <span aria-hidden="true">&times;</span>
                                                                  </button>
                                                             </div>
-                                                            <form method="POST" action="{{route('admin.roles.update',$user->id)}}">
-                                                                 @csrf
-                                                                 @method('PUT')
-                                                                 <div class="modal-body">
-                                                                      <div class="form-group">
-                                                                           <label>Asignar rol</label>
-                                                                           <select class="form-control" name="rol" required>
-                                                                                @foreach($roleslista as $rol)
-                                                                                <option value="{{$rol->id}}">{{$rol->nombre_rango}}</option>
-                                                                                @endforeach
-                                                                           </select>
-                                                                      </div>
-                                                                      <div class="form-group">
-                                                                           <label>Descripción del rol</label>
-                                                                           <input class="form-control m-input" type="text" name="descripcion" placeholder="Escribe la descripción del rol" required>
-                                                                      </div>
-                                                                      <div class="form-group">
-                                                                           <label>Orden principal</label>
-                                                                           <select class="form-control" name="orden" required>
-                                                                                <option value="0">0</option>
-                                                                                <option value="1">1</option>
-                                                                                <option value="2">2</option>
-                                                                           </select>
-                                                                      </div>
-                                                                      <div class="form-group">
-                                                                           <strong>Rol actual:</strong><br>
-                                                                           @if($user->rango->isEmpty())
-                                                                           Ningún rango asignado
-                                                                           @else 
-                                                                           @foreach($user->rango as $derechos){{$derechos->rango}}<br>@endforeach
-                                                                           @endif   
-                                                                      </div>
-                                                                 </div>
-                                                                 <div class="modal-footer">
-                                                                      <button type="submit" class="btn btn-primary">Cambiar rol de usuario</button>
-                                                                 </div>
-                                                            </form>
+                                                            @csrf
+                                                            @method('PUT')
+                                                            <div class="modal-body">
+                                                                 @if(!$user->rango->isEmpty())
+                                                                 <table class="table table-striped table-bordered">
+                                                                      <thead>
+                                                                           <tr>
+                                                                                <th>Rol</th>
+                                                                                <th>Descripción rol</th>
+                                                                                <th>Guardar</th>
+                                                                                <th>Borrar</th>
+                                                                           </tr>
+                                                                      </thead>
+                                                                      <tbody>
+                                                                           @foreach($user->rango as $derechos)
+                                                                           <tr>
+                                                                                <form method="POST" action="{{route('admin.roles.update',$user->id)}}">
+                                                                                @csrf
+                                                                                @method('PUT')
+                                                                                     <td>
+                                                                                     <select class="form-control" name="rol" required>
+                                                                                          @foreach($roleslista as $rol)
+                                                                                          <option value="{{$rol->id}}" @if($derechos->id_rol == $rol->id) selected @endif>{{$rol->nombre_rango}}</option>
+                                                                                          @endforeach
+                                                                                     </select>
+                                                                                     </td>
+                                                                                     <td><input class="form-control m-input" type="text" name="descripcion" placeholder="Escribe la descripción del rol" value="{{$derechos->rango}}" required></td>
+                                                                                     <td><button type="submit" class="btn btn-success"><i class="fas fa-check"></i></button></td>
+                                                                                </form>
+                                                                                <td>
+                                                                                     <form action="{{route('admin.roles.rango.destroy',$derechos->id)}}" method="POST">
+                                                                                          @method('DELETE')
+                                                                                          @csrf
+                                                                                          <button type="submit" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                                                                                     </form>
+                                                                                </td>
+                                                                           </tr>
+                                                                           @endforeach
+                                                                      </tbody>
+                                                                 </table>
+                                                                 @else 
+                                                                 No tiene roles definidos
+                                                                 @endif
+                                                            </div>
                                                        </div>
                                                   </div>
                                              </div>
-                                             <div class="modal fade" id="rango2_{{$user->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+                                             <div class="modal fade" id="rango2_{{$user->id}}" tabindex="-1" role="dialog" aria-hidden="true">
                                                   <div class="modal-dialog modal-dialog-centered" role="document">
                                                        <div class="modal-content">
                                                             <div class="modal-header">
-                                                                 <h5 class="modal-title">Agregar rango</h5>
+                                                                 <h5 class="modal-title">Agregar nuevo rango</h5>
                                                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                  <span aria-hidden="true">&times;</span>
                                                                  </button>
@@ -220,7 +227,7 @@
                                                                       </div>
                                                                  </div>
                                                                  <div class="modal-footer">
-                                                                      <button type="submit" class="btn btn-primary">Cambiar rol de usuario</button>
+                                                                      <button type="submit" class="btn btn-primary">Guardar cambios</button>
                                                                  </div>
                                                             </form>
                                                        </div>
@@ -230,7 +237,7 @@
                                                   <div class="modal-dialog modal-dialog-centered" role="document">
                                                        <div class="modal-content">
                                                             <div class="modal-header">
-                                                                 <h5 class="modal-title">¿Seguro que quieres dar de baja?</h5>
+                                                                 <h5 class="modal-title">¿Seguro que quieres borrar al usuario?</h5>
                                                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                  <span aria-hidden="true">&times;</span>
                                                                  </button>
@@ -240,7 +247,7 @@
                                                                  @csrf
                                                                  <div class="modal-body">
                                                                       <div class="form-group">
-                                                                           <label>No podras revertir los cambios</label>
+                                                                           <label><h3>Se borrarán noticias, sus sweets, perfil entre otras cosas relacionado a el</h3>No podras revertir los cambios, se eliminará permanentemente de la web!</label>
                                                                       </div>
                                                                  </div>
                                                                  <div class="modal-footer">

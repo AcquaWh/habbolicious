@@ -52,7 +52,8 @@ Route::put('/admin/roles/{id}','RolesController@update')->middleware('verified')
 Route::post('/admin/roles-sec/{id}','RolesController@secundario')->middleware('verified')->name('admin.roles.secundario');
 Route::get('/admin/roles/crear','RolesController@create')->middleware('verified')->name('admin.roles.create');
 Route::post('/admin/roles/crear-rol','RolesController@store')->middleware('verified')->name('admin.roles.store');
-Route::delete('/admin/roles/eliminar/{id}','RolesController@destroy')->middleware('verified')->name('admin.roles.destroy');
+Route::delete('/admin/roles/usuario/{id}','RolesController@destroy')->middleware('verified')->name('admin.roles.destroy');
+Route::delete('/admin/roles/eliminar/{id}','RolesController@destroyrol')->middleware('verified')->name('admin.roles.rango.destroy');
 Route::get('/admin/vacantes','VacantesController@index')->middleware('verified')->name('admin.vacantes');
 Route::get('/admin/vacantes/crear','VacantesController@create')->middleware('verified')->name('admin.vacantes.create');
 Route::post('/admin/vacantes','VacantesController@store')->middleware('verified')->name('admin.vacantes.store');

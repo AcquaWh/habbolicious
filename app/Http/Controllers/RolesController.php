@@ -21,7 +21,7 @@ class RolesController extends Controller
         $usuarios = User::select('users.id','users.name','users.ip')
         ->get();
         foreach($usuarios as $usu){
-            $rangos = Equipo::select('hb_equipo.srol as rango')->where('id_user',$usu->id)->get();
+            $rangos = Equipo::select('hb_equipo.id','hb_equipo.srol as rango','hb_equipo.id_rol')->where('id_user',$usu->id)->get();
             $usu->rango = $rangos;
         }
         $roles = Equipo::select('id_rol')->where('id_user',Auth::user()->id)->first();
@@ -59,28 +59,23 @@ class RolesController extends Controller
             }
         }
         if($id_rol){
-            $roles = Equipo::where('id_user',$id)->first();
-            if(!$roles){
-                $equipo = new Equipo();
-                $equipo->id_user = $id;
-                $equipo->id_rol = $id_rol;
-                $equipo->srol = $request->input('descripcion');
-                $equipo->orden = $request->input('orden');
-                if($equipo->save()){
-                    return redirect()->route('admin.roles')->with('exito','Se hizo el cambio exitosamente');
-                }
-            } else {
-                $roles->id_rol = $id_rol;
-                $roles->srol = $request->input('descripcion');
-                $roles->orden = $request->input('orden');
-                if($roles->save()){
-                    return redirect()->route('admin.roles')->with('exito','Se hizo el cambio exitosamente');
-                }
+            $roles = Equipo::where('id_user',$id)->first();          
+            $roles->id_rol = $id_rol;
+            $roles->srol = $request->input('descripcion');
+            if($roles->save()){
+                return redirect()->route('admin.roles')->with('exito','Se hizo el cambio exitosamente');
             }
            
         }
-        
         return redirect()->route('admin.roles')->with('error','No se logro hacer el cambio deseado');
+    }
+    public function destroyrol($id)
+    {
+        $rol = Equipo::find($id);
+        if($rol->delete()){
+            return redirect()->route('admin.roles')->with('exito','Rol eliminado');
+        }
+        return redirect()->route('admin.roles')->with('exito','El rol no se pudo eliminar correctamente');
     }
     public function destroy($id)
     {
