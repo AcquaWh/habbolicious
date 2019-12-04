@@ -12,7 +12,7 @@
      <meta name="msapplication-TileColor" content="#9f00a7">
      <meta name="msapplication-TileImage" content="/img/favicons/mstile-144x144.png">
      <meta name="theme-color" content="#ffffff">
-     <meta name="csrf-token" content="{{ csrf_token() }}" />
+     <meta name="csrf-token" content="{{ csrf_token() }}">
      <title>@yield('title')</title>
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
      <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap" rel="stylesheet">

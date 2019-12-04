@@ -11,17 +11,17 @@
                     <div class="col-lg-8 mt-3">
                          <div class="card">
                               <div class="contenedor-detalles">
-                                   <div class="portadanoticia" style="background-image:url('/img/portada/{{$noticias->portada}}');"></div>
                                    <div class="detalles">
                                         <span class="titulo">{{$noticias->titulo}}</span><br>
                                         <span class="descripcion">{{$noticias->descripcion}}</span>
                                    </div>
                                    @auth
-                                   <a href="" class="megusta btn btn-danger"><i class="far fa-heart"></i> 0</a>
+                                   <button class="megusta btn btn-danger"><i class="far fa-heart"></i> 0</button>
                                    @else 
                                    <button class="btn btn-danger megusta"><i class="far fa-heart"></i> 0</button>
                                    @endauth
                               </div>
+                              <div class="banner-noticia" style="background-image:url('/img/portada/{{$noticias->portada}}');"></div>
                               <div class="detalles-noticias">
                                    <div class="card-body row">   
                                         <div class="col-lg-12">
