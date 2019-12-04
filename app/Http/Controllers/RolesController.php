@@ -50,16 +50,16 @@ class RolesController extends Controller
         return redirect()->route('admin.roles')->with('error','No se logro agregar el nuevo rango');
     }
     public function update(Request $request, $id) {
-        $usuario = User::find($id);
         $id_rol = $request->input('rol');
         if ($request->input('password') && $request->input('password') != '') {
+            $usuario = User::find($id);
             $usuario->password = bcrypt($request->input('password'));
             if($usuario->save()) {
                 return redirect()->route('admin.roles')->with('exito','Se hizo el cambio exitosamente');
             }
         }
         if($id_rol){
-            $roles = Equipo::where('id_user',$id)->first();          
+            $roles = Equipo::where('id',$id)->first();          
             $roles->id_rol = $id_rol;
             $roles->srol = $request->input('descripcion');
             if($roles->save()){

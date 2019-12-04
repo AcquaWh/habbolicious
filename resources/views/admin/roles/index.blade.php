@@ -162,7 +162,7 @@
                                                                       <tbody>
                                                                            @foreach($user->rango as $derechos)
                                                                            <tr>
-                                                                                <form method="POST" action="{{route('admin.roles.update',$user->id)}}">
+                                                                                <form method="POST" action="{{route('admin.roles.update',$derechos->id)}}">
                                                                                 @csrf
                                                                                 @method('PUT')
                                                                                      <td>
