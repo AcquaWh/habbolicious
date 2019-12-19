@@ -4,6 +4,7 @@
 @section('customStyles')
 <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" rel="stylesheet" type="text/css" />
+<link id="bsdp-css" href="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker3.min.css" rel="stylesheet">
 @endsection
 
 @section('content')
@@ -32,7 +33,7 @@
                               </div>
                          </div>
                     </div>
-                    <form id="frmEventos" class="m-form m-form--fit m-form--label-align-right" enctype="multipart/form-data" method="POST" action="">
+                    <form id="frmEventos" class="m-form m-form--fit m-form--label-align-right" enctype="multipart/form-data" method="POST" action="{{route('admin.eventos.store')}}">
                          @csrf
                          <div class="m-portlet__body">
                               <div class="form-group m-form__group">
@@ -43,11 +44,15 @@
                                    <input class="form-control m-input" name="titulo" type="text" maxlength="200" required>
                               </div>
                               <div class="form-group m-form__group">
+                                   <label>Fecha de evento</label>
+                                   <input id="fecha" type="text" class="form-control m-input" name="fecha" placeholder="Fecha de evento" value="{{now()->format("Y/m/d")}}" required>
+                              </div>
+                              <div class="form-group m-form__group">
                                    <label>Descripción</label>
                                    <textarea class="form-control" name="descripcion" type="text" maxlength="200" rows="3" required></textarea>
                               </div>
                               <div class="form-group m-form__group">
-                                   <textarea id="summernote" name="cuerpo" class="form-control m-input" rows="3" required></textarea>
+                                   <textarea id="eventos" name="cuerpo" class="form-control m-input" rows="3" required></textarea>
                               </div>
                          </div>
                          <div class="m-portlet__foot m-portlet__foot--fit">
@@ -65,6 +70,8 @@
 @section('customScripts')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/dropzone.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
+<script src="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/locales/bootstrap-datepicker.es.min.js" charset="UTF-8"></script>
 <script src="/js/summernote.js"></script>
 <script>
      var uploadedDocumentMap = {}

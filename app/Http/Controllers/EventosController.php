@@ -41,6 +41,7 @@ class EventosController extends Controller
         $eventos->descripcion = $request->input('descripcion');
         $eventos->cuerpo = $request->input('cuerpo');
         $eventos->portada = $request->input('portada');
+        $eventos->fecha = $request->input('fecha');
         if($eventos->save()){
             return redirect()->route('admin.eventos')->with('exito','Evento guardado');
         }
@@ -53,7 +54,7 @@ class EventosController extends Controller
 
     }
     public function destroy($id){
-        
+
     }
     public function portada(Request $request){
         $foto = $request->file('file');

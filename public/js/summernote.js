@@ -8,3 +8,12 @@ $('#vacantes').summernote({
      tabsize: 2,
      height: 200
 });
+$('#eventos').summernote({
+     placeholder: 'Escribe el cuerpo de el evento',
+     tabsize: 2,
+     height: 200
+});
+$('#fecha').datepicker({
+     language: "es",
+     format: 'yyyy/mm/dd'
+});
