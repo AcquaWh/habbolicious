@@ -27,4 +27,18 @@ $(document).ready(function() {
                "url": "https://cdn.datatables.net/plug-ins/1.10.20/i18n/Spanish.json"
           }
      });
+     $('#eventos').DataTable({
+          responsive: true,
+          colReorder: true,
+          "language": {
+               "url": "https://cdn.datatables.net/plug-ins/1.10.20/i18n/Spanish.json"
+          }
+     });
+     $('#blogs').DataTable({
+          responsive: true,
+          colReorder: true,
+          "language": {
+               "url": "https://cdn.datatables.net/plug-ins/1.10.20/i18n/Spanish.json"
+          }
+     });
  } );

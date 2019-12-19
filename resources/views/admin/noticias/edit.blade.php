@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title','HabboLicious • Panel de administración')
+@section('title','HabboLicious • Editar Noticias')
 
 @section('customStyles')
 <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">

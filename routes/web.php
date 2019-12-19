@@ -56,8 +56,12 @@ Route::delete('/admin/roles/usuario/{id}','RolesController@destroy')->middleware
 Route::delete('/admin/roles/eliminar/{id}','RolesController@destroyrol')->middleware('verified')->name('admin.roles.rango.destroy');
 Route::get('/admin/vacantes','VacantesController@index')->middleware('verified')->name('admin.vacantes');
 Route::get('/admin/vacantes/crear','VacantesController@create')->middleware('verified')->name('admin.vacantes.create');
-Route::post('/admin/vacantes','VacantesController@store')->middleware('verified')->name('admin.vacantes.store');
+Route::post('/admin/vacantes/guardar','VacantesController@store')->middleware('verified')->name('admin.vacantes.store');
 Route::get('/admin/vacantes/{id}','VacantesController@edit')->middleware('verified')->name('admin.vacantes.edit');
 Route::put('/admin/vacantes/editar/{id}','VacantesController@update')->middleware('verified')->name('admin.vacantes.update');
 Route::delete('/admin/vacantes/eliminar/{id}','VacantesController@destroy')->middleware('verified')->name('admin.vacantes.destroy');
+Route::get('/admin/eventos','EventosController@index')->middleware('verified')->name('admin.eventos');
+Route::get('/admin/eventos/crear','EventosController@create')->middleware('verified')->name('admin.eventos.create');
+Route::post('/admin/eventos/subir', 'EventosController@portada')->middleware('verified')->name('admin.eventos.subir');
+Route::post('/admin/eventos/guardar','EventosController@store')->middleware('verified')->name('admin.eventos.store');
 Auth::routes(['verify' => true]);

@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title','HabboLicious • Crear nuevo rol')
+@section('title','HabboLicious • Agregar rol')
 
 @section('customStyles')
 @endsection
@@ -9,12 +9,7 @@
      <div class="d-flex align-items-center">
           <div class="mr-auto">
                <a href="{{route('admin.roles')}}" class="btn btn-secondary m-btn m-btn--custom m-btn--icon m-btn--pill m-btn--air">
-                    <span>
-                         <i class="fas fa-chevron-left"></i>
-                         <span>
-                              Regresar
-                         </span>
-                    </span>
+                    <span><i class="fas fa-chevron-left"></i><span>Regresar</span></span>
                </a>
           </div>
           

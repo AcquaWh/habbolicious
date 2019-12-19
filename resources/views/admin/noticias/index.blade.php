@@ -34,7 +34,6 @@
 <div class="m-content">
      <div class="row">
           <div class="col-lg-12">
-               <!--begin::Portlet-->
                <div class="m-portlet m-portlet--tab">
                     <div class="m-portlet__head">
                          <div class="m-portlet__head-caption">
@@ -45,12 +44,11 @@
                                    <h3 class="m-portlet__head-text">
                                         Lista de Noticias
                                    </h3>
-                                   
                               </div>
                          </div>
                     </div>
                     <div class="m-portlet__body">
-                         <table id="noticias" class="table table-striped table-bordered" style="width:100%">
+                         <table id="noticias" class="table table-striped table-bordered">
                               <thead>
                                    <tr>
                                         <th>Fecha</th>

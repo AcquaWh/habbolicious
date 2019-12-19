@@ -47,7 +47,7 @@
                          </div>
                     </div>
                     <div class="m-portlet__body">
-                         <table id="roles" class="table table-striped table-bordered" style="width:100%">
+                         <table id="roles" class="table table-striped table-bordered">
                               <thead>
                                    <tr>
                                         <th>ID</th>
@@ -81,7 +81,7 @@
                          </div>
                     </div>
                     <div class="m-portlet__body">
-                         <table id="usuariosrol" class="table table-striped table-bordered" style="width:100%">
+                         <table id="usuariosrol" class="table table-striped table-bordered">
                               <thead>
                                    <tr>
                                         <th>Usuario</th>
