@@ -49,20 +49,53 @@
                                         <th>Usuario</th>
                                         <th>Título</th>
                                         <th>Descripción</th>
+                                        <th>Día evento</th>
                                         <th>Editar</th>
                                    </tr>
                               </thead>
                               <tbody>
+                                   @foreach($eventos as $evento)
                                    <tr>
-                                        <td>adsada</td>
-                                        <td>asdada</td>
-                                        <td>adsada</td>
-                                        <td>dasa</td>
+                                        <td>{{$evento->created_at->diffForHumans()}}</td>
+                                        <td>{{$evento->name}}</td>
+                                        <td>{{$evento->titulo}}</td>
+                                        <td>{{$evento->descripcion}}</td>
+                                        <td>{{$evento->fecha}}</td>
                                         <td class="editarnoti">
                                              <a href="" class="btn btn-success"><i class="far fa-edit"></i></a>
-                                             <button class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                                             <button class="btn btn-danger" data-toggle="modal" data-target="#m_modal_{{$evento->id}}"><i class="far fa-trash-alt"></i></button>
                                         </td>
+                                        <div class="modal fade" id="m_modal_{{$evento->id}}" tabindex="-1" role="dialog" aria-labelledby="titulomodal" aria-hidden="true">
+                                             <div class="modal-dialog" role="document">
+                                                  <div class="modal-content">
+                                                       <div class="modal-header">
+                                                            <h5 class="modal-title" id="titulomodal">
+                                                                 Eliminar evento
+                                                            </h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                 <span aria-hidden="true">×</span>
+                                                            </button>
+                                                       </div>
+                                                       <div class="modal-body">
+                                                            ¿Estás seguro de que quieres eliminarlo?
+                                                       </div>
+                                                       <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                                                 Cerrar
+                                                            </button>
+                                                            <form action="{{route('admin.eventos.destroy',$evento->id)}}" method="POST">
+                                                                 @method('DELETE')
+                                                                 @csrf
+                                                                 <button type="submit" class="btn btn-danger">
+                                                                      Eliminar
+                                                                 </button>
+                                                            </form>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
                                    </tr>
+                                   @endforeach
                               </tbody>
                          </table>
                     </div>

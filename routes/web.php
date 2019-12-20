@@ -64,4 +64,5 @@ Route::get('/admin/eventos','EventosController@index')->middleware('verified')->
 Route::get('/admin/eventos/crear','EventosController@create')->middleware('verified')->name('admin.eventos.create');
 Route::post('/admin/eventos/subir', 'EventosController@portada')->middleware('verified')->name('admin.eventos.subir');
 Route::post('/admin/eventos/guardar','EventosController@store')->middleware('verified')->name('admin.eventos.store');
+Route::delete('/admin/eventos/eliminar/{id}','EventosController@destroy')->middleware('verified')->name('admin.eventos.destroy');
 Auth::routes(['verify' => true]);

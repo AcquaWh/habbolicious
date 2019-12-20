@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use File;
 use App\Perfil;
 use Auth;
 use App\User;
@@ -19,9 +20,13 @@ class EventosController extends Controller
     public function index(){
         Carbon::setLocale('es');
         $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+        $eventos = Eventos::select('users.name','hb_eventos.id','hb_eventos.titulo','hb_eventos.descripcion','hb_eventos.fecha','hb_eventos.created_at')
+        ->leftJoin('users','hb_eventos.id_user','users.id')
+        ->get();
         $roles = Equipo::select('id_rol')->where('id_user',Auth::user()->id)->first();
         $argumentos = array();
         $argumentos['roles'] = $roles;
+        $argumentos['eventos'] = $eventos;
         $argumentos['fotousuario'] = $fotousuario;
         return view('admin.eventos.index',$argumentos);
     }
@@ -54,7 +59,12 @@ class EventosController extends Controller
 
     }
     public function destroy($id){
-
+        $eventos = Eventos::find($id);
+        File::delete(public_path()."/img/portada/".$eventos->portada);
+        if($eventos->delete()){
+            return redirect()->route('admin.eventos')->with('exito','Evento eliminado correctamente');
+        }
+        return redirect()->route('admin.eventos')->with('exito','El evento no se pudo eliminar');
     }
     public function portada(Request $request){
         $foto = $request->file('file');
