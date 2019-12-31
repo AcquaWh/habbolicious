@@ -146,56 +146,12 @@
 								</h4>
 								<i class="m-menu__section-icon fas fa-angle-double-right"></i>
 							</li>
-							@if($roles->id_rol == 4)
-							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon far fa-newspaper"></i><span class="m-menu__link-text">Reporteros</span><i class="m-menu__ver-arrow la la-angle-right"></i></a>
-								<div class="m-menu__submenu "><span class="m-menu__arrow"></span>
-									<ul class="m-menu__subnav">
-										<li class="m-menu__item " aria-haspopup="true"><a href="{{route('admin.noticias')}}" class="m-menu__link "><span class="m-menu__link-text">Noticias</span></a></li>
-									</ul>
-								</div>
-							</li>
-							@endif
-							@if($roles->id_rol == 8)
-							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon far fa-calendar-alt"></i><span class="m-menu__link-text">Eventos</span><i class="m-menu__ver-arrow la la-angle-right"></i></a>
-								<div class="m-menu__submenu "><span class="m-menu__arrow"></span>
-									<ul class="m-menu__subnav">
-										<li class="m-menu__item " aria-haspopup="true"><a href="#" class="m-menu__link "><span class="m-menu__link-text">Agregar eventos</span></a></li>
-									</ul>
-								</div>
-							</li>
-							@endif
-							@if($roles->id_rol == 5)
-							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon fas fa-headphones-alt"></i><span class="m-menu__link-text">DJ</span><i class="m-menu__ver-arrow la la-angle-right"></i></a>
-								<div class="m-menu__submenu "><span class="m-menu__arrow"></span>
-									<ul class="m-menu__subnav">
-										<li class="m-menu__item " aria-haspopup="true"><a href="#" class="m-menu__link "><span class="m-menu__link-text">Horario</span></a></li>
-										<li class="m-menu__item " aria-haspopup="true"><a href="#" class="m-menu__link "><span class="m-menu__link-text">Ver Peticiones</span></a></li>
-									</ul>
-								</div>
-							</li>
-							@endif
-							@if($roles->id_rol == 2)
-							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon far fa-newspaper"></i><span class="m-menu__link-text">Reporteros</span><i class="m-menu__ver-arrow la la-angle-right"></i></a>
-								<div class="m-menu__submenu "><span class="m-menu__arrow"></span>
-									<ul class="m-menu__subnav">
-										<li class="m-menu__item " aria-haspopup="true"><a href="{{route('admin.noticias')}}" class="m-menu__link "><span class="m-menu__link-text">Noticias</span></a></li>
-									</ul>
-								</div>
-							</li>
-							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon fas fa-user-tie"></i><span class="m-menu__link-text">Coordinación</span><i class="m-menu__ver-arrow la la-angle-right"></i></a>
-								<div class="m-menu__submenu "><span class="m-menu__arrow"></span>
-									<ul class="m-menu__subnav">
-										<li class="m-menu__item " aria-haspopup="true"><a href="#" class="m-menu__link "><span class="m-menu__link-text">Administrar DJs</span></a></li>
-										<li class="m-menu__item " aria-haspopup="true"><a href="#" class="m-menu__link "><span class="m-menu__link-text">Añadir DJ</span></a></li>
-									</ul>
-								</div>
-							</li>
-							@endif
 							@if($roles->id_rol == 1 || $roles->id_rol == 3)
 							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon far fa-newspaper"></i><span class="m-menu__link-text">Reporteros</span><i class="m-menu__ver-arrow la la-angle-right"></i></a>
 								<div class="m-menu__submenu "><span class="m-menu__arrow"></span>
 									<ul class="m-menu__subnav">
-										<li class="m-menu__item " aria-haspopup="true"><a href="{{route('admin.noticias')}}" class="m-menu__link "><span class="m-menu__link-text">Noticias</span></a></li>
+										<li class="m-menu__item " aria-haspopup="true"><a href="{{route('admin.noticias')}}" class="m-menu__link "><span class="m-menu__link-text">Administrar Noticias</span></a></li>
+										<li class="m-menu__item " aria-haspopup="true"><a href="{{route('admin.noticias')}}" class="m-menu__link "><span class="m-menu__link-text">Administrar Slider</span></a></li>
 									</ul>
 								</div>
 							</li>
@@ -209,8 +165,9 @@
 							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon fas fa-headphones-alt"></i><span class="m-menu__link-text">DJ</span><i class="m-menu__ver-arrow la la-angle-right"></i></a>
 								<div class="m-menu__submenu "><span class="m-menu__arrow"></span>
 									<ul class="m-menu__subnav">
+										<li class="m-menu__item " aria-haspopup="true"><a href="#" class="m-menu__link "><span class="m-menu__link-text">Streaming</span></a></li>
 										<li class="m-menu__item " aria-haspopup="true"><a href="#" class="m-menu__link "><span class="m-menu__link-text">Horario</span></a></li>
-										<li class="m-menu__item " aria-haspopup="true"><a href="#" class="m-menu__link "><span class="m-menu__link-text">Ver Peticiones</span></a></li>
+										<li class="m-menu__item " aria-haspopup="true"><a href="#" class="m-menu__link "><span class="m-menu__link-text">Peticiones</span></a></li>
 									</ul>
 								</div>
 							</li>
@@ -218,7 +175,22 @@
 								<div class="m-menu__submenu "><span class="m-menu__arrow"></span>
 									<ul class="m-menu__subnav">
 										<li class="m-menu__item " aria-haspopup="true"><a href="#" class="m-menu__link "><span class="m-menu__link-text">Administrar DJs</span></a></li>
-										<li class="m-menu__item " aria-haspopup="true"><a href="#" class="m-menu__link "><span class="m-menu__link-text">Añadir DJ</span></a></li>
+										<li class="m-menu__item " aria-haspopup="true"><a href="#" class="m-menu__link "><span class="m-menu__link-text">Administrar Horario</span></a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon fas fa-couch"></i><span class="m-menu__link-text">Cátalogo</span><i class="m-menu__ver-arrow la la-angle-right"></i></a>
+								<div class="m-menu__submenu "><span class="m-menu__arrow"></span>
+									<ul class="m-menu__subnav">
+										<li class="m-menu__item " aria-haspopup="true"><a href="#" class="m-menu__link "><span class="m-menu__link-text">Administrar Cátalogo</span></a></li>
+										<li class="m-menu__item " aria-haspopup="true"><a href="#" class="m-menu__link "><span class="m-menu__link-text">API Furnis</span></a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon fas fa-gift"></i><span class="m-menu__link-text">Lotería</span><i class="m-menu__ver-arrow la la-angle-right"></i></a>
+								<div class="m-menu__submenu "><span class="m-menu__arrow"></span>
+									<ul class="m-menu__subnav">
+										<li class="m-menu__item " aria-haspopup="true"><a href="#" class="m-menu__link "><span class="m-menu__link-text">Administrar Lotería</span></a></li>
 									</ul>
 								</div>
 							</li>
@@ -226,7 +198,11 @@
 								<div class="m-menu__submenu "><span class="m-menu__arrow"></span>
 									<ul class="m-menu__subnav">
 										<li class="m-menu__item " aria-haspopup="true"><a href="{{route('admin.roles')}}" class="m-menu__link "><span class="m-menu__link-text">Administrar Rangos</span></a></li>
+										<li class="m-menu__item " aria-haspopup="true"><a href="" class="m-menu__link "><span class="m-menu__link-text">Administrar Streaming</span></a></li>
+										<li class="m-menu__item " aria-haspopup="true"><a href="" class="m-menu__link "><span class="m-menu__link-text">Administrar Placas</span></a></li>
+										<li class="m-menu__item " aria-haspopup="true"><a href="" class="m-menu__link "><span class="m-menu__link-text">Administrar Baneados</span></a></li>
 										<li class="m-menu__item " aria-haspopup="true"><a href="{{route('admin.vacantes')}}" class="m-menu__link "><span class="m-menu__link-text">Administrar Vacantes</span></a></li>
+										<li class="m-menu__item " aria-haspopup="true"><a href="" class="m-menu__link "><span class="m-menu__link-text">Personalizar web</span></a></li>
 									</ul>
 								</div>
 							</li>

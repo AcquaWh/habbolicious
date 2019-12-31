@@ -7,9 +7,7 @@
 @section('content')
 <div class="m-content"> 
      <div class="alert alert-brand" role="alert">
-          <strong>
-               Bienvenidos a Habbolicious v0.1!
-          </strong>
+          <strong>Bienvenidos a la nueva versión Habbolicious v1.0!</strong>
           Este panel de administración se creo para que tu puedas manejarlo facilmente.
      </div>
      <div class="row">

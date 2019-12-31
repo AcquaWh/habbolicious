@@ -4,7 +4,7 @@
 @section('customStyles')
 <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" rel="stylesheet" type="text/css" />
-<link id="bsdp-css" href="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker3.min.css" rel="stylesheet">
+<link href="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker3.min.css" rel="stylesheet">
 @endsection
 
 @section('content')
@@ -74,6 +74,10 @@
 <script src="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/locales/bootstrap-datepicker.es.min.js" charset="UTF-8"></script>
 <script src="/js/summernote.js"></script>
 <script>
+     $('#fecha').datepicker({
+          language: "es",
+          format: 'yyyy/mm/dd'
+     });
      var uploadedDocumentMap = {}
      Dropzone.options.documentDropzone = {
           url: '{{route('admin.eventos.subir')}}',

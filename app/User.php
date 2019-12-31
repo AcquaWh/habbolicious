@@ -16,7 +16,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','habbo','id_rol','ip'
+        'name', 'email', 'password','habbo','id_rol','ip','banned_until'
     ];
 
     /**
@@ -35,5 +35,9 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+    ];
+
+    protected $dates = [
+        'banned_until'
     ];
 }

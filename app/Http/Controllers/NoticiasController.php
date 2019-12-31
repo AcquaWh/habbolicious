@@ -21,6 +21,7 @@ class NoticiasController extends Controller
         $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
         $noticias = Noticias::select('users.name','hb_noticias.id','hb_noticias.titulo','hb_noticias.descripcion','hb_noticias.created_at')
         ->leftJoin('users','hb_noticias.id_user','users.id')
+        ->orderBy('id','DESC')
         ->get();
         $roles = Equipo::select('id_rol')->where('id_user',Auth::user()->id)->first();
         $argumentos = array();

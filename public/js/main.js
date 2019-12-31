@@ -16,7 +16,6 @@ $( function() {
             }
         }
     })
-    /* Galletas*/
     function compruebaAceptaCookies() {
         if(localStorage.aceptaCookies == 'true'){
             $("#cajacookies").remove();

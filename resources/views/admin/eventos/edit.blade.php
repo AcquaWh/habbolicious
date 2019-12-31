@@ -1,11 +1,11 @@
 @extends('layouts.admin')
-@section('title','HabboLicious • Panel de administración')
+@section('title','HabboLicious • Editar eventos')
 
-@section('customstyles')
+@section('customStyles')
 @endsection
 
 @section('content')
 @endsection
 
-@section('customscripts')
+@section('customScripts')
 @endsection

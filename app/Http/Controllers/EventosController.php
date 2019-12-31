@@ -53,10 +53,17 @@ class EventosController extends Controller
         return redirect()->route('admin.eventos')->with('error','No se pudo guardar el evento');
     }
     public function edit($id){
-        
+        $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
+        $roles = Equipo::select('id_rol')->where('id_user',Auth::user()->id)->first();
+        $eventos = Eventos::select('id','titulo','descripcion','fecha')->where('id',$id)->first();
+        $argumentos = array();
+        $argumentos['roles'] = $roles;
+        $argumentos['eventos'] = $eventos;
+        $argumentos['fotousuario'] = $fotousuario;
+        return view('admin.eventos.edit',$argumentos);
     }
     public function update(Request $request, $id){
-
+        
     }
     public function destroy($id){
         $eventos = Eventos::find($id);

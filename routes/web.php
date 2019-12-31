@@ -14,6 +14,7 @@
 Route::get('/', function () {
     return redirect()->route('index');
 });
+
 Route::get('/','HabboliciousController@index')->name('index');
 Route::get('/noticias','HabboliciousController@noticias')->name('noticias');
 Route::get('/noticias/detalles/{id}','DetallesNoticiasController@show')->name('noticias.show');
@@ -38,6 +39,7 @@ Route::post('/portada', 'SubirarchivoController@portada')->middleware('verified'
 Route::post('/avatar', 'SubirarchivoController@avatar')->middleware('verified')->name('avatar');
 Route::delete('/eliminar/comentario/{id}', 'ComentarioPerfilController@destroy')->middleware('verified')->name('comentario-perfil.destroy');
 Route::post('/vacante/enviar','HabboliciousController@vacante')->middleware('verified')->name('vacante.enviar');
+
 /* Administrador */
 Route::get('/admin','AdminController@index')->middleware('verified')->name('admin.index');
 Route::get('/admin/noticias','NoticiasController@index')->middleware('verified')->name('admin.noticias');
@@ -47,6 +49,7 @@ Route::post('/admin/noticias/portada', 'NoticiasController@portada')->middleware
 Route::post('/admin/noticias/crear','NoticiasController@store')->middleware('verified')->name('admin.noticias.store');
 Route::put('/admin/noticias/{id}','NoticiasController@update')->middleware('verified')->name('admin.noticias.update');
 Route::delete('/admin/noticias/eliminar/{id}','NoticiasController@destroy')->middleware('verified')->name('admin.noticias.destroy');
+
 Route::get('/admin/roles','RolesController@index')->middleware('verified')->name('admin.roles');
 Route::put('/admin/roles/{id}','RolesController@update')->middleware('verified')->name('admin.roles.update');
 Route::post('/admin/roles-sec/{id}','RolesController@secundario')->middleware('verified')->name('admin.roles.secundario');
@@ -54,15 +57,21 @@ Route::get('/admin/roles/crear','RolesController@create')->middleware('verified'
 Route::post('/admin/roles/crear-rol','RolesController@store')->middleware('verified')->name('admin.roles.store');
 Route::delete('/admin/roles/usuario/{id}','RolesController@destroy')->middleware('verified')->name('admin.roles.destroy');
 Route::delete('/admin/roles/eliminar/{id}','RolesController@destroyrol')->middleware('verified')->name('admin.roles.rango.destroy');
+
 Route::get('/admin/vacantes','VacantesController@index')->middleware('verified')->name('admin.vacantes');
 Route::get('/admin/vacantes/crear','VacantesController@create')->middleware('verified')->name('admin.vacantes.create');
 Route::post('/admin/vacantes/guardar','VacantesController@store')->middleware('verified')->name('admin.vacantes.store');
 Route::get('/admin/vacantes/{id}','VacantesController@edit')->middleware('verified')->name('admin.vacantes.edit');
 Route::put('/admin/vacantes/editar/{id}','VacantesController@update')->middleware('verified')->name('admin.vacantes.update');
 Route::delete('/admin/vacantes/eliminar/{id}','VacantesController@destroy')->middleware('verified')->name('admin.vacantes.destroy');
+
 Route::get('/admin/eventos','EventosController@index')->middleware('verified')->name('admin.eventos');
 Route::get('/admin/eventos/crear','EventosController@create')->middleware('verified')->name('admin.eventos.create');
 Route::post('/admin/eventos/subir', 'EventosController@portada')->middleware('verified')->name('admin.eventos.subir');
 Route::post('/admin/eventos/guardar','EventosController@store')->middleware('verified')->name('admin.eventos.store');
+Route::get('/admin/eventos/editar/{id}','EventosController@edit')->middleware('verified')->name('admin.eventos.edit');
+Route::put('/admin/eventos/actualizar/{id}','NoticiasController@update')->middleware('verified')->name('admin.eventos.update');
 Route::delete('/admin/eventos/eliminar/{id}','EventosController@destroy')->middleware('verified')->name('admin.eventos.destroy');
+
+
 Auth::routes(['verify' => true]);

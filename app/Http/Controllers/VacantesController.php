@@ -20,14 +20,14 @@ class VacantesController extends Controller
         $this->middleware('auth');
     }
     public function index(){
-        $formulario = VacantesFormulario::select('id','titulo','cuerpo','pregunta1','pregunta2','pregunta3','pregunta4')->get();
-        $argumentos = array();
+        $formulario = VacantesFormulario::select('id','titulo','cuerpo','pregunta1','pregunta2','pregunta3','pregunta4')->orderBy('id','DESC')->get();
         if(Auth::check()){
             $fotousuario = Perfil::where('id_user',Auth::user()->id)->first();
             $roles = Equipo::select('id_rol')->where('id_user',Auth::user()->id)->first();
             $argumentos['fotousuario'] = $fotousuario;
             $argumentos['roles'] = $roles;
         }
+        $argumentos = array();
         $argumentos['formulario'] = $formulario;
         return view('admin.vacantes.index',$argumentos);
     }

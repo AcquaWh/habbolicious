@@ -62,7 +62,7 @@
                                         <td>{{$evento->descripcion}}</td>
                                         <td>{{$evento->fecha}}</td>
                                         <td class="editarnoti">
-                                             <a href="" class="btn btn-success"><i class="far fa-edit"></i></a>
+                                             <a href="{{route('admin.eventos.edit',$evento->id)}}" class="btn btn-success"><i class="far fa-edit"></i></a>
                                              <button class="btn btn-danger" data-toggle="modal" data-target="#m_modal_{{$evento->id}}"><i class="far fa-trash-alt"></i></button>
                                         </td>
                                         <div class="modal fade" id="m_modal_{{$evento->id}}" tabindex="-1" role="dialog" aria-labelledby="titulomodal" aria-hidden="true">
