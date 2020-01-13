@@ -61,6 +61,19 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'ChecarAdmin' => \App\Http\Middleware\ChecarAdmin::class,
+        'ChecarRadio' => \App\Http\Middleware\ChecarAdmin::class,
+        'ChecarModeracion' => \App\Http\Middleware\ChecarAdmin::class,
+        'ChecarMarketing' => \App\Http\Middleware\ChecarAdmin::class,
+        'ChecarInformacion' => \App\Http\Middleware\ChecarAdmin::class,
+        'ChecarHelpers' => \App\Http\Middleware\ChecarAdmin::class,
+        'ChecarGuias' => \App\Http\Middleware\ChecarAdmin::class,
+        'ChecarEventos' => \App\Http\Middleware\ChecarAdmin::class,
+        'ChecarDiseño' => \App\Http\Middleware\ChecarAdmin::class,
+        'ChecarDesarrollo' => \App\Http\Middleware\ChecarAdmin::class,
+        'ChecarCoordinador' => \App\Http\Middleware\ChecarAdmin::class,
+        'ChecarConcursos' => \App\Http\Middleware\ChecarAdmin::class,
+        'ChecarCatalogo' => \App\Http\Middleware\ChecarAdmin::class,
     ];
 
     /**
