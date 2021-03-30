@@ -4,7 +4,8 @@
 - Modificar en .env APP_DEBUG=true a APP_DEBUG=false
 - Modificar en .env, tu base de datos, usuario y contraseña según tu servidor/hosting/vps
 - Subir archivos a la carpeta de /public_html del hosting
-- Reedireccionar la carga del dominio en la carpeta /public
+- Reedireccionar la carga de la página en la carpeta /public
+- Asegurarte que en el hosting este activado el PHP 8.0
 
 ## INSTALACIÓN DE SSL
 - Activa el certificado SSL en tu subdominio o dominio que usará el template
