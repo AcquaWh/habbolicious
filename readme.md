@@ -3,7 +3,12 @@
 - Añadir el archivo .env a la carpeta principal
 - Modificar en .env APP_DEBUG=true a APP_DEBUG=false
 - Modificar en .env, tu base de datos, usuario y contraseña según tu servidor/hosting/vps
-- Modifica el htaccess de la carpeta /public para activar el SSL https://
+- Subir archivos a la carpeta de /public_html del hosting
+- Reedireccionar la carga del dominio en la carpeta /public
+
+## INSTALACIÓN DE SSL
+- Activa el certificado SSL en tu subdominio o dominio que usará el template
+- Modifica el htaccess de la carpeta /public para activar el SSL
 ```plain
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
@@ -33,7 +38,8 @@
     RewriteRule ^ index.php [L]
 </IfModule>
 ```
-## DEMO EN VIVO
+## DEMO
 https://habbo.fernandacruz.com/
+
 ## CREDITOS
 @AcquaWh
