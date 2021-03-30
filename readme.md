@@ -39,6 +39,14 @@
     RewriteRule ^ index.php [L]
 </IfModule>
 ```
+
+## ACTUALIZACIÓN DE VERSIÓN
+- Actualizar la versión del Composer en https://getcomposer.org/
+- En la carpeta principal usar el comando:
+```plain
+composer update
+```
+
 ## DEMO
 https://habbo.fernandacruz.com/
 
