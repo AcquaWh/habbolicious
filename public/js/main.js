@@ -81,15 +81,15 @@ $( function() {
             success: function(response){
                 $("#email").css('border','1px solid green');
                 $("#mensajeinicio").empty();
-                $('#iniciarsesion').on('submit', function(e){
-                    e.submit();
+                $('#iniciarsesion').on('submit', function(){
+                    this.submit();
                 });
             },
             error: function(response){
                 $("#email").css('border','1px solid red');
                 $("#mensajeinicio").html("No existe este correo, intenta de nuevo");
-                $('#iniciarsesion').on('submit', function(e){
-                    e.preventDefault();
+                $('#iniciarsesion').on('submit', function(){
+                    this.preventDefault();
                 });
             }
         });

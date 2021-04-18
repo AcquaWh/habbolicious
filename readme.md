@@ -48,6 +48,9 @@
 composer update
 ```
 
+## SASS Compiler Watch Comandos
+sass --watch scss/admin.scss:css/admin.css
+
 ## DEMO
 https://habbo.fernandacruz.com/
 
