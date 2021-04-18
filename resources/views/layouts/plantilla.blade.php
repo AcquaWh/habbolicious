@@ -28,7 +28,7 @@
           <nav class="navbar navbar-expand-md fixed-top">
                <div class="container">
                     <a class="navbar-brand" href="{{route('index')}}">
-                         <img class="habbolicious" src="/img/kRER70w.png" alt=""/>
+                         <img class="habbolicious" src="/img/Q3e9wmC.png" alt=""/>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                          <i class="fas fa-bars"></i>
@@ -171,7 +171,7 @@
                          <div class="slider-noticias">
                               <div class="owl-carousel owl-theme">
                                    <div class="item" style="background-image:url(/img/portada/KwOrNTu.png);"><span class="titulo">Ponte el gorro de navidad!</span><br><br><span>Llego en invierno, nos esperan muchos eventos!</span></div>
-                                   <div class="item" style="background-image:url(/img/portada/dTkZQ0X.png);"><span class="titulo">Vacantes disponibles, ahora!</span><br><br><span>Entra a la sección de vacantes, animaté.</span></div>
+                                   <div class="item" style="background-image:url(/img/portada/I1VAC1AB.png);"><span class="titulo">Vacantes disponibles, ahora!</span><br><br><span>Entra a la sección de vacantes, animaté.</span></div>
                               </div>
                          </div>
                     </div>
@@ -212,19 +212,19 @@
      @yield('content')
      <div id="cajacookies">
           <p>Éste sitio web usa cookies, si permanece aquí acepta su uso. Puede leer más sobre el uso de cookies en nuestra <a href="{{route('terminos')}}">política de privacidad</a>.</p>
-          <button id="aceptargalletas" class="btn pull-right"><i class="fas fa-cookie-bite"></i>  Aceptar nuestras galletitas</button>
+          <button id="aceptargalletas" class="btn pull-right"><i class="fas fa-cookie-bite"></i>  Aceptar nuestras cookies</button>
      </div>
      </main>
      <footer class="footer mt-auto">
           <div class="container">
                <div class="row">
                     <div class="col-lg-3 text-left m-auto">
-                         <img class="habbolicious" src="/img/kRER70w.png" alt=""/>
+                         <img class="habbolicious" src="/img/Q3e9wmC.png" alt=""/>
                     </div>
                     <div class="col-lg-9">
                     <p class="mapa"><a href="{{route('index')}}">Inicio</a> / <a href="{{route('noticias')}}">Noticias</a> / <a href="{{route('blogs')}}">Blog</a> / <a href="{{route('catalogo')}}">Catálogo</a> / <a href="{{route('eventos')}}">Eventos</a> / <a href="{{route('equipo')}}">Equipo</a> / <a href="{{route('vacantes')}}">Vacantes</a> / <a href="{{route('utilidades')}}">Utilidades</a> / <a href="{{route('normas')}}">Normas</a> / <a href="{{route('terminos')}}">Términos</a> /<br></p>
-                         <span class="habboli">©2019, Habbolicious<br></span>
-                         <span>Habbolicious no está afiliada a, respaldada, promocionada o aprobada específicamente por Sulake Oy o sus Afiliados. De acuerdo a la Política de Webs fans de Habbo, Habbolicious puede utilizar las marcas comerciales y otras propiedades intelectuales de Habbo.</span>
+                         <span class="habboli">©2021, Habbojungle<br></span>
+                         <span>Habbojungle no está afiliada a, respaldada, promocionada o aprobada específicamente por Sulake Oy o sus Afiliados. De acuerdo a la Política de Webs fans de Habbo, Habbojungle puede utilizar las marcas comerciales y otras propiedades intelectuales de Habbo.</span>
                     </div>
                </div>
           </div>

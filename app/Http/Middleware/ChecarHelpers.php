@@ -19,8 +19,8 @@ class ChecarHelpers
     public function handle($request, Closure $next)
     {
         $rol = Equipo::select('id_rol')->where('id_user',Auth::user()->id)->first();
-        if($rol != 13){
-            return redirect()->route('admin.index');
+        if($rol->id_rol != 13){
+            return $next($request);
         }
         return $next($request);
     }

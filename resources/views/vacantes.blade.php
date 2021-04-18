@@ -1,5 +1,5 @@
 @extends('layouts.plantilla')
-@section('title','Vacantes • ¡Endulza tu Habbo vida!')
+@section('title','Vacantes • ¡Bienvenido a la selva!')
 
 @section('customstyles')
 @endsection
@@ -11,7 +11,7 @@
                <div class="col-lg-8">
                     <div class="contenedor-vacantes">
                          <h3><strong>Envía tu solicitud de Vacantes</strong></h3>
-                         <p>¿Quieres pasartela bien? Te ofrecemos nuevas experiencias en Habbolicious, podras presenciar el crecimiento de esa gran comunidad. ¡Simplemente solicite a continuación y nos pondremos en contacto lo antes posible!</p>
+                         <p>¿Quieres pasarlo bien? Te ofrecemos nuevas experiencias en Habbojungle, podrás presenciar el crecimiento de esta gran comunidad. ¡Simplemente solicita a continuación y nos pondremos en contacto lo antes posible!</p>
                     </div>
                     <div class="contenedor-vacantes">
                          @if(Session::has('error'))
@@ -92,6 +92,13 @@
                     </div>
                </div>
                <div class="col-lg-4">
+                    
+                    <div class="contenedor-titulo" style="background-image: url(/img/extra/lpromo_cland_bundle.png);">
+                         <h4>Twitter</h4>
+                    </div>
+                    <div class="contenedor-twitter">
+                         <a class="twitter-timeline" data-height="530" href="https://twitter.com/HabboJungleFan?ref_src=twsrc%5Etfw">Twitter by HabboJungle</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
                     <div class="contenedor-titulo" style="background-image: url(/img/extra/lpromo_inventory_badges.png?w=760);">
                          <h4>Últimas placas</h4>
                     </div>
@@ -99,12 +106,6 @@
                          @foreach($habbo['data'] as $placa)
                          <div class="placas" style="background-image: url({{ $placa['image'] }});" data-toggle="tooltip" data-placement="top" title="{{ $placa['name'] }}"></div>
                          @endforeach
-                    </div>
-                    <div class="contenedor-titulo" style="background-image: url(/img/extra/lpromo_cland_bundle.png);">
-                         <h4>Twitter</h4>
-                    </div>
-                    <div class="contenedor-twitter">
-                         <a class="twitter-timeline" data-height="530" href="https://twitter.com/HabboLiciousES?ref_src=twsrc%5Etfw">Twitter por Habbolicious</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                </div>
           </div>

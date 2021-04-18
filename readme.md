@@ -1,4 +1,5 @@
 # Template Fansite Habbolicious (Laravel 8)
+
 ## INSTALACIÓN
 - Añadir el archivo .env a la carpeta principal
 - Modificar en .env APP_DEBUG=true a APP_DEBUG=false

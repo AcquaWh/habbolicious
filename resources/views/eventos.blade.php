@@ -1,5 +1,5 @@
 @extends('layouts.plantilla')
-@section('title','Eventos • ¡Endulza tu Habbo vida!')
+@section('title','Eventos • ¡Bienvenido a la selva!')
 
 @section('customstyles')
 @endsection
@@ -15,7 +15,7 @@
                          <h4>Twitter</h4>
                     </div>
                     <div class="contenedor-twitter">
-                         <a class="twitter-timeline" data-height="530" href="https://twitter.com/HabboLiciousES?ref_src=twsrc%5Etfw">Twitter por Habbolicious</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                         <a class="twitter-timeline" data-height="530" href="https://twitter.com/HabboJungleFan?ref_src=twsrc%5Etfw">Twitter by HabboJungle</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                </div>
           </div>

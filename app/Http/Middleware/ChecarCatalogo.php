@@ -19,8 +19,8 @@ class ChecarCatalogo
     public function handle($request, Closure $next)
     {
         $rol = Equipo::select('id_rol')->where('id_user',Auth::user()->id)->first();
-        if($rol != 12){
-            return redirect()->route('admin.index');
+        if($rol->id_rol != 12){
+            return $next($request);
         }
         return $next($request);
     }

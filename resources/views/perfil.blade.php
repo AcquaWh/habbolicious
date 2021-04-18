@@ -1,5 +1,5 @@
 @extends('layouts.plantilla')
-@section('title','Perfil • ¡Endulza tu Habbo vida!')
+@section('title','Perfil • ¡Bienvenido a la selva!')
 
 @section('customstyles')
 @endsection

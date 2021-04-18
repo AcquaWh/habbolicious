@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.googlemail.com'),
+    'host' => env('MAIL_HOST', 'mail.habbojungle.es'),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'mail@habbolicious.com'),
-        'name' => env('MAIL_FROM_NAME', 'Habbolicious'),
+        'address' => env('MAIL_FROM_ADDRESS', 'mail@habbojungle.es'),
+        'name' => env('MAIL_FROM_NAME', 'habbojungle'),
     ],
 
     /*

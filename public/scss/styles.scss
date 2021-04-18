@@ -3,7 +3,8 @@ body {
      background: #e1eff9;
 }
 .navbar {
-     background: #fff;
+    background: rgb(54,176,193);
+    background: linear-gradient(328deg, rgba(54,176,193,1) 0%, rgba(0,255,72,1) 100%);
      box-shadow: 0px 3px 12px rgba(107, 107, 107, 0.39);
      padding: 0px;
      z-index: 3;
@@ -17,11 +18,12 @@ body {
      .navbar-toggler{
           transition: 0.3s;
           margin-right: 10px;
+          outline:none;
           &:hover {
-               background: #e6e6e6;
+                background: #3c9462;
           }
           i {
-               color: #b1b1b1;
+               color: white;
           }
      }
      .navbar-nav {
@@ -503,7 +505,6 @@ body {
           background-image: url(/img/extra/7VQgJ0h.png);
           height: 380px;
           background-size: 700px;
-          background-color: #ffccfc;
           border-bottom: 10px solid white;
           box-shadow: 0px 0px 10px #0000004f;
           .globos {
@@ -702,7 +703,10 @@ body {
                     }
                }
                .avatar-radio{
+                   overflow:hidden;
                     background: linear-gradient(180deg, #3586c1, #0c3a65);
+                    border:5px solid white;
+                    box-shadow: 0px 0px 20px rgba(0,0,0,0.52);
                     color: white;
                     height: 100%;
                     padding-top: 10px;
@@ -720,7 +724,7 @@ body {
                          transition: 0.6s;
                          z-index: -1;
                          &:hover {
-                              transform:translateX(-84px);
+                            transform: translate(0px,30px);
                          }
                     }
                }
@@ -1856,6 +1860,7 @@ body {
 }
 footer {
      background: #589eae;
+     z-index:-1;
      text-align: right;
      padding-top: 30px !important;
      padding-bottom: 20px;

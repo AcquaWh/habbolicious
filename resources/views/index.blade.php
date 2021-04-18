@@ -1,5 +1,5 @@
 @extends('layouts.habbolicious')
-@section('title','HabboLicious • ¡Endulza tu Habbo vida!')
+@section('title','HabboJungle • ¡Bienvenido a la selva!')
 
 @section('customstyles')
 @endsection
@@ -87,7 +87,7 @@
                          <h4>Twitter</h4>
                     </div>
                     <div class="contenedor-twitter">
-                         <a class="twitter-timeline" data-height="530" href="https://twitter.com/HabboLiciousES?ref_src=twsrc%5Etfw">Twitter por Habbolicious</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        <a class="twitter-timeline" href="https://twitter.com/HabboJungleFan?ref_src=twsrc%5Etfw">Tweets by HabboJungle</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                     <div class="contenedor-titulo" style="background-image: url(/img/extra/lpromo_inventory_badges.png?w=760);">
                          <h4>Últimas placas</h4>
@@ -126,6 +126,16 @@
                </div>
           </div>
      </div>
+    <a href="https://discord.gg/FbBteVbMPe" target="_blank">
+    <div class="btn btn-dark floating-btn">
+    <i class="icon fab fa-discord"></i>
+    <div class="expanded">
+      <span>
+        <i class="far fa-comments"></i>¡Únete a nuestro Discord!</span>
+    </div>
+  </div>
+</a>
+
 </div>
 </div>
 @endsection

@@ -28,7 +28,7 @@
     
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
-                                            <strong>Tu correo no es correcto, intenta otra vez.</strong>
+                                            <strong>Tu correo no es correcto, intentalo otra vez.</strong>
                                         </span>
                                     @enderror
                                 </div>

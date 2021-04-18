@@ -76,7 +76,7 @@
 
                                    <div class="form-group">
                                         <div class="col-md-12">
-                                             <div class="g-recaptcha" data-sitekey="6Lfi5roUAAAAAKGXZrz5tY6Lyk2emq2lZh3wWUiU"></div>
+                                             <div class="g-recaptcha" data-sitekey="6LfsGZUaAAAAAOxkAwIi-DF_uGPNMPMe4-tpgS1b"></div>
                                              @if ($errors->has('g-recaptcha-response'))
                                              <span class="help-block text-danger" role="alert">
                                                   <strong>Verifica sí no eres un robot</strong>

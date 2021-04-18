@@ -41,7 +41,7 @@ Route::delete('/eliminar/comentario/{id}', 'ComentarioPerfilController@destroy')
 Route::post('/vacante/enviar','HabboliciousController@vacante')->name('vacante.enviar');
 
 /* Administrador */
-Route::get('/admin','AdminController@index')->middleware('ChecarAdmin','ChecarCoordinador','ChecarDesarrollo','ChecarInformacion','ChecarRadio','ChecarConcursos','ChecarMarketing','ChecarEventos','ChecarGuias','ChecarDiseño','ChecarModeracion','ChecarCatalogo','ChecarHelpers')->name('admin.index');
+Route::get('/admin','AdminController@index')->middleware('ChecarAdmin','ChecarCoordinador','ChecarDesarrollo','ChecarInformacion','ChecarRadio','ChecarConcursos','ChecarMarketing','ChecarEventos','ChecarGuias','ChecarDiseno','ChecarModeracion','ChecarCatalogo','ChecarHelpers')->name('admin.index');
 Route::get('/admin/noticias','NoticiasController@index')->middleware('ChecarAdmin','ChecarDesarrollo','ChecarInformacion')->name('admin.noticias');
 Route::get('/admin/crear-noticias/','NoticiasController@create')->middleware('ChecarAdmin','ChecarDesarrollo','ChecarInformacion')->name('admin.noticias.create');
 Route::get('/admin/editar-noticias/{id}','NoticiasController@edit')->middleware('ChecarAdmin','ChecarDesarrollo','ChecarInformacion')->name('admin.noticias.edit');
@@ -72,5 +72,10 @@ Route::post('/admin/eventos/guardar','EventosController@store')->middleware('Che
 Route::get('/admin/eventos/editar/{id}','EventosController@edit')->middleware('ChecarAdmin','ChecarDesarrollo','ChecarInformacion')->name('admin.eventos.edit');
 Route::put('/admin/eventos/actualizar/{id}','EventosController@update')->middleware('ChecarAdmin','ChecarDesarrollo','ChecarInformacion')->name('admin.eventos.update');
 Route::delete('/admin/eventos/eliminar/{id}','EventosController@destroy')->middleware('ChecarAdmin','ChecarDesarrollo','ChecarInformacion')->name('admin.eventos.destroy');
+
+Route::get('/comandos', function() {
+    Artisan::call('cache:clear');
+    return "Cache se limpio";
+});
 
 Auth::routes(['verify' => true]);

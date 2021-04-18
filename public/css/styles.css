@@ -1,10 +1,75 @@
 @charset "UTF-8";
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e1eff9;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  transition:0.2s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 body {
   font-family: 'Ubuntu Condensed', sans-serif;
   background: #e1eff9; }
+.floating-btn {
+  color: white;
+  background: #7289da;
+  border-color: #7289da;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 2.6rem;
+  width: 5.2rem;
+  height: 5.2rem;
+  border-radius: 5.2rem 5.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: width 0.5s ease;
+}
+.floating-btn .expanded {
+  opacity: 0;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 24px;
+  transition: opacity 0.25s ease;
+}
+.floating-btn:hover {
+  width: 26rem;
+}
+.floating-btn:hover .icon {
+  opacity: 0;
+}
+.floating-btn:hover .expanded {
+  opacity: 1;
+}
 
+.floating-btn .fa-discord {
+  padding-top: .4rem;
+}
 .navbar {
-  background: #fff;
+  background: rgb(54,176,193);
+  background: linear-gradient(328deg, rgba(54,176,193,1) 0%, rgba(0,255,72,1) 100%);
   box-shadow: 0px 3px 12px rgba(107, 107, 107, 0.39);
   padding: 0px;
   z-index: 3; }
@@ -15,18 +80,19 @@ body {
       transform: scale(1.2); }
   .navbar .navbar-toggler {
     transition: 0.3s;
+    outline:none;
     margin-right: 10px; }
     .navbar .navbar-toggler:hover {
-      background: #e6e6e6; }
+      background: #3c9462; }
     .navbar .navbar-toggler i {
-      color: #b1b1b1; }
+      color: white; }
   .navbar .navbar-nav {
     text-align: center; }
     .navbar .navbar-nav .ini-habbo {
       box-shadow: none !important;
       background: none;
       border: none;
-      color: #616161;
+      color: #000000;
       font-weight: bold !important; }
     .navbar .navbar-nav button {
       margin: auto; }
@@ -148,7 +214,7 @@ body {
       transition: 0.3s;
       background-color: black; }
     .navbar .navbar-nav a {
-      color: #616161;
+      color: #000000;
       font-weight: bold;
       transition: 0.3s; }
       .navbar .navbar-nav a:hover {
@@ -413,10 +479,9 @@ body {
       margin-top: 42px !important; }
   .principal .fondo {
     margin-bottom: 160px;
-    background-image: url(/img/extra/7VQgJ0h.png);
+    background-image: url(/img/extra/Fondo_HABBOJUNGLE_verde.png);
     height: 380px;
     background-size: 700px;
-    background-color: #ffccfc;
     border-bottom: 10px solid white;
     box-shadow: 0px 0px 10px #0000004f; }
     .principal .fondo .globos {
@@ -482,15 +547,17 @@ body {
           padding: 10px; }
     .principal .fondo .radio {
       margin-top: 70px;
-      background: white;
-      box-shadow: 0px 6px 9px rgba(0, 0, 0, 0.473); }
+      opacity: 0.95; }
       .principal .fondo .radio span {
-        margin-right: 10px; }
+        margin-right: 25px; }
       .principal .fondo .radio a {
         text-decoration: none; }
       .principal .fondo .radio .titulo-radio {
         padding: 10px;
-        background: #cccccc;
+        background-image: url(/img/extra/ce7a3b_Dibujo.png);
+        background-position-y: 12.3em;
+        background-size: 380px;
+        background-position-x: 26.7em;
         color: #4e4e4e;
         margin-top: 12px;
         margin-left: 20px;
@@ -503,11 +570,15 @@ body {
         text-overflow: ellipsis; }
       .principal .fondo .radio .cancion-radio {
         padding: 10px;
-        background: #cccccc;
+        background-image: url(/img/extra/ce7a3b_Dibujo.png);
+        background-position-y: -27px;
+        background-size: 380px;
+        background-position-x: -33px;
         color: #4e4e4e;
         margin-top: 10px;
         margin-left: 20px;
         font-size: 13px;
+        font-weight: bold;
         border-radius: 5px;
         margin-bottom: 10px;
         white-space: nowrap;
@@ -517,7 +588,9 @@ body {
         margin-bottom: 14px; }
         .principal .fondo .radio .menu-radio .dj {
           display: inline-block;
-          background: #cccccc;
+              background-image: url(/img/extra/ce7a3b_Dibujo2.png);
+              background-position-y: -17px;
+              background-size: 72px;
           color: #4e4e4e;
           font-size: 13px;
           margin-left: 20px;
@@ -527,10 +600,15 @@ body {
           cursor: pointer; }
           .principal .fondo .radio .menu-radio .dj:hover {
             color: white;
-            background: #f980a0; }
+            background-image: url(/img/extra/ce7a3b_Dibujo2.png);
+            background-position-y: -17px;
+            background-size: 72px; }
         .principal .fondo .radio .menu-radio .play {
           display: inline-block;
-          background: #cccccc;
+          background-image: url(/img/extra/ce7a3b_Dibujo1.png);
+          background-position-x: -11.5px;
+          background-position-y: -6.5px;
+          background-size: 53px;
           color: #4e4e4e;
           font-size: 13px;
           margin-left: 4px;
@@ -540,10 +618,16 @@ body {
           cursor: pointer; }
           .principal .fondo .radio .menu-radio .play:hover {
             color: white;
-            background: #f980a0; }
+            background-image: url(/img/extra/ce7a3b_Dibujo1.png);
+            background-position-x: -11.5px;
+            background-position-y: -6.5px;
+            background-size: 53px; }
         .principal .fondo .radio .menu-radio .stop {
           display: inline-block;
-          background: #cccccc;
+          background-image: url(/img/extra/ce7a3b_Dibujo1.png);
+          background-position-x: -11px;
+          background-position-y: -6px;
+          background-size: 53px;
           color: #4e4e4e;
           font-size: 13px;
           margin-left: 4px;
@@ -553,10 +637,16 @@ body {
           cursor: pointer; }
           .principal .fondo .radio .menu-radio .stop:hover {
             color: white;
-            background: #f980a0; }
+            background-image: url(/img/extra/ce7a3b_Dibujo1.png);
+            background-position-x: -11px;
+            background-position-y: -6px;
+            background-size: 53px; }
         .principal .fondo .radio .menu-radio .enviar-peticion {
           display: inline-block;
-          background: #cccccc;
+          background-image: url(/img/extra/ce7a3b_Dibujo1.png);
+          background-position-x: -10.5px;
+          background-position-y: -6.5px;
+          background-size: 53px;
           color: #4e4e4e;
           font-size: 13px;
           margin-left: 4px;
@@ -566,10 +656,15 @@ body {
           cursor: pointer; }
           .principal .fondo .radio .menu-radio .enviar-peticion:hover {
             color: white;
-            background: #f980a0; }
+            background-image: url(/img/extra/ce7a3b_Dibujo1.png);
+            background-position-x: -10.5px;
+            background-position-y: -6.5px;
+            background-size: 53px; }
         .principal .fondo .radio .menu-radio .volumen {
           display: inline-block;
-          background: #cccccc;
+          background-image: url(/img/extra/ce7a3b_Dibujo2.png);
+          background-position-y: -16.5px;
+          background-size: 71px;
           color: #4e4e4e;
           font-size: 13px;
           margin-left: 4px;
@@ -581,7 +676,7 @@ body {
             width: 100%; }
             .principal .fondo .radio .menu-radio .volumen #slider span {
               border-radius: 70px;
-              background: #f82878;
+              background: #000000;
               border: none;
               width: 16px;
               height: 16px; }
@@ -590,13 +685,18 @@ body {
             margin-top: 10px;
             margin-left: 20px; } }
       .principal .fondo .radio .avatar-radio {
-        background: linear-gradient(180deg, #3586c1, #0c3a65);
-        color: white;
+        overflow:hidden;
+        background: linear-gradient(180deg, #589eae, #2AFE87);
+        border:5px solid white;
+        box-shadow: 0px 0px 20px rgba(0,0,0,0.52);
+        color: black;
+        font-weight: bold;
         height: 100%;
         padding-top: 10px;
         padding-left: 10px;
         padding-right: 10px;
-        margin: auto; }
+        margin: auto;
+        border-radius: 20px;}
         .principal .fondo .radio .avatar-radio .oyentes {
           font-size: 13px;
           position: absolute; }
@@ -607,7 +707,7 @@ body {
           transition: 0.6s;
           z-index: -1; }
           .principal .fondo .radio .avatar-radio .avatar:hover {
-            transform: translateX(-84px); }
+            transform: translate(0px,30px); }
     .principal .fondo .noticias-usuarios {
       margin-top: 40px; }
       .principal .fondo .noticias-usuarios .post-noticias {
@@ -737,16 +837,19 @@ body {
       bottom: 18px;
       color: white; }
   .principal .contenido-inicio .cuadro-staff {
-    background: white;
+    background: #589eae;
     padding: 20px;
     box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219);
     margin-bottom: 20px; }
     .principal .contenido-inicio .cuadro-staff h3 {
       font-size: 24px;
+      font-weight: bold;
       margin-bottom: 14px; }
     .principal .contenido-inicio .cuadro-staff .cuadro-staff-info {
       padding: 10px;
+      border-style: solid;
       background: white;
+      background-image: url(https://image.freepik.com/foto-gratis/fondo-hoja-verde-cesped-artificial_34251-272.jpg);
       margin-bottom: 10px;
       height: 110px;
       box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219); }
@@ -769,20 +872,21 @@ body {
         display: inline-block;
         color: #337ab7; }
       .principal .contenido-inicio .cuadro-staff .cuadro-staff-infoex a {
-        color: #337ab7;
+        color: #000000;
         text-decoration: none; }
       .principal .contenido-inicio .cuadro-staff .cuadro-staff-infoex .cuadro-staff-texto {
-        font-size: 85%; }
+        font-size: 85%;
+        font-weight: bold; }
       .principal .contenido-inicio .cuadro-staff .cuadro-staff-infoex .user-icon.salt {
         height: 21px;
         width: 21px;
-        background: url(/img/icons/candyicon.png);
+        background: url(/img/icons/monkeyicon.png);
         background-repeat: no-repeat;
         background-position: center;
         display: inline-block;
         vertical-align: -3px; }
       .principal .contenido-inicio .cuadro-staff .cuadro-staff-infoex .user-style.slushy {
-        background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #950707), color-stop(0.15, #bf7017), color-stop(0.3, #f2ec2f), color-stop(0.45, #218309), color-stop(0.6, #2681c9), color-stop(0.75, #480979));
+        background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #000000));
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent; }
@@ -895,7 +999,7 @@ body {
       margin-top: 7px;
       margin-right: 13px; }
   .principal .contenido-inicio .contenedor-vacantes {
-    background: white;
+    background: #589eae;
     padding: 20px;
     box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219);
     margin-bottom: 20px; }
@@ -1065,7 +1169,7 @@ body {
     .principal .contenido-inicio .comentario .contenido {
       padding: 8px; }
   .principal .contenido-inicio .contenedor-noticias {
-    background: white;
+    background: #589eae;
     padding: 10px;
     height: auto;
     box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219);
@@ -1197,7 +1301,7 @@ body {
       font-size: 24px;
       margin-bottom: 14px; }
   .principal .contenido-inicio .contenedor-twitter {
-    background: white;
+    background: #589eae;
     padding: 10px;
     height: auto;
     box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219);
@@ -1207,7 +1311,7 @@ body {
       .principal .contenido-inicio .contenedor-twitter .twitter-timeline:hover {
         color: black; }
   .principal .contenido-inicio .contenedor-blogs {
-    background: white;
+    background: #589eae;
     padding: 10px;
     height: auto;
     box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219);
@@ -1263,7 +1367,7 @@ body {
         opacity: 1;
         margin-top: 0px; }
   .principal .contenido-inicio .contenedor-placas {
-    background: white;
+    background: #589eae;
     padding: 10px;
     height: auto;
     box-shadow: 0px 0px 9px rgba(54, 54, 54, 0.219);
@@ -1281,7 +1385,7 @@ body {
       display: inline-block;
       transition: 0.3s; }
       .principal .contenido-inicio .contenedor-placas .placas:hover {
-        background-color: #850073c4; }
+        background-color: #fffb8a; }
   .principal .contenido-inicio .contenedor-eventos {
     background: white;
     padding: 10px;
@@ -1390,7 +1494,11 @@ body {
         .principal .fondo .radio .titulo-radio {
           padding: 10px;
           margin-right: 20px;
-          background: #cccccc;
+          background-image: url(/img/extra/ce7a3b_Dibujo.png);
+          background-position-y: -1.5em;
+          background-size: 330px;
+          background-position-x: -2em;
+          background-repeat: no-repeat;
           color: #4e4e4e;
           margin-top: 14px;
           margin-left: 20px;
@@ -1403,7 +1511,11 @@ body {
           text-overflow: ellipsis; }
         .principal .fondo .radio .cancion-radio {
           padding: 10px;
-          background: #cccccc;
+          background-image: url(/img/extra/ce7a3b_Dibujo.png);
+          background-position-y: -1.5em;
+          background-size: 330px;
+          background-position-x: -1.89em;
+          background-repeat: no-repeat;
           color: #4e4e4e;
           margin-top: 10px;
           margin-left: 20px;
@@ -1425,7 +1537,7 @@ body {
         .principal .fondo .radio .menu-radio {
           margin-bottom: 13px; }
           .principal .fondo .radio .menu-radio .volumen {
-            width: 100px; }
+            width: 70px; }
     .principal .contenido-inicio {
       margin-top: 0px; }
       .principal .contenido-inicio .error {
@@ -1504,6 +1616,7 @@ body {
 
 footer {
   background: #589eae;
+  z-index: -1;
   text-align: right;
   padding-top: 30px !important;
   padding-bottom: 20px; }

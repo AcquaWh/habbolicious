@@ -1,5 +1,5 @@
 @extends('layouts.plantilla')
-@section('title','Editar Perfil • ¡Endulza tu Habbo vida!')
+@section('title','Editar Perfil • ¡Bienvenido a la selva!')
 
 @section('customstyles')
 <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" rel="stylesheet" type="text/css" />

@@ -1,5 +1,5 @@
 @extends('layouts.plantilla')
-@section('title','Error 404 • ¡Endulza tu Habbo vida!')
+@section('title','Error 404 • ¡Bienvenido a la selva!')
 
 @section('customstyles')
 @endsection

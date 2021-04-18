@@ -19,8 +19,8 @@ class ChecarDesarrollo
     public function handle($request, Closure $next)
     {
         $rol = Equipo::select('id_rol')->where('id_user',Auth::user()->id)->first();
-        if($rol != 3){
-            return redirect()->route('admin.index');
+        if($rol->id_rol != 3){
+            return $next($request);
         }
         return $next($request);
     }

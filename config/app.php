@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Habbojungle'),
 
     /*
     |--------------------------------------------------------------------------
@@ -123,12 +123,10 @@ return [
 
     'cipher' => 'AES-256-CBC',
     'debug_blacklist' => [
-        '_COOKIE' => array_keys($_COOKIE),
-        '_SERVER' => array_keys($_SERVER),
-        '_ENV' => array_keys($_ENV),
+      '_COOKIE' => array_keys($_COOKIE),
+      '_SERVER' => array_keys($_SERVER),
+      '_ENV' => array_keys($_ENV),
     ],
-
-
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers

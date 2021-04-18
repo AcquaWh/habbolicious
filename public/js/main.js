@@ -98,7 +98,7 @@ $( function() {
     var radiohabbo = document.createElement('audio');
     $('#slider').append(radiohabbo);
     radiohabbo.id = "radiohabbo";
-    iniciaraudio('https://centova.wlservices.org:4002/stream', 0);
+    iniciaraudio('https://radio.hostedred.com/radio/8050/jungle', 0);
     function iniciaraudio(archivo, volumen) {
         radiohabbo.src = archivo;
         radiohabbo.setAttribute('loop', 'loop');
@@ -116,38 +116,24 @@ $( function() {
     }
     /* Api */
     function api(){
-        $.ajax({
-            url: "https://centova.wlservices.org/rpc/habbolicious/streaminfo.get",
-            type: 'GET',
-            cache: false,
-            success: function(json){
-                json.data.forEach(function (item) {
-                    if(item.track.title == ""){
-						$(".cancion-radio").html("");
-						$(".titulo-radio").html("");
-						$(".avatar").css( "background-image","url(https://www.habbo.es/habbo-imaging/avatarimage?user=HabboliciousFAN&direction=3&head_direction=3&gesture=sml&action=none&size=l)");
-						$(".cancion-radio").html("<span><i class='fas fa-music' aria-hidden='true'></i></span> No disponible");
-						$(".titulo-radio").html("<span><i class='fas fa-user' aria-hidden='true'></i></span> No hay DJ");
-					} else {
-						var oyente = item.listeners;
-						var dj = item.title;
-						var titulo = item.track.title;
-						var artista = item.track.artist;
-						$(".oyentes").html("");
-						$(".cancion-radio").html("");
-                        $(".titulo-radio").html("");
-                        if(dj == "Habbolicious"){
-                            $(".avatar").css("background-image","url('https://www.habbo.es/habbo-imaging/avatarimage?user=xCoositta&direction=3&head_direction=3&gesture=sml&action=none&size=l')");
-                        } else {
-                            $(".avatar").css("background-image","url('https://www.habbo.es/habbo-imaging/avatarimage?user="+dj+"&direction=3&head_direction=3&gesture=sml&action=none&size=l')");
-                        }
-						$(".oyentes").html("Oyentes: "+oyente+" habbos");
-						$(".cancion-radio").html("<span><i class='fas fa-music' aria-hidden='true'></i></span>"+artista+" - "+titulo);
-						$(".titulo-radio").html("<span><i class='fas fa-user' aria-hidden='true'></i></span>"+dj);
-					}
-                });
+        $.get("https://radio.hostedred.com/api/nowplaying/7",function(data){
+        	var djname = (data.live.streamer_name) ? data.live.streamer_name : "AutoDJ";
+        	var oyente = data.listeners.total;
+			var titulo = data.now_playing.song.text;
+			var artista = data.now_playing.song.artist;
+			$(".oyentes").html("");
+			$(".cancion-radio").html("");
+            $(".titulo-radio").html("");
+            if(djname == "Habbojungle"){
+                $(".avatar").css("background-image","url('https://www.habbo.es/habbo-imaging/avatarimage?user=xCoositta&direction=3&head_direction=3&gesture=sml&action=none&size=l')");
+            } else {
+                $(".avatar").css("background-image","url('https://www.habbo.es/habbo-imaging/avatarimage?user="+djname+"&direction=3&head_direction=3&gesture=sml&action=none&size=l')");
             }
+			$(".oyentes").html("Oyentes: "+oyente+" habbos");
+			$(".cancion-radio").html("<span><i class='fas fa-music' aria-hidden='true'></i></span>"+artista+" - "+titulo);
+			$(".titulo-radio").html("<span><i class='fas fa-user' aria-hidden='true'></i></span>"+djname);
         });
+        
     }
     api();
     setInterval(api,15000);

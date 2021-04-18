@@ -42,7 +42,6 @@ var SnippetLogin = function() {
         login.addClass('m-login--forget-password');
         //login.find('.m-login__forget-password').animateClass('flipInX animated');
         mUtil.animateClass(login.find('.m-login__forget-password')[0], 'flipInX animated');
-
     }
 
     var handleFormSwitch = function() {
