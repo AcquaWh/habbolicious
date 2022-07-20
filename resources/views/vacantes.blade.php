@@ -103,8 +103,8 @@
                          <h4>Últimas placas</h4>
                     </div>
                     <div class="contenedor-placas">
-                         @foreach($habbo['data'] as $placa)
-                         <div class="placas" style="background-image: url({{ $placa['image'] }});" data-toggle="tooltip" data-placement="top" title="{{ $placa['name'] }}"></div>
+                         @foreach($habbo['badges'] as $placa)
+                         <div class="placas" style="background-image: url({{ $placa['url_habbo'] }});" data-toggle="tooltip" data-placement="top" title="{{ $placa['name'] }}"></div>
                          @endforeach
                     </div>
                </div>

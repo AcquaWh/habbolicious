@@ -25,7 +25,7 @@ class DetallesNoticiasController extends Controller
             return view('error',$argumentos);
         } else {
             Carbon::setLocale('es');
-            $placas = file_get_contents("https://api.habboapi.net/badges?per_page=24&hotel=es");
+            $placas = file_get_contents("https://habboassets.com/api/v1/badges?hotel=es");
             $noticias = Noticias::select('users.name','hb_noticias.id','hb_noticias.titulo','hb_noticias.descripcion','hb_noticias.cuerpo','hb_noticias.portada','hb_noticias.created_at')
             ->leftJoin('users','hb_noticias.id_user','users.id')
             ->where('hb_noticias.id',$id)
